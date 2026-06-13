@@ -178,7 +178,7 @@
   .spot-col li{margin:.4rem 0;color:var(--ink-2);font-size:.97rem;line-height:1.45}
 
   /* Click-to-enlarge lightbox (progressive enhancement; images still show if JS is off) */
-  figure img{cursor:zoom-in}
+  figure img,.media img{cursor:zoom-in}
   #lightbox{position:fixed;inset:0;z-index:100;background:oklch(0.15 0.01 250 / .94);display:none;align-items:center;justify-content:center;padding:1.5rem;cursor:zoom-out}
   #lightbox.open{display:flex}
   #lightbox img{max-width:min(96vw,1500px);max-height:92vh;width:auto;height:auto;border-radius:0;box-shadow:0 10px 40px oklch(0 0 0 / .5)}
@@ -825,7 +825,7 @@ It's 26/1247/F, due to be decided around 21 July. Worth objecting now if you use
 <script>
 (function(){
   var lb=document.getElementById('lightbox'),big=lb.querySelector('img');
-  Array.prototype.forEach.call(document.querySelectorAll('figure img'),function(im){
+  Array.prototype.forEach.call(document.querySelectorAll('figure img, .media img'),function(im){
     im.addEventListener('click',function(){
       big.src=im.currentSrc||im.src;big.alt=im.alt||'';
       lb.classList.add('open');document.body.style.overflow='hidden';
