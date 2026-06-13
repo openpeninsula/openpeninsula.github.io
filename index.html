@@ -68,11 +68,10 @@
   .hero-now .now-sub{position:relative;z-index:2;margin:.15rem 0 0;font-size:clamp(.8rem,2.6vw,1.05rem);font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;line-height:1.1}
   .hero-now .now-meta{margin:.45rem 0 0;font-size:.95rem;color:var(--ink-2);line-height:1.45;max-width:32ch}
   /* Cover-fill the cell with a 16:9 video: grow to at least the cell in both axes, keep 16:9, clip the overflow. */
-  .hero-then video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block}
+  .hero-then .hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block}
   .hero-then .hero-strike{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
   .hero-then .hero-strike line{stroke:var(--accent);stroke-width:5;vector-effect:non-scaling-stroke;filter:drop-shadow(0 1px 2px rgba(0,0,0,.55))}
   .hero-then{background:#1c1c1c url(images/fete.webp) center/cover no-repeat}
-  @media(max-width:559px){.hero-then video{display:none}}
   header.lead .hero-note{margin:.7rem 0 0;font-size:.92rem;font-style:italic;color:var(--ink-2);line-height:1.5;max-width:44rem}
   /* On mobile the NOW panel stacks full-width; centre it so it does not read as a lonely left column. */
   @media(max-width:559px){
@@ -381,7 +380,7 @@
     <div class="hero">
       <div class="hero-then">
         <div class="hero-free" aria-hidden="true"><span class="hf-big">FREE</span><span class="hf-sub">For the community</span></div>
-        <video class="hero-vid" autoplay muted loop playsinline preload="metadata" poster="images/fete.webp" aria-label="The free Urban Village Fete, the developer's own film, struck through"><source src="images/fete-video.mp4" type="video/mp4"></video>
+        <img class="hero-vid" src="images/fete.webp" alt="The free Urban Village Fete, families on the grass with food stalls and the Peninsula towers behind, struck through to show it is gone">
         <svg class="hero-strike" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="0" x2="100" y2="100"/><line x1="100" y1="0" x2="0" y2="100"/></svg>
       </div>
       <div class="hero-now">
@@ -390,7 +389,6 @@
         <p class="now-sub">Per person</p>
       </div>
     </div>
-    <p class="hero-note">Their own footage of the fete is still on the page announcing its "pause". The event itself is gone.</p>
     <p>For ten years, the free Urban Village Fete was one of the Peninsula's few genuinely free community events, drawing around <strong>30,000 people a year</strong>. <strong>This year it did not happen.</strong> No mention in their newsletter. No social post. No proper announcement. Just one quiet line on their own website:</p>
     <blockquote class="devquote">
       <p>Urban Village Fete will take a pause in 2026 as we look ahead to an exciting new chapter on the Peninsula, with <span class="hi">major cultural arrivals including Troubadour Greenwich Peninsula Theatre and Secret Cinema</span>.</p>
