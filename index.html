@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Peninsula had a free fete. Look at what replaced it.</title>
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex, noai, noimageai">
+<meta name="description" content="Greenwich Peninsula's free community fete is gone, replaced by two ticketed venues. What residents were not shown, and how to object before 21 July 2026.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://openpeninsula.github.io/">
+<meta property="og:title" content="We had a free fete. Now a ticketed Disney show on our doorstep.">
+<meta property="og:description" content="Greenwich Peninsula's free community fete is gone, replaced by two ticketed venues. What residents were not shown, and how to object before 21 July 2026.">
+<meta property="og:image" content="https://openpeninsula.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="We had a free fete. Now a ticketed Disney show on our doorstep.">
+<meta name="twitter:description" content="Greenwich Peninsula's free community fete is gone, replaced by two ticketed venues. Object before 21 July 2026.">
+<meta name="twitter:image" content="https://openpeninsula.github.io/og.png">
+<style>
+  @font-face{font-family:'BDO Grotesk';src:url('fonts/BDOGrotesk-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:'BDO Grotesk';src:url('fonts/BDOGrotesk-DemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+  @font-face{font-family:'BDO Grotesk';src:url('fonts/BDOGrotesk-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:'BDO Grotesk';src:url('fonts/BDOGrotesk-ExtraBold.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+  :root{
+    --paper:oklch(0.994 0.001 250); --band:oklch(0.968 0.004 250); --slot:oklch(0.93 0.006 250);
+    --ink:oklch(0.20 0.01 250); --ink-2:oklch(0.42 0.012 250); --ink-3:oklch(0.54 0.012 250);
+    --rule:oklch(0.86 0.006 250); --accent:oklch(0.50 0.17 27); --accent-deep:oklch(0.43 0.16 27);
+    --sans:'BDO Grotesk',-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --s2:.6rem; --s3:1rem; --s4:1.6rem; --s5:2.6rem; --s6:4rem;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.09rem;line-height:1.6;-webkit-font-smoothing:antialiased;padding-top:3rem}
+  .wrap{max-width:47rem;margin-inline:auto;padding-inline:1.4rem}
+  h1,h2,h3{line-height:1.12;letter-spacing:-0.015em;text-wrap:balance}
+  p{text-wrap:pretty}
+  .hl{color:var(--accent)}
+  .hi{background:rgba(255,221,87,.9);padding:.04em .18em;margin:0 -.04em;border-radius:.12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  b,strong{font-weight:700;color:var(--ink-2)}
+
+  header.lead{padding-block:3.2rem 1.4rem;border-bottom:1px solid var(--rule)}
+  .kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+  header.lead h1{font-size:clamp(2rem,5.6vw,3.1rem);font-weight:800;margin:.6rem 0 0}
+  header.lead p{font-size:clamp(1.15rem,2.4vw,1.32rem);color:var(--ink);margin-top:1.1rem;max-width:44rem}
+
+  /* Hero: the free fete, struck through (taken away) vs the price that replaced it. */
+  .hero{display:grid;grid-template-columns:1fr;gap:.6rem;margin:1.8rem 0 .4rem}
+  @media(min-width:560px){.hero{grid-template-columns:1fr 1fr;gap:.8rem}}
+  .hero-then,.hero-now{position:relative;height:200px;overflow:hidden}
+  @media(min-width:560px){.hero-then,.hero-now{height:282px}}
+  .hero-then img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.82)}
+  /* the strike-through: reads as "taken away / no longer here", not a verdict */
+  .hero-then::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.3))}
+  .hero-free{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.55);pointer-events:none}
+  .hero-free .hf-big{font-size:clamp(2.2rem,8vw,3.6rem);font-weight:600;letter-spacing:-0.02em;line-height:1}
+  .hero-free .hf-sub{margin-top:.15rem;font-size:clamp(.8rem,2.6vw,1.05rem);font-weight:700;letter-spacing:.04em;text-transform:uppercase;line-height:1.1}
+  .hero-tag{position:absolute;top:.75rem;left:.75rem;z-index:3;font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:.32rem .6rem;background:var(--ink);color:var(--paper)}
+  .hero-tag.now{background:var(--accent)}
+  .hero-now{background:var(--ink);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:1.5rem;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+  .hero-now .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .hero-now::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:oklch(0.50 0.17 27 / 0.58)}
+  .hero-now .price{position:relative;z-index:2;font-size:clamp(2.2rem,8vw,3.6rem);font-weight:600;letter-spacing:-0.02em;line-height:1;color:#fff}
+  .hero-now .price span{font-weight:400;padding:0 .03em}
+  .hero-now .now-sub{position:relative;z-index:2;margin:.15rem 0 0;font-size:clamp(.8rem,2.6vw,1.05rem);font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;line-height:1.1}
+  .hero-now .now-meta{margin:.45rem 0 0;font-size:.95rem;color:var(--ink-2);line-height:1.45;max-width:32ch}
+  /* Cover-fill the cell with a 16:9 video: grow to at least the cell in both axes, keep 16:9, clip the overflow. */
+  .hero-then video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block}
+  .hero-then .hero-strike{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+  .hero-then .hero-strike line{stroke:var(--accent);stroke-width:5;vector-effect:non-scaling-stroke;filter:drop-shadow(0 1px 2px rgba(0,0,0,.55))}
+  .hero-then{background:#1c1c1c url(images/fete-video-poster.webp) center/cover no-repeat}
+  @media(max-width:559px){.hero-then video{display:none}}
+  header.lead .hero-note{margin:.7rem 0 0;font-size:.92rem;font-style:italic;color:var(--ink-2);line-height:1.5;max-width:44rem}
+  /* On mobile the NOW panel stacks full-width; centre it so it does not read as a lonely left column. */
+  @media(max-width:559px){
+    .hero-now{align-items:center;text-align:center}
+    .hero-now .now-sub,.hero-now .now-meta{margin-inline:auto}
+  }
+
+  section{padding-block:var(--s5)}
+  section + section{border-top:1px solid var(--rule)}
+  .ev-head{padding-bottom:0}
+  h2{font-size:clamp(1.5rem,3.4vw,2rem);font-weight:800;margin:0 0 var(--s3)}
+  .num{color:var(--accent);font-variant-numeric:tabular-nums;font-size:.8em;margin-right:.4rem}
+  section > p{max-width:44rem;margin:0 0 1rem}
+  .pull{font-size:1.25rem;line-height:1.4;font-weight:600;max-width:44rem;margin:var(--s5) 0}
+  .src{font-size:.84rem;color:var(--ink-3);max-width:44rem;margin-top:var(--s2)}
+  .src code{font-family:var(--mono);font-size:.92em}
+
+  /* Figures and image slots. Replace a .slot with an <img> to add a real photo. */
+  figure{margin:var(--s4) 0}
+  figure img{display:block;width:100%;border-radius:0}
+  .slot{min-height:18rem;background:var(--slot);border:1px dashed var(--rule);border-radius:0;display:grid;place-items:center;
+        text-align:center;padding:1.4rem;color:var(--ink-2);font-size:.95rem;line-height:1.45}
+  .slot b{display:block;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:.4rem}
+  figcaption{font-size:.95rem;color:var(--ink-2);line-height:1.55;margin-top:.9rem;max-width:44rem}
+  figcaption .q{color:var(--ink);font-weight:600}
+
+  /* Side-by-side comparison */
+  .vs{display:grid;gap:1rem;grid-template-columns:1fr;margin:var(--s4) 0}
+  @media(min-width:640px){.vs{grid-template-columns:1fr 1fr}}
+  .vs figure{margin:0}
+  .vs .tag{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;
+           padding:.2rem .5rem;border-radius:0;margin-bottom:.5rem}
+  .vs .tag.render{background:var(--band);color:var(--ink-2)}
+  .vs .tag.real{background:var(--accent);color:#fff}
+  .askbox{background:var(--band);border-radius:0;padding:1.4rem 1.6rem;margin:var(--s5) 0;font-weight:600;line-height:1.5;max-width:44rem}
+
+  .figures-2{display:grid;gap:1rem;grid-template-columns:1fr;margin:var(--s4) 0}
+  @media(min-width:640px){.figures-2{grid-template-columns:1fr 1fr}}
+  .figures-2 figure{margin:0}
+  .figures-2.maps figure{display:flex;flex-direction:column}
+  .figures-2.maps img{aspect-ratio:6/7;object-fit:contain;background:var(--paper)}
+
+  /* "Not the first to go" loss grid */
+  .lossgrid{display:grid;gap:1rem;grid-template-columns:1fr;margin:var(--s4) 0}
+  @media(min-width:560px){.lossgrid{grid-template-columns:1fr 1fr}}
+  .lossgrid .item{background:var(--band);overflow:hidden;display:flex;flex-direction:column}
+  .lossgrid .media{position:relative;aspect-ratio:16/10;display:grid;place-items:center;background:var(--slot);overflow:hidden}
+  .lossgrid .media img{width:100%;height:100%;object-fit:cover;display:block}
+  .lossgrid .media .ic{width:38px;height:38px;color:var(--accent)}
+  .lost-tag{position:absolute;top:.6rem;left:.6rem;z-index:1;background:var(--ink);color:var(--paper);font-size:.7rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:.28rem .6rem}
+  .lossgrid .body{padding:1rem 1.15rem 1.1rem}
+  .lossgrid h3{font-size:1.05rem;font-weight:800;margin:0 0 .35rem;letter-spacing:-0.01em}
+  .lossgrid .body p{margin:0;font-size:.97rem;color:var(--ink-2);line-height:1.5;max-width:none}
+
+  /* "This is our riverside" 3-up */
+  .rivergrid{display:grid;gap:1rem;grid-template-columns:1fr;margin:var(--s4) 0}
+  @media(min-width:680px){.rivergrid{grid-template-columns:1fr 1fr 1fr}}
+  .rivergrid .item{background:var(--band);overflow:hidden;display:flex;flex-direction:column}
+  .rivergrid .media{aspect-ratio:4/3;overflow:hidden}
+  .rivergrid .media img{width:100%;height:100%;object-fit:cover;display:block}
+  .rivergrid .body{padding:.85rem 1rem 1rem}
+  .rivergrid h3{font-size:1rem;font-weight:800;margin:0 0 .3rem;letter-spacing:-0.01em}
+  .rivergrid .body p{margin:0;font-size:.93rem;color:var(--ink-2);line-height:1.45;max-width:none}
+
+  /* collapsible "Sources" line */
+  .srcfold{max-width:44rem;margin-top:var(--s2)}
+  .srcfold>summary{font-size:.84rem;color:var(--ink-3);cursor:pointer;list-style:none;font-family:var(--mono)}
+  .srcfold>summary::-webkit-details-marker{display:none}
+  .srcfold>summary::before{content:"+ sources";color:var(--accent)}
+  .srcfold[open]>summary::before{content:"\2212 sources";color:var(--accent)}
+  .srcfold .src{margin-top:.45rem}
+
+  #object h3{font-size:1.18rem;font-weight:800;margin:var(--s5) 0 .55rem;letter-spacing:-0.01em}
+  .starter-note{font-size:.95rem;color:var(--ink-2);max-width:44rem;margin:.6rem 0 1rem}
+  .starter-note .i-ico{width:1.05em;height:1.05em;vertical-align:-0.16em;margin-right:.4em;color:var(--accent)}
+
+  /* developer quote, pulled out and attributed */
+  .devquote{background:var(--band);padding:1rem 1.3rem;margin:1.2rem 0;max-width:44rem}
+  .devquote p{margin:0;font-size:1.02rem;line-height:1.5;color:var(--ink)}
+  .devquote p::before{content:"\201C";color:var(--accent);font-family:Georgia,"Times New Roman",serif;font-size:1.85em;line-height:0;vertical-align:-.32em;margin-right:.05em}
+  .devquote cite{display:block;margin-top:.6rem;font-style:normal;font-size:.85rem;color:var(--ink-3)}
+
+  /* Night vs day reveal (2-up) + overlaid pills */
+  .reveal{display:grid;gap:1rem;grid-template-columns:1fr;margin:var(--s4) 0}
+  @media(min-width:640px){.reveal{grid-template-columns:1fr 1fr}}
+  .reveal figure{margin:0}
+  figure.has-pill{position:relative}
+  figure.has-pill img{display:block}
+  .pill{position:absolute;top:.75rem;left:.75rem;z-index:2;font-size:.72rem;font-weight:700;letter-spacing:.01em;padding:.34rem .72rem;border-radius:0;box-shadow:0 1px 4px oklch(0.2 0.03 250 / .32)}
+  .pill-shown{background:oklch(0.99 0.002 250);color:var(--ink)}
+  .pill-day{background:var(--ink);color:var(--paper)}
+  .pill-hidden{background:var(--accent);color:#fff}
+  .reveal-after{max-width:32rem}
+
+  /* Spot-the-difference block (image + bullets, two cards) */
+  .spot{display:grid;gap:1rem;grid-template-columns:1fr;margin:var(--s4) 0}
+  @media(min-width:680px){.spot{grid-template-columns:1fr 1fr}}
+  .spot .spot-col{margin:0;background:var(--band);border-radius:0;padding:1rem 1.1rem 1.1rem;display:flex;flex-direction:column}
+  .spot .chip{align-self:flex-start;font-size:.72rem;font-weight:700;letter-spacing:.01em;padding:.3rem .7rem;border-radius:0;margin-bottom:.8rem}
+  .chip-shown{background:var(--ink);color:var(--paper)}
+  .chip-file{background:var(--accent);color:#fff}
+  .spot-col img{margin:0 0 .8rem}
+  .spot-col ul{margin:0;padding-left:1.1rem}
+  .spot-col li{margin:.4rem 0;color:var(--ink-2);font-size:.97rem;line-height:1.45}
+
+  /* Click-to-enlarge lightbox (progressive enhancement; images still show if JS is off) */
+  figure img{cursor:zoom-in}
+  #lightbox{position:fixed;inset:0;z-index:100;background:oklch(0.15 0.01 250 / .94);display:none;align-items:center;justify-content:center;padding:1.5rem;cursor:zoom-out}
+  #lightbox.open{display:flex}
+  #lightbox img{max-width:min(96vw,1500px);max-height:92vh;width:auto;height:auto;border-radius:0;box-shadow:0 10px 40px oklch(0 0 0 / .5)}
+  #lightbox .lb-x{position:fixed;top:.8rem;right:1.1rem;color:#fff;font-size:1.7rem;line-height:1;font-weight:700;opacity:.9}
+  #toTop{position:fixed;right:1.1rem;bottom:1.1rem;z-index:60;width:2.7rem;height:2.7rem;display:flex;align-items:center;justify-content:center;background:var(--accent);color:#fff;border:0;border-radius:0;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;box-shadow:0 2px 10px oklch(0 0 0 / .25)}
+  #toTop.show{opacity:1;visibility:visible;transform:none}
+  #toTop:hover{background:var(--accent-deep)}
+  #toTop svg{width:1.25rem;height:1.25rem}
+
+  .stat{font-size:clamp(2.2rem,6vw,3.4rem);font-weight:800;letter-spacing:-0.02em;color:var(--accent);line-height:1}
+  .stat-row{display:grid;gap:1.4rem;grid-template-columns:1fr;margin:var(--s4) 0}
+  @media(min-width:640px){.stat-row{grid-template-columns:1fr 1fr 1fr}}
+  .stat-row .lbl{margin-top:.4rem;font-size:.98rem;color:var(--ink-2);line-height:1.4}
+
+  footer{background:var(--band);margin-top:var(--s6)}
+  footer .wrap{padding-block:2rem}
+  footer p{font-size:.92rem;color:var(--ink-2);max-width:44rem}
+  footer a{color:var(--accent);font-weight:700;text-decoration:none}
+  footer a:hover{text-decoration:underline}
+
+  /* Fixed action bar */
+  .topbar{position:fixed;inset:0 0 auto 0;z-index:50;background:var(--paper);border-bottom:1px solid var(--rule)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:1rem;max-width:47rem;margin-inline:auto;padding:.55rem 1.4rem}
+  .topbar .brand{display:flex;align-items:center;gap:.55rem;min-width:0}
+  .topbar .brand-logo{height:1.45rem;width:auto;flex:none;color:var(--accent);display:block}
+  .topbar .brand-name{font-weight:800;font-size:1rem;letter-spacing:-0.01em;color:var(--ink);white-space:nowrap}
+  .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:.92rem;text-decoration:none;padding:.5rem .9rem;border-radius:0;white-space:nowrap}
+  .btn:hover{background:var(--accent-deep)}
+
+  /* How to object */
+  #object{scroll-margin-top:4rem}
+  section > ul{max-width:44rem;margin:var(--s3) 0;padding-left:1.2rem}
+  section > ul li{margin:.4rem 0;color:var(--ink-2)}
+  .cta-note{display:flex;gap:.6rem;align-items:flex-start;font-weight:700;color:var(--accent-deep);background:oklch(0.95 0.035 27);border-radius:0;padding:.8rem 1rem;max-width:44rem}
+  .cta-note b{color:var(--ink)}
+  .cta-note .cta-ico{flex:none;width:22px;height:22px;color:var(--accent);margin-top:.15rem}
+
+  /* Then / Now comparison */
+  .thennow{display:grid;gap:1rem;grid-template-columns:1fr;margin:var(--s5) 0}
+  @media(min-width:640px){.thennow{grid-template-columns:1fr 1fr}}
+  .thennow > div{background:var(--band);border-radius:0;padding:1.2rem 1.4rem}
+  .thennow .tn-label{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+  .thennow .tn-now{color:var(--accent-deep)}
+  .thennow .tn-h{font-size:1.12rem;font-weight:800;margin:.25rem 0 .7rem}
+  .thennow ul{margin:0;padding-left:1.1rem}
+  .thennow li{margin:.4rem 0;color:var(--ink-2);font-size:1rem}
+
+  /* Proportional bar */
+  .propbar{margin:var(--s4) 0;max-width:44rem}
+  .propbar-bar{height:2.2rem;background:var(--slot);border-radius:0;overflow:hidden}
+  .propbar-res{height:100%;width:33%;background:var(--accent)}
+  .propbar-legend{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin-top:.7rem;font-size:.92rem;color:var(--ink-2)}
+  .propbar-legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:0;background:var(--slot);vertical-align:middle;margin-right:.4rem}
+  .propbar-legend i.res{background:var(--accent)}
+
+  /* Planning-case summary (councillors / Greenwich Society) */
+  .brief{margin:var(--s4) 0;border-radius:0;background:var(--band);padding:0 1.3rem}
+  .brief summary{cursor:pointer;font-weight:800;padding:1rem 0;font-size:1.05rem;list-style:none}
+  .brief summary::-webkit-details-marker{display:none}
+  .brief summary::before{content:"+";color:var(--accent);font-weight:800;margin-right:.5rem}
+  .brief[open] summary::before{content:"\2013"}
+  .brief .lead-line{color:var(--ink-2);font-size:.95rem;margin:0 0 .8rem}
+  .brief ol{margin:0 0 1rem;padding-left:1.2rem}
+  .brief li{margin:.55rem 0;color:var(--ink-2);font-size:.98rem;line-height:1.5}
+  .brief li b{color:var(--ink-2);font-weight:700}
+  .brief .foot{color:var(--ink-2);font-size:.95rem;margin:0 0 1rem;font-style:italic}
+
+  /* Conversion: above-fold strip, primary CTA, steps, starter, inline prompts */
+  header.lead .livenote{font-size:.95rem;color:var(--ink-2);margin-top:1.4rem;padding-top:1.1rem;border-top:1px solid var(--rule);max-width:44rem}
+  header.lead .livenote a{color:var(--accent);font-weight:700;text-decoration:none;white-space:nowrap}
+  .cta-do{background:var(--band);border-radius:0;padding:1.4rem 1.5rem;margin:var(--s4) 0}
+  .btn-lg{display:block;background:var(--accent);color:#fff;font-weight:800;font-size:1.1rem;text-decoration:none;text-align:center;padding:.95rem 1.2rem;border-radius:0}
+  .btn-lg:hover{background:var(--accent-deep)}
+  header.lead .topcta{margin-top:1.6rem;max-width:44rem}
+  .topcta .btn-lg{margin-bottom:.7rem}
+  header.lead .topcta p{font-size:.95rem;color:var(--ink-2);margin:0;line-height:1.5}
+  .cta-steps{margin:1.1rem 0 0;padding-left:1.3rem}
+  .cta-steps li{margin:.5rem 0;color:var(--ink-2)}
+  .cta-steps li b{color:var(--ink-2)}
+  .starter-label{margin:var(--s4) 0 .5rem;font-weight:700;color:var(--ink)}
+  .starter{margin:0 0 var(--s4);padding:1.4rem 1.6rem;background:oklch(0.975 0.014 92);border:1px solid oklch(0.9 0.022 88);border-radius:0;font-family:Georgia,"Times New Roman",serif;font-size:1.05rem;line-height:1.72;color:var(--ink);max-width:42rem;box-shadow:1px 2px 0 oklch(0.92 0.015 90)}
+  .cta-inline{margin:.4rem 0 var(--s4)}
+  .cta-inline a{color:var(--accent);font-weight:700;text-decoration:none}
+  .cta-inline a:hover{text-decoration:underline}
+
+  /* Action helpers: peak card, callouts, portal fineprint */
+  .expect{margin:1rem 0 0;font-size:.92rem;color:var(--ink-2);line-height:1.5}
+  .expect b{color:var(--ink-2)}
+  .callout{background:var(--band);padding:1rem 1.2rem;margin:var(--s4) 0;max-width:44rem;line-height:1.5;color:var(--ink-2)}
+  .callout b{color:var(--ink-2)}
+  .callout ul{margin:.55rem 0;padding-left:1.2rem}
+  .callout li{margin:.3rem 0}
+
+  .fig-narrow{max-width:26rem}
+  .tiktok-row{display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;margin:var(--s4) 0}
+  .tiktok-row .tk{flex:1 1 300px;max-width:340px;margin:0}
+  .tiktok-row .tk iframe{width:100%;aspect-ratio:9/16;border:0;display:block;background:#000}
+  .tiktok-row .tk figcaption{font-size:.84rem;color:var(--ink-2);margin-top:.5rem;line-height:1.4}
+  .tiktok-row .tk-credit{color:var(--ink-3);font-family:var(--mono)}
+
+  /* Landing blocks: the problem claims, the ask list, the evidence accordions */
+  .claims{margin:var(--s4) 0;display:grid;grid-template-columns:1fr;gap:.9rem}
+  @media(min-width:620px){.claims{grid-template-columns:1fr 1fr}}
+  .claim{background:var(--band);padding:1.1rem 1.2rem}
+  .claim > .ci{display:block;width:1.7rem;height:1.7rem;color:var(--accent);margin-bottom:.55rem}
+  .claim > .ci svg{display:block;width:100%;height:100%}
+  .claim b{display:block;font-size:1.08rem;line-height:1.3;color:var(--ink)}
+  .claim p{margin:.35rem 0 0;color:var(--ink-2);font-size:.96rem;line-height:1.45}
+  .claim p strong{font-weight:700}
+  ul.ask{max-width:44rem;margin:var(--s3) 0;padding-left:1.2rem}
+  ul.ask li{margin:.5rem 0;color:var(--ink);line-height:1.45}
+  .ev-intro{color:var(--ink-2);margin:0 0 var(--s3);max-width:44rem}
+  details.ev{background:var(--band);padding:0 1.3rem;margin:.7rem 0}
+  details.ev > summary{cursor:pointer;font-weight:700;padding:1rem 0;font-size:1.05rem;list-style:none;color:var(--ink)}
+  details.ev > summary::-webkit-details-marker{display:none}
+  details.ev > summary::before{content:"+";color:var(--accent);font-weight:800;margin-right:.6rem}
+  details.ev[open] > summary::before{content:"\2013"}
+  details.ev[open]{background:var(--paper)}
+  .ev-body{padding:.2rem 0 1.3rem}
+  .ev-body > p{max-width:44rem;margin:0 0 1rem}
+  .ev-body ol{max-width:44rem;padding-left:1.2rem}
+  .ev-body ol li{margin:.55rem 0;color:var(--ink-2);line-height:1.5}
+  .ev-body ol li b{color:var(--ink-2)}
+  .ev-lead{font-weight:600;color:var(--ink);margin:.1rem 0 1rem;max-width:44rem}
+  .ev-body ul{max-width:44rem;margin:0 0 1rem;padding-left:1.2rem}
+  .ev-body ul li{margin:.5rem 0;color:var(--ink-2);line-height:1.5}
+  .ev-body ul li b{color:var(--ink-2)}
+  .locmap{max-width:44rem;margin:var(--s4) auto}
+  .footnote{font-size:.8rem;color:var(--ink-3);max-width:44rem;margin-top:1rem;line-height:1.5}
+  sup.fn a{color:var(--accent);text-decoration:none}
+  /* Share */
+  .nav-actions{display:flex;align-items:stretch;gap:.5rem}
+  .nav-actions .btn{display:inline-flex;align-items:center;justify-content:center}
+  .btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:transparent;color:var(--accent);font-weight:700;font-size:.92rem;text-decoration:none;padding:.45rem .85rem;border:1.5px solid var(--accent);border-radius:0;white-space:nowrap;cursor:pointer;font-family:inherit}
+  .btn-ghost:hover{background:var(--accent);color:#fff}
+  @media(max-width:460px){.topbar .brand-name{display:none}}
+  .share-overlay{position:fixed;inset:0;z-index:100;background:rgba(20,18,17,.55);align-items:center;justify-content:center;padding:1rem}
+  .share-overlay[hidden]{display:none}
+  .share-overlay:not([hidden]){display:flex}
+  .share-panel{position:relative;background:var(--paper);width:100%;max-width:34rem;max-height:88vh;overflow:auto;padding:1.6rem 1.5rem 1.7rem;box-shadow:0 14px 50px rgba(0,0,0,.32)}
+  .share-close{position:absolute;top:.5rem;right:.6rem;background:none;border:0;font-size:1.7rem;line-height:1;color:var(--ink-2);cursor:pointer;padding:.1rem .4rem}
+  .share-close:hover{color:var(--ink)}
+  .share-title{font-size:1.3rem;font-weight:800;letter-spacing:-0.01em;margin:0 1.6rem 0 0}
+  .share-intro{color:var(--ink-2);font-size:.97rem;line-height:1.5;margin:.4rem 0 0;max-width:none}
+  .share-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.1rem 0 1.3rem}
+  .share-btn{display:inline-flex;align-items:center;gap:.4rem;background:var(--band);color:var(--ink);border:1px solid var(--rule);font-weight:700;font-size:.9rem;font-family:inherit;padding:.55rem .85rem;text-decoration:none;cursor:pointer;border-radius:0}
+  .share-btn:hover{background:var(--slot)}
+  .share-btn.share-native{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .share-btn.is-copied{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .share-cards{display:grid;gap:.8rem}
+  .share-card{border:1px solid var(--rule);background:var(--band);padding:.9rem 1rem}
+  .share-card-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.5rem}
+  .share-card-head h3{font-size:.95rem;font-weight:800;margin:0}
+  .share-copy{background:var(--accent);color:#fff;border:0;font-weight:700;font-size:.82rem;font-family:inherit;padding:.38rem .75rem;cursor:pointer;border-radius:0;white-space:nowrap}
+  .share-copy:hover{background:var(--accent-deep)}
+  .share-copy.is-copied{background:var(--ink)}
+  .share-msg{white-space:pre-wrap;font-size:.9rem;line-height:1.5;color:var(--ink-2);margin:0}
+  .share-hint{font-size:.82rem;color:var(--ink-3);margin:1.1rem 0 0}
+  .share-more{margin-top:.1rem}
+  .share-more>summary{font-size:.88rem;color:var(--accent);font-weight:700;cursor:pointer;list-style:none;padding:.35rem 0;display:inline-block}
+  .share-more>summary::-webkit-details-marker{display:none}
+  .share-more>summary::before{content:"+ "}
+  .share-more[open]>summary::before{content:"\2212 "}
+  .share-more .share-card{margin-top:.5rem}
+  .share-group{margin:var(--s4) 0;max-width:44rem}
+  .share-group>p{color:var(--ink-2);font-size:.97rem;line-height:1.5;margin:.2rem 0 .7rem;max-width:none}
+  .share-inline{background:var(--band);padding:1.2rem 1.3rem;margin:var(--s4) 0;max-width:44rem}
+  .share-inline h3{margin:0 0 .3rem;font-size:1.05rem;font-weight:800;letter-spacing:-0.01em}
+  .share-inline p{margin:0 0 .85rem;color:var(--ink-2);font-size:.97rem;line-height:1.5;max-width:none}
+  .share-inline-btn{display:inline-flex;align-items:center;line-height:1.1;background:var(--accent);color:#fff;font-weight:700;font-size:1rem;border:0;border-radius:0;padding:.72rem 1.15rem;cursor:pointer;font-family:inherit}
+  .share-inline-btn:hover{background:var(--accent-deep)}
+  @media(max-width:559px){.share-overlay{align-items:flex-end;padding:0}.share-panel{max-width:100%;max-height:92vh}}
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="row">
+    <span class="brand">
+      <svg class="brand-logo" viewBox="0 0 538 589" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open Peninsula"><path d="M86.3 570.742C96.3 553.909 116.7 510.242 118.3 470.242C120.3 420.242 90.8 369.742 74.8 328.242C58.8 286.742 28.3 209.742 36.3 134.742C42.7 74.7422 78.3 49.2435 94.3 43.2435C110.3 37.2435 141.8 24.7444 178.3 51.2454C214.8 77.7464 276.8 202.241 319.8 248.242C362.8 294.244 377.8 324.243 451.3 347.243L528.8 366.747" stroke="currentColor" stroke-width="70" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="brand-name">Open Peninsula</span>
+    </span>
+    <div class="nav-actions">
+      <button type="button" class="btn-ghost" data-share-open aria-haspopup="dialog" aria-controls="shareModal">Share</button>
+      <a class="btn" href="#object">Object now &rarr;</a>
+    </div>
+  </div>
+</nav>
+
+<header class="lead">
+  <div class="wrap">
+    <h1>They quietly dropped our free neighbourhood fete. <span class="hl">Now they want a ticketed Disney show on our doorstep.</span></h1>
+    <div class="hero">
+      <div class="hero-then">
+        <div class="hero-free" aria-hidden="true"><span class="hf-big">FREE</span><span class="hf-sub">For the community</span></div>
+        <video class="hero-vid" autoplay muted loop playsinline preload="metadata" poster="images/fete-video-poster.webp" aria-label="The free Urban Village Fete, the developer's own film, struck through"><source src="images/fete-video.mp4" type="video/mp4"></video>
+        <svg class="hero-strike" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="0" x2="100" y2="100"/><line x1="100" y1="0" x2="0" y2="100"/></svg>
+      </div>
+      <div class="hero-now">
+        <img class="hero-bg" src="images/secret-cinema-render-rear.webp" alt="" aria-hidden="true">
+        <div class="price">&pound;49<span>-</span>&pound;299</div>
+        <p class="now-sub">Per person</p>
+      </div>
+    </div>
+    <p class="hero-note">Their own footage of the fete is still on the page announcing its "pause". The event itself is gone.</p>
+    <p>For ten years, the free Urban Village Fete was one of the Peninsula's few genuinely free community events, drawing around <strong>30,000 people a year</strong>. <strong>This year it did not happen.</strong> No mention in their newsletter. No social post. No proper announcement. Just one quiet line on their own website:</p>
+    <blockquote class="devquote">
+      <p>Urban Village Fete will take a pause in 2026 as we look ahead to an exciting new chapter on the Peninsula, with <span class="hi">major cultural arrivals including Troubadour Greenwich Peninsula Theatre and Secret Cinema</span>.</p>
+      <cite>Greenwich Peninsula, official Urban Village Fete page</cite>
+    </blockquote>
+    <p>That "exciting new chapter" is not another free community event. It is two ticketed venues, including Secret Cinema's Pirates of the Caribbean, from &pound;49 a ticket<sup class="fn">*</sup>, already sold out for February.</p>
+    <p>And these are marketed <strong>nationally and internationally, not to the neighbourhood</strong>: the Troubadour bills itself for "world-class productions and international live entertainment", and the same Disney show is sold UK-wide through O2 Priority, Visa, TodayTix and Disney.</p>
+    <p>The developer has not clearly announced this to residents. If you are reading it here, you may be among the first to hear <strong>the fete is gone</strong>.</p>
+    <div class="topcta">
+      <a class="btn-lg" href="#object">Got two minutes? Object now &rarr;</a>
+      <p>Secret Cinema, <strong>26/1247/F</strong>, is open for comments until the council decides, around <strong>21 July 2026</strong>. This page walks you through it.</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2>The problem, in short</h2>
+    <div class="claims">
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v14"/></svg></span><div><b>Free public culture out, paid visitor entertainment in.</b><p>The developer's own placemaking was built around free, public things residents could actually use: the Urban Village Fete, the NOW Gallery, the weekend market, the Jetty, public art and the riverside. Now the free fete is "paused" while <strong>two ticketed venues</strong> are presented as the Peninsula's "exciting new chapter".</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><b>Up to 2,250 people emptying onto the riverside we use every day.</b><p>That is the applicant's own figure, for Secret Cinema and the Troubadour together, leaving in a single half hour, onto the quiet riverside where people stroll, run and sit by the water. The developer itself called this a calm leisure route for the neighbourhood. Now they would pour an event crowd onto it, and <strong>no one has checked what that does</strong>.</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><div><b>Sold as a permanent home, applied for as temporary.</b><p>The developer's own website calls it Secret Cinema's <strong>"new permanent home"</strong>, and the Troubadour next door is marketed to investors as <strong>"semi-permanent, high-capacity venues"</strong>. Yet both are applied for only as <strong>temporary</strong> "meanwhile" uses, for up to ten years, on land the masterplan keeps for housing. A decade-long commercial venue should not be treated like a short gap-filler.</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 4v6"/><path d="M17 4v6"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg></span><div><b>The infrastructure is already over capacity.</b><p>TfL already calls North Greenwich <strong>the fourth busiest bus station in London</strong> and says it "no longer meets capacity requirements." It serves a 20,000-seat O2 week after week and a 10,000-capacity Magazine London, and now two more venues, with no one assessing the realistic overlap.</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 9 4l6 5.5V19a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 20v-5h3v5"/></svg></span><div><b>Close to homes, late, and loud.</b><p>The venues sit inside Lower Riverside, among thousands of homes, with another residential tower rising <strong>about 25 metres from the cinema's own facade</strong>. They would run matinee and evening shows, up to seven days a week, past midnight several nights, with amplified live music and special effects, on a riverside their own survey records at birdsong levels. The theatre's own acoustician already predicts a <strong>breach of the council's noise limit</strong> before the cinema is added.</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 7.601-5.994 8.19a1 1 0 0 0 .1 1.298l.817.818a1 1 0 0 0 1.314.087L15.09 12"/><path d="M16.5 21.174C15.5 20.5 14.372 20 13 20c-2.058 0-3.928 2.356-6 2-2.072-.356-2.775-3.369-1.5-4.5"/><circle cx="16" cy="7" r="5"/></svg></span><div><b>Like the O2, but on our doorstep.</b><p>In planning terms these fall in <strong>the same broad category as major venues like the O2</strong>: ticketed, destination-scale entertainment, over-18s on its latest nights, not a community facility, with everything, even the bars, behind the ticket. The masterplan put a venue like this beside the O2 and the station, where the transport is, not on a residential riverside far closer to homes.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What residents were not shown</h2>
+    <p>The glowing image residents were shown is not the whole story. These are from the planning file.</p>
+    <div class="figures-2">
+      <figure>
+        <img src="images/secret-cinema-render-daylight.webp" alt="Daylight render of Secret Cinema from the planning application: the timber-slatted facade in flat daylight, the entrance raised onto a podium reached by stairs and a switchback ramp, lined with plain metal railings, pinched against the path">
+        <figcaption><span class="q">The daylight frontage.</span> The entrance is raised onto a podium, reached by stairs and a long switchback ramp, lined with railings, pinched against the narrow path.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/secret-cinema-render-rear.webp" alt="Render of the Secret Cinema rear elevation: a plain dark metal box hung with large illuminated show banners and lit advertising panels">
+        <figcaption><span class="q">The rear they do not show.</span> A plain dark box hung with large illuminated show banners, lighting and advertising on a currently dark riverside.</figcaption>
+      </figure>
+    </div>
+    <details class="srcfold"><summary></summary>
+    <p class="src">Both are the applicant's own renders, planning application <code>26/1247/F</code> (Studio DJL). The glowing night view they lead with, and the side-by-side comparison, are in the evidence section below.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>This is our riverside</h2>
+    <p>This is not just a route to somewhere else. It is the Thames Path, a National Trail, and the neighbourhood's everyday riverside: parkrun, dog walks, buggies, kids on bikes, evening walks and quiet time by the water.</p>
+    <p>It can look wide in photos. It is not. Most of the width is a protected two-way cycle route, part of National Cycle Route 1. The strip meant for walking is only about 1.5 metres, and the cycle lane is not spare crowd space.</p>
+    <div class="rivergrid">
+      <div class="item">
+        <div class="media"><img src="images/path-evening.webp" alt="The riverside path on a normal evening: people cycling and walking under the tree canopy, planting on one side and a building wall on the other, the marked cycle and walking lanes"></div>
+        <div class="body">
+          <h3>An ordinary evening on the path</h3>
+          <p>People walking and cycling home along the river, under the trees.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="media"><img src="images/riverside-terrace.webp" alt="A canopied shelter on the Olympian Way riverside terrace: people sitting and reclining on raised benches and loungers beneath a large angular canopy, with planting, a drinking fountain and steps between levels" style="object-position:center 42%"></div>
+        <div class="body">
+          <h3>A place to sit, not a crowd corridor</h3>
+          <p>A designed sitting terrace: canopied shelters, benches and loungers for rest by the water, not event dispersal.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="media"><img src="images/parkrun-stretch.webp" alt="A Saturday parkrun on Olympian Way, a still from within the run: runners filling the riverside path, the plots where Secret Cinema and the Troubadour would stand on the left, the river on the right"></div>
+        <div class="body">
+          <h3>It already fills up</h3>
+          <p>A normal Saturday parkrun fills the very stretch where Secret Cinema and the Troubadour would sit.</p>
+        </div>
+      </div>
+    </div>
+        <figure class="locmap">
+      <img src="images/venue-plots-map.webp" alt="Annotated aerial map of the venue plots on the Greenwich Peninsula riverside: the Troubadour (up to 3,000) and Secret Cinema (up to 1,500), with a residential plot under construction, line a thin strip between the buildings and the Thames, alongside Olympian Way. A label notes the public entrances open onto Olympian Way; another marks where the riverside path is split into two levels by seating, crossed only at two staircases.">
+      <figcaption><span class="q">The public entrances open onto Olympian Way.</span> The audience doors open straight onto the 1.5-metre footway between the buildings and the river. Along the frontage the path is split into two levels by seating and planting, crossed only at two staircases, so the lower path is separated exactly where the crowd loads. Arrive or leave, you are on Olympian Way.</figcaption>
+    </figure>
+    <p>Now picture <span class="hi">up to 2,250 people leaving the two venues onto it in half an hour</span>, again and again on event nights. The everyday route becomes the venues' forecourt, and no one has assessed whether it stays usable for the people who live here.</p>
+    <details class="srcfold"><summary></summary>
+    <p class="src">Plot locations from the planning applications (Troubadour <code>25/3391/F</code>, Secret Cinema <code>26/1247/F</code>); entrances and access per the applicants' own Design and Access Statements and Venue Management Plans, which give access "solely via Olympian Way". Base aerial imagery: Google Maps.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>This is the venue they cite as proof</h2>
+    <p>Nothing has opened here yet, so we cannot show the Greenwich crowd. But the venues' own evidence shows what to expect. The Troubadour that would stand beside Secret Cinema runs a near-identical theatre at Canary Wharf, the very venue its operator points to as proof these places cause no trouble. So look at it.</p>
+    <figure>
+      <div class="figures-2">
+        <img src="images/canary-wharf-queue.webp" alt="The queue at the Hunger Games on Stage opening night at Troubadour Canary Wharf: a long line of people waiting outside on the street at night">
+        <img src="images/canary-wharf-crowd.webp" alt="The crowd at the operator's Troubadour theatre at Canary Wharf on a show night: dozens of people gathered on the open paving directly outside the illuminated TROUBADOUR CANARY WHARF Theatre entrance">
+      </div>
+      <figcaption><span class="q">Their own venue, the one they cite as proof.</span> The operator's Troubadour at Canary Wharf: the opening-night queue, and the crowd gathered outside the entrance. People gather outside any venue; here it works because the entrance opens onto a large public square that absorbs them. At Greenwich the same entrance gives onto the 1.5-metre path.</figcaption>
+    </figure>
+    <p>The difference is the space. At Canary Wharf the crowd spills out across an open public square that absorbs it. Here there is no such concourse. The audience loads onto the 1.5-metre riverside path you have just seen, and the one public space beside it is a landscaped plaza, dotted with a large sculpture, trees, benches and bollards and built for sitting, not an open square a crowd can spread across. <b>The audience here would be more than twice the size.</b></p>
+    <details class="srcfold"><summary></summary>
+    <p class="src">Photos: the operator's own Troubadour theatre at Canary Wharf, the opening-night queue (@jaystakes) and the crowd outside the entrance (<a href="https://www.tiktok.com/@twotruthfultravel/video/7629832064988171542" target="_blank" rel="noopener">@twotruthfultravel</a>), both via TikTok. Canary Wharf, in Tower Hamlets, is the venue the operator itself points to as proof; it is cited here only as the operator's own delivery record. It holds about 1,200, against up to 3,000 across the two Greenwich auditoria. Fuller detail, including the venue's opening problems, is in the evidence section below.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>And the fete is not the first to go</h2>
+    <p>The free things here have a way of disappearing.</p>
+    <div class="lossgrid">
+      <div class="item">
+        <div class="media"><img src="images/fete.webp" alt="The free Urban Village Fete: families on the grass with food stalls, the O2 and the Peninsula towers behind"><span class="lost-tag">Paused 2026</span></div>
+        <div class="body">
+          <h3>The Urban Village Fete</h3>
+          <p>Ten years of a free neighbourhood event, now "paused" while the developer promotes the Troubadour and Secret Cinema as the Peninsula's "exciting new chapter".</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="media"><img src="images/now-gallery.webp" alt="NOW Gallery on Peninsula Square: its glass frontage hosting a free charity market with signs reading Free Entry and All Welcome"><span class="lost-tag">Gallery gone 2025</span></div>
+        <div class="body">
+          <h3>NOW Gallery</h3>
+          <p>A free public gallery and community space for eleven years, now consented as permanent retail, cafe and bar, with no gallery use kept.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="media" style="aspect-ratio:3/2"><img src="images/market.webp" alt="A row of green-canopied Greenwich Peninsula Market stalls across the public square by the O2: a Heritage cheese stall and a Georgian food stall, people browsing in summer"><span class="lost-tag">Gone since 2024</span></div>
+        <div class="body">
+          <h3>The weekend market</h3>
+          <p>A free weekend market on Peninsula Square for food, fresh produce, makers and craft. Its operator promised it back in 2025; it never returned.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="media"><img src="images/jetty.webp" alt="Farmopolis on the Jetty: people eating at long tables inside a planted greenhouse hung with potted plants, greenery and the river beyond"><span class="lost-tag">Gone</span></div>
+        <div class="body">
+          <h3>Farmopolis</h3>
+          <p>A floating garden on the Jetty, free to enter, made from rescued Chelsea Flower Show plants, with food, drink and events. Now closed, with nothing in its place.</p>
+        </div>
+      </div>
+    </div>
+    <p>These were the things residents could use without booking, paying or planning a night out: free, local, public, and part of everyday life here.</p>
+    <p>The Peninsula already had culture. It had free public culture. Now the free things are disappearing, while ticketed destination venues are called the community benefit.</p>
+    <details class="srcfold"><summary></summary>
+    <p class="src">NOW Gallery and the permanent commercial conversion: planning application <code>25/0474/F</code> (granted 4 June 2025) and Greenwich Wire, August 2025. The Greenwich Peninsula weekend market (food, fresh produce, makers and craft, run by Real Food Festival): the market's own Instagram announced its final day before closing “for a few months” on 29 September 2024, and the operator's own website still says it is “closed for the winter… back in 2025”; as of 2026 it has not returned or posted further news. Farmopolis on the Jetty (Wayward and Secret Productions, RHS Chelsea 2016 reuse partner): a free-to-enter floating garden and cultural space with food, drink, performances and workshops; the Jetty continued as a free public garden (still described as a free floating garden in the developer's own 2020 visitor guide) and is now closed to the public. The developer's own placemaking consultant, Futurecity (2014, for Knight Dragon), describes the NOW Gallery and the Jetty as “meanwhile activation” cultural projects that helped establish the Peninsula's identity. Operator, developer and press records (market photo: Greenwich Peninsula Market's own Instagram, @greenwich_peninsula_market, the market's photography by Nic Crilly-Hargrave; Farmopolis photo: press). Each amenity closed for its own stated reasons and is cited here as a pattern of lost free and community amenity, not an allegation about any single closure.</p>
+    </details>
+  </section>
+
+  <section id="object">
+    <h2>Object now</h2>
+    <p>The live application is Secret Cinema, <span class="hi">26/1247/F</span>. The council expects to decide around <span class="hi">21 July 2026</span>, so comments need to go in now.</p>
+    <div class="cta-do">
+      <a class="btn-lg" href="https://planning.royalgreenwich.gov.uk/online-applications/applicationDetails.do?activeTab=makeComment&amp;keyVal=_GRNW_DCAPR_128442" target="_blank" rel="noopener">Object on the council portal &rarr;</a>
+      <p class="expect">Choose <b>Object</b>, write a few lines in your own words, and submit. You do not need to write a long objection. The portal asks for your name, email and address. Have <strong>26/1247/F</strong> to hand.</p>
+    </div>
+    <p class="cta-note"><svg class="cta-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><span><b>Object before this disappears into a report.</b> The council expects to decide around 21 July, but the officer's recommendation is usually written before then. If you object, do it now.<br>This could run for up to ten years.</span></p>
+    <h3>What to ask for</h3>
+    <p>Ask the council to:</p>
+    <ul class="ask">
+      <li>refuse Secret Cinema, submitted without the crowd, transport and cumulative assessments it needs</li>
+      <li>carry out a site visit before deciding, rather than judging it from renders</li>
+      <li>assess Secret Cinema, the Troubadour, The O2 and other major Peninsula venues together</li>
+      <li>require a proper crowd safety and pedestrian capacity assessment of Olympian Way and the Thames Path</li>
+      <li>assess the effect on the cycle route, station, buses, taxis, drop-offs and local streets</li>
+      <li>secure all mitigation, including queuing, crowd dispersal, pick-up and drop-off and noise controls, by enforceable condition, not by voluntary or post-opening management plans</li>
+      <li>refer the application to the public Planning Board, not delegated approval</li>
+    </ul>
+    <p>The council should also weigh the loss of public riverside amenity, late-night noise, lighting, advertising, and whether ticketed commercial venues should be treated as a community benefit while free public amenities disappear.</p>
+    <h3>A starting point, make it your own</h3>
+    <blockquote class="starter">I object to application 26/1247/F. I live on Greenwich Peninsula. The applicant's own figures show up to 2,250 people leaving Secret Cinema and the Troubadour next door in a single half hour onto Olympian Way and the Thames Path, where the marked walking space is about 1.5 metres beside a two-way National Cycle Route. There has been no proper crowd safety assessment of that route, and the combined effect of Secret Cinema, the Troubadour, The O2 and other major Peninsula venues using the same station, streets, buses, taxis and riverside routes has not been assessed together. The venues would sit close to homes and run late into the night, on land the masterplan set aside for homes. Please refuse the application. The necessary crowd safety, transport and cumulative assessments have not been carried out, and a decision of this scale should be made at the public Planning Board, not under delegated powers.</blockquote>
+    <p class="starter-note"><svg class="i-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>Change the wording so it sounds like you. Personal comments carry more weight.</p>
+    <p>The strongest objection is not that you miss the fete. It is that this site has not been properly assessed for crowd safety, cumulative transport, late-night noise, loss of public amenity and how close it sits to homes. Lead with that, and use the fete only as context for how the change is being sold.</p>
+    <p>Most of all, say how you use the riverside: walking, running, cycling, commuting, parkrun, dog walks, taking children out, sitting by the water, or relying on North Greenwich station and the buses. Your own experience is far harder to set aside than copied text.</p>
+    <h3>Your objection matters</h3>
+    <p>The developer's own consultation drew <b>35 responses from around 6,000 residents contacted</b>. <b>Do not assume someone else has already said it.</b></p>
+    <p>After you object, send this page to a neighbour and ask them to object <b>before 21 July</b>. Separate objections from different residents matter.</p>
+    <div class="share-inline">
+      <h3>Share this with one neighbour</h3>
+      <p>Most residents will not know this application exists. Send this page to someone in your building or local group.</p>
+      <button type="button" class="share-inline-btn" data-share-open aria-haspopup="dialog" aria-controls="shareModal">Share page</button>
+    </div>
+    <div class="share-group">
+      <h3>Sharing with a residents' group?</h3>
+      <p>If you are in a building or residents' association chat, you can send this:</p>
+      <div class="share-card">
+        <div class="share-card-head"><h3>Residents' group message</h3><button type="button" class="share-copy" data-copy="group">Copy</button></div>
+        <p class="share-msg" data-msg="group">Sharing because I don't think many residents know this is happening.
+
+Secret Cinema has applied for a temporary venue on Lower Riverside, beside homes and the Thames Path. It would sit next to the proposed Troubadour theatre site, and the free Urban Village Fete has been paused while these ticketed venues are being presented as the Peninsula's "exciting new chapter".
+
+The concern is the combined impact: crowds, late-night noise, taxis and drop-offs, North Greenwich station and buses, and the everyday use of Olympian Way / the Thames Path.
+
+The application is 26/1247/F and the council expects to decide around 21 July.
+
+More info / how to object: [URL]</p>
+      </div>
+    </div>
+    <p>It also helps to email your Peninsula ward councillors saying you have objected and asking for the application to go to the <b>public Planning Board</b>.</p>
+    <p class="cta-inline"><a href="https://www.writetothem.com/" target="_blank" rel="noopener">Find your councillors &rarr;</a></p>
+  </section>
+
+  <section class="ev-head">
+    <h2>Want the evidence?</h2>
+    <p class="ev-intro">Everything above comes from the applicants' own planning documents, public sources, and what is on these streets. Open any of these to see it.</p>
+  </section>
+
+  <details class="ev">
+    <summary>What residents were shown, and what is in the planning file</summary>
+    <div class="ev-body">
+    <p class="ev-lead">Residents see a glowing night render. The planning file shows a plainer, railing-lined building, raised on a podium and pinched against the path.</p>
+    <p>This is not a small local screening. Secret Cinema is promoting a ten-week run of Disney's <b>Pirates of the Caribbean</b>, pre-sold through O2 Priority, Visa, TodayTix and Disney, from <b>&pound;49 a ticket up to &pound;299 a head for a VIP package</b>. February has already sold out, with dates going into March, months before it opens. The venue would open late into the night, and its own noise report models <b>113 decibels inside</b>, unsurprising for a show its own page describes as having a <b>live band</b>, stunts and on-stage special effects, not a quiet film. Its own visitor information shows what kind of night it is: the main evening shows, Thursday to Saturday, are <b>over-18s only</b>, with under-16s not admitted, an adult ticketed night out rather than a family or community occasion, and it warns ticket-holders to expect "loud music and crowds". Its doors open an hour before each show, so the audience funnels in across the hour beforehand as well as out at the end. Even its food, drink and bar spaces are part of the ticketed experience, behind the &pound;49-plus door, not a new public place residents can use. Its own ticket page even gives the address as <b>Olympian Way</b> and sends visitors on the five-minute walk to and from North Greenwich station, the venue itself routing its audience onto the same path and the same station.</p>
+    <p>It is the same building in both renders. Click either image to compare them.</p>
+    <div class="spot">
+      <figure class="spot-col">
+        <span class="chip chip-shown">Shown to residents</span>
+        <img src="images/secret-cinema-render-night.webp" alt="Night render shown to residents: the Secret Cinema timber facade lit up like a glowing curtain of light, reflected in calm water, with lush green trees and an illuminated SECRET CINEMA sign">
+        <ul>
+          <li>Dramatic night lighting, the whole facade glowing</li>
+          <li>The raised entrance edge dressed as a solid, concrete-look wall</li>
+          <li>Only a scatter of people, not the sell-out crowd it is built for</li>
+          <li>The flattering riverside angle, the plainer sides kept out of frame</li>
+        </ul>
+      </figure>
+      <figure class="spot-col">
+        <span class="chip chip-file">In the planning file</span>
+        <img src="images/secret-cinema-render-daylight.webp" alt="Daylight render of the Secret Cinema from the planning application: the same timber-slatted facade in flat daylight with bare trees, a recessed and narrower entrance, a raised edge and railings at the base">
+        <ul>
+          <li>The same raised edge is plain black railings, not a solid wall</li>
+          <li>Reached by narrow stairs and a long switchback ramp</li>
+          <li>The entrance recessed and narrower</li>
+          <li>Pinched tight against the path, easy to bottleneck</li>
+        </ul>
+      </figure>
+    </div>
+    <p>The lit-up version is the one that travels to residents and the press, and neither it nor the daylight elevation shows the back, the plain banner-clad box on the dark riverside shown higher up the page. Asked about exactly this, the developer confirmed in writing:</p>
+    <blockquote class="devquote">
+      <p>The CGIs focus primarily on the arrival experience, rather than the full extent of the structure.</p>
+      <cite>The developer, in writing, asked why its renders leave out the rest of the building</cite>
+    </blockquote>
+    <p>And these are not quiet screenings: immersive events that run for hours and draw big crowds the operator normally stages on large open sites. Here they would empty onto a 1.5-metre riverside path, with <b>up to 2,250 people leaving the two venues in a single half hour</b>, by the applicant's own figure.</p>
+    <details class="srcfold"><summary></summary>
+    <p class="src">These are the applicant's own renders, planning application <code>26/1247/F</code> (Studio DJL), public: the glowing night view that reaches residents and the press, and the daylight elevation from the file. The rear elevation is shown earlier on the page. The developer's quoted words are from its own written response. The 2,250 half-hour egress figure is from the applicant's Transport Statement (i-Transport, April 2026).</p>
+    </details>
+    </div>
+  </details>
+
+  <details class="ev">
+    <summary>The Troubadour next door, and the operator's record at Canary Wharf</summary>
+    <div class="ev-body">
+    <p class="ev-lead">The operator points to its Canary Wharf theatre as proof these venues work. But Canary Wharf has a large public square at the door, and Greenwich does not.</p>
+    <p>The <b>Troubadour</b> next door is the bigger venue: two auditoria, up to <b>3,000 seats</b>, nearly 25 metres tall, open until <b>1am</b> at weekends, about <b>80 metres</b> from the nearest existing homes. It would use the same riverside route as Secret Cinema, and was resolved to be granted in January 2026 but is <b>still awaiting a final decision</b>, its Section 106 not completed.</p>
+    <p>This is the developer's own image of the entrance.</p>
+    <figure>
+      <img src="images/entrance.webp" alt="The developer's render of the Troubadour entrance opening directly onto Olympian Way: a person coming up the steps from the lower riverside, where the timber loungers are, onto the path and across the two-way cycle lane toward the lit entrance">
+      <figcaption><span class="q">Look at where the door is.</span> The entrance opens straight onto Olympian Way, which here is a 1.5-metre footpath beside a 3-metre two-way national cycle route. In the picture someone is coming up from the lower riverside, where the loungers people use to sit out quietly are, onto the path and across the cycle lane to reach it.</figcaption>
+    </figure>
+    <div class="askbox">This is their own picture of a calm afternoon. Now put the audience for two full auditoria, up to three thousand people, arriving and leaving across that 1.5-metre footpath and the cycle lane, past the loungers people use to rest.</div>
+    <p>At Canary Wharf the crowd spills out across a large open public square that absorbs it. Greenwich has no such concourse: the entrance opens straight onto Olympian Way, beside the Thames Path and National Cycle Route 1, and the nearest open space is a landscaped plaza of sculpture, trees, benches and bollards, built for sitting and slow movement, not for absorbing a theatre crowd. The comparison the operator invites makes the problem clearer, not weaker.</p>
+    <ul>
+      <li><b>Bigger:</b> Canary Wharf holds about <b>1,200</b>; the Greenwich proposal is up to <b>3,000</b> across two auditoria.</li>
+      <li><b>Opening problems (October 2025):</b> long queues in the rain, unfinished areas, crowding on exit routes that attendees described as unsafe, and accessibility complaints from wheelchair users.</li>
+      <li>That single way out is the same vulnerability these plots have, so <b>crowd safety and step-free access should be secured by condition before approval, not deferred to a management plan after the doors open.</b></li>
+    </ul>
+    <p>And it will be loud. This riverside is quiet today, at birdsong levels in the developer's own survey, yet the Troubadour's own acoustician already predicts the theatre would exceed the council's noise limit at the very plot where Secret Cinema would sit, before the cinema's own crowd and sound are added on top.</p>
+    <p>And the way it was sold does not hold up: the "85% support" was <b>30 of 35 responses</b>, gathered on the developer's own channels, and the boards advertised around <b>500 jobs</b> for a venue that is about <b>65</b>.</p>
+    <details class="srcfold"><summary></summary>
+    <p class="src">Render: planning application <code>25/3391/F</code> / Troubadour (public). Photos: the operator's Troubadour at Canary Wharf (the opening-night queue, @jaystakes; the crowd outside the entrance, <a href="https://www.tiktok.com/@twotruthfultravel/video/7629832064988171542" target="_blank" rel="noopener">@twotruthfultravel</a>; both via TikTok). Canary Wharf capacity (about 1,200) and its opening problems, including the single-staircase exit crush and the access failures: reported by The Independent, MyLondon and theatre critic Liam O'Dell (all 21 October 2025), plus first-hand attendee reviews. (Canary Wharf is in Tower Hamlets, not Greenwich; cited only as the operator's own delivery record.) Consultation and jobs: Troubadour Statement of Community Involvement and Planning Statement (Firstplan, 9 October 2025), 30 of 35 responses "in support" and circa 65 FTE direct jobs against the "500" board headline (BBC News / Local Democracy Reporting Service, 3 February 2026). Resolved to be granted by the Council's Planning Board on 20 January 2026, subject to a Section 106 still not completed, so the application remains awaiting a decision. Ten-year temporary use.</p>
+    </details>
+    </div>
+  </details>
+
+  <details class="ev">
+    <summary>The path: 1.5 metres, and the crowd it must carry</summary>
+    <div class="ev-body">
+    <p class="ev-lead">Up to 2,250 people leave the two venues in a single half hour, onto about 1.5 metres of walking space beside a two-way cycle route. Nobody assessed whether it works, and on TfL's own guidance it does not.</p>
+    <p>The Thames Path here was built as the Peninsula's "P5K" route, a five-kilometre running and walking loop for the neighbourhood, conditioned to stay public "in perpetuity", not for event crowds. When the path itself went through planning, TfL and amenity groups asked for an assessment of how many people it could carry; the developer said none was needed, because it was "a leisure route, not the primary commuter route". The one time its capacity was raised, they said it did not need checking, and now they want to empty event crowds onto it. On the applicant's own drawings the two-way cycle track takes about three metres; the walking strip beside it is about one and a half, and it is part of National Cycle Route 1, so a crowd does not only fill the path, it blocks cyclists riding straight through.</p>
+    <p>And it is the amenity, not just a route. P5K Phase 2 was a landscaping scheme: a designed public leisure space for the neighbourhood, the upper level for walking, running and cycling, the lower level for sitting and relaxing by the water. An event crowd bottlenecking onto it, and onto the seating terrace below, turns that amenity into the venues' forecourt. The loss of a designed public leisure space is a planning harm in its own right, separate from whether the path can physically carry the crowd.</p>
+    <p>It is also part of the designated Thames Path National Trail, protected by national, regional and local planning policy. Emptying an event crowd onto it at peak, so that it is not safely usable, runs against that protection (the specific policies are set out in the councillors' section below).</p>
+    <figure>
+      <img src="images/station-route-map.webp" alt="Secret Cinema's own promotional map for ticket-holders, drawn as a pirate treasure map: a marked walking route runs from North Greenwich Station, past The O2, down to the venue marked with a skull, beside the Disney Pirates of the Caribbean Secret Cinema logo">
+      <figcaption><span class="q">Their own map sends everyone this way.</span> Secret Cinema's visitor map directs every ticket-holder to walk from North Greenwich Station down to the venue. There is no other way in on foot: the route runs through a landscaped public square of benches, bollards and planting, the one shown lower down, then onto Olympian Way, the narrow riverside corridor the applicant's own Design and Access Statement gives as access "solely via Olympian Way".</figcaption>
+    </figure>
+    <figure>
+      <img src="images/olympian-way-path.webp" alt="The riverside path at Olympian Way: a marked shared route, a two-way cycle lane with cycle-route signage beside a narrow pedestrian strip, planting alongside, the path continuing narrow into the distance">
+      <figcaption><span class="q">Not a plaza.</span> A marked cycle and walking route: about 1.5 metres for walking beside a 3-metre two-way National Cycle Route. On quiet days people spread across it informally, but an event crowd forces pedestrians and cyclists into the same narrow space, and it stays this narrow past the plots. The applicant's own figure is up to 2,250 people leaving the two venues across it in half an hour.</figcaption>
+    </figure>
+    <p>The developer's answer is that the path "will remain clear" and a queuing plan will keep crowds off the cycle route. That is an assurance, not an assessment: the plan is not yet written, it covers people arriving rather than the 2,250 leaving at once, and no one has measured whether the strip can hold them. And the same developer describes Olympian Way very differently when selling the homes next door, its own statement for the block now rising to the south calls it "a public footpath" and "the pedestrian only pathway", the neighbourhood's primary walking route, not an events exit.</p>
+    <p>The applicant calls this 2,250 peak its own worst case, and "unlikely", because the two operators "will coordinate" their show times. But that coordination is not secured by any condition, the two venues share one developer and one narrow corridor, and even on the applicant's own worst case no one has assessed whether the footway works.</p>
+    <p><b>Why the lower path and the Design District route do not solve it</b></p>
+    <ul>
+      <li>There is a <b>lower riverside path</b>, but along the venue frontage it is a separate level, divided from the upper footway by a strip of seating, loungers and planting and crossed only at <b>two staircases</b>. A crowd cannot pour down two stair points, and the two paths merge into one only at each end, away from the entrances, so it cannot be relied on to take the overflow.</li>
+      <li>On TfL's own <b>Pedestrian Comfort Guidance</b>, the applicant's 2,250-in-half-hour flow across the roughly 1.5-metre footway lands in the worst band, <b>"unacceptable" for a residential street</b>.</li>
+      <li>Even granting a generous 2.6 to 3 metres, more than the marked strip, it is still "very uncomfortable", worse than the guidance accepts at peak. The cycle lane is not crowd space, and <b>the applicant assessed none of this</b>.</li>
+    </ul>
+    <figure>
+      <img src="images/path-loungers.webp" alt="Timber lounger-style seats and tall grasses beside the riverside path, with people sitting on the timber deck behind">
+      <figcaption><span class="q">A place to sit, not a crowd corridor.</span> Along the frontage the riverside is a designed sitting terrace: timber loungers people lie out on, benches, tall grasses and planting, a quiet place to rest by the water. This is not open ground a crowd can pour along or spread across, it is a working public amenity an event crowd would take over.</figcaption>
+    </figure>
+    <p>And the alternative they point residents to does not solve it. Secret Cinema's resident Q&amp;A says egress will be "through the Design District", but its own Transport Statement routes everyone via Olympian Way and never mentions it, and the Design District can only be reached along Olympian Way in the first place, the same narrow corridor. Nor is it open ground: the approach is landscaped public space, grass, trees, fixed bollards and benches, built for slow movement and rest, not a concourse a crowd of thousands could pass through without trampling it.</p>
+    <figure>
+      <img src="images/design-district-approach.webp" alt="The public square on the approach to the Design District: a paved plaza studded with fixed metal bollards, granite benches, planters and a litter bin, with cranes and the cityscape across the river behind">
+      <figcaption><span class="q">On the only route in and out.</span> This landscaped public square sits on the single walking route between the station and the venue, and is the same "Design District route" they point residents to: grass, trees, bollards and benches, built for sitting and slow movement, not for funnelling a crowd through.</figcaption>
+    </figure>
+    <details class="srcfold"><summary></summary>
+    <p class="src">Path and conditions: delivered as the P5K Phase 2 riverside route (reserved matters <code>16/4183/R</code>, <code>17/3349/R</code>, <code>18/0876/F</code>), conditioned for pedestrians and cyclists "in perpetuity"; TfL and amenity groups asked for a usage and capacity assessment and the file response was that "no assessment was deemed necessary" as it is "a leisure route, not the primary commuter route". Walking route map: Secret Cinema's own visitor map for the Pirates of the Caribbean production (promotional material), directing ticket-holders on foot from North Greenwich Station to the venue. Path photo: a resident's own. Pedestrian comfort: TfL Pedestrian Comfort Guidance for London (people per minute per metre: C+ 18 to 20 the peak floor, D 27 to 35 "very uncomfortable", E over 35 the worst; D and E unacceptable for a residential street). Applied to the applicant's egress figure of about 2,250 in half an hour (75 a minute): about 50 ppmm across the roughly 1.5-metre footway (PCL E), about 29 ppmm at 2.6 metres (PCL D), about 25 ppmm at 3 metres (worse than the C+ peak floor); the segregated cycle lane is not counted as footway. "Will remain clear" and the queuing plan: Secret Cinema Planning Statement (Montagu Evans, April 2026), para 4.12. "A public footpath" / "the pedestrian only pathway": Knight Dragon's Design &amp; Access Statement for the adjacent residential plot M0121 (Chapman Taylor, May 2023), which also records 1,825 homes in Lower Riverside and 1,007 in Upper Riverside. Egress route: Secret Cinema's resident Q&amp;A (Statement of Community Consultation, <code>26/1247/F</code>) versus its i-Transport Transport Statement (April 2026); the Design District is reachable only via Olympian Way. Design District photo: a resident's own. Riverside seating photo along the frontage (timber loungers and planting): a resident's own. How the crowd disperses beyond Olympian Way is not assessed in the application. Thames Path status and protection: the Greenwich Peninsula riverside is part of the designated Thames Path National Trail (National Trails, designated under the National Parks and Access to the Countryside Act 1949); NPPF (December 2024) para 105, "protect and enhance public rights of way and access, including National Trails"; Royal Borough of Greenwich Core Strategy (2014, adopted) Policy IM4, which safeguards "the existing riverside and Thames paths"; London Plan (2021) Policy SI 16, "These paths will be public and not private spaces". National Trail status is a recognised planning consideration through these policies; it is not claimed to trigger any separate statutory consultation or veto.</p>
+    </details>
+    </div>
+  </details>
+
+  <details class="ev">
+    <summary>The station and streets, already over capacity</summary>
+    <div class="ev-body">
+    <p class="ev-lead">The same station and streets are already over capacity on an ordinary O2 night, and nobody has assessed a realistic peak day across all the venues at once.</p>
+    <p>After almost every O2 event, North Greenwich jams for the best part of an hour. It is a routine sight, filmed and posted by visitors again and again.</p>
+    <div class="tiktok-row">
+      <figure class="tk">
+        <iframe src="https://www.tiktok.com/player/v1/7631403742742744342?rel=0&amp;description=0&amp;music_info=0" allow="encrypted-media; fullscreen" allowfullscreen loading="lazy" title="The North Greenwich bus station after an O2 event, crowds waiting to get on (@sophsconcertss, via TikTok)"></iframe>
+        <figcaption>The bus station after an O2 event: crowds stuck, waiting to get on. <span class="tk-credit">@sophsconcertss, via TikTok</span></figcaption>
+      </figure>
+      <figure class="tk">
+        <iframe src="https://www.tiktok.com/player/v1/7624548783510113549?rel=0&amp;description=0&amp;music_info=0" allow="encrypted-media; fullscreen" allowfullscreen loading="lazy" title="The walk out of the O2 after an event (@miaomeew, via TikTok)"></iframe>
+        <figcaption>The walk out of the O2 after an event. <span class="tk-credit">@miaomeew, via TikTok</span></figcaption>
+      </figure>
+    </div>
+    <p>That is the arena on its own, about 20,000 people, and it is not the only venue, nor is the station ready:</p>
+    <ul>
+      <li>TfL calls North Greenwich the <b>fourth busiest bus station in London</b> and says it "no longer meets capacity requirements". The new bus station meant to fix it is not built, and the developer has applied to push its trigger from <b>3,000 to 6,000 homes</b> (not yet determined); the venues' crowds count toward neither threshold.</li>
+      <li><b>Magazine London</b>, also on the Peninsula, holds up to <b>10,000</b>, and its own advice tells people to come by Tube and bus. Nobody has modelled a realistic peak day: an O2 event plus a Magazine event plus the two new venues, on one station and the same few streets.</li>
+      <li><b>And the O2 is a year-round destination, not just event nights.</b> On top of the arena, its outlet, cinema and restaurants pull a continuous daily crowd: the O2 as a whole recorded <b>over 10 million visitors in 2024</b>, nearly all arriving through the same single Tube and bus interchange, before either new venue is added.</li>
+      <li>Many skip the buses and <b>drive</b>, parking at the retail park by IKEA and walking in through East Parkside and the streets around it, parked cars, drop-offs and horns into the evening, none of it counted in the applicant's transport work.</li>
+      <li><b>Pick-ups and drop-offs land on East Parkside and Edmund Halley Way</b>, the residential streets, where private hire, taxis and family cars wait and idle into the evening. The developer has tried to move this off the estate with a pick-up car park on Millennium Way, but admits to residents that <b>there is still an issue on East Parkside</b>. The further fixes are unfinished, geo-fencing is being added to the taxi apps and a physical barrier is only "being considered", and geo-fencing reaches app-based taxis only, not private cars or family pick-ups. Measures still in progress, on a problem the developer accepts persists, should be secured by <b>condition</b>, not left to keep trying after the doors open.</li>
+    </ul>
+    <details class="srcfold"><summary></summary>
+    <p class="src">Crowd videos: @sophsconcertss (the bus station) and @miaomeew (the walk out), via TikTok, after O2 events. Bus station capacity ("fourth busiest", "no longer meets capacity requirements"): TfL assessment. The proposed deferral of the new bus station's delivery trigger from 3,000 to 6,000 occupied homes is a S106 variation applied for by the developer (<code>24/4133/I106</code>) and not yet determined. Magazine London capacity (up to 10,000 across internal and external spaces; Showground up to 7,000) and its travel advice (public transport encouraged, the Tube busier than usual on event days): Magazine London's own website. The O2's capacity of about 20,000 is cited in the applicant's own Secret Cinema Transport Statement (i-Transport, April 2026). East Parkside pick-up/drop-off: the developer's own response to residents (2026) describes a pick-up car park on Millennium Way and geo-fencing on the taxi apps, yet states "there is still an issue on East Parkside"; the geo-fencing covers app-based private hire only, not private cars or family pick-ups, and a physical barrier is only "being considered". The O2's wider destination footfall (over 10 million visitors in 2024, up about 12% on 2023's 8.9 million; its ICON Outlet is 210,000 sq ft and more than 60 brands, counted within that destination total, with no separately published standalone figure): The O2's own visitor announcements (theo2.co.uk), reported in retail trade press. This destination footfall is continuous and separate from the arena's event-night peak, and is not added in the applicant's cumulative assessment.</p>
+    </details>
+    </div>
+  </details>
+
+  <details class="ev">
+    <summary>The masterplan: this is housing land</summary>
+    <div class="ev-body">
+    <p class="ev-lead">These plots are zoned for housing. The masterplan put venues like these by the station, not on the riverside it set aside for homes.</p>
+    <ul>
+      <li>In planning terms a theatre and a cinema are <b>"Sui Generis"</b> uses: ticketed destination entertainment, not a library, museum or community hall. The council's own description of Secret Cinema (<code>26/1247/F</code>) says "Sui Generis".</li>
+      <li>The masterplan put uses of that kind in the centre, by the station and the O2, away from homes, and zoned the riverside plots, including these two, for <b>housing</b>.</li>
+      <li>The Mayor of London's own cultural-design guidance agrees: venues like these need central, well-connected sites with space to gather, queue and leave, and it warns a queuing crowd's noise can be a worse nuisance to neighbours than the show inside. These plots offer none of that, only the 1.5-metre path.</li>
+    </ul>
+    <div class="figures-2 maps">
+      <figure>
+        <img src="images/masterplan-2015.webp" alt="The 2015 masterplan's Ground Level Land Use Plan. The riverside development plots, including 20.01 and 20.02 where the venues would go, are shaded pale blue and labelled C, meaning C3 housing. No plot is allocated for a theatre or cinema.">
+        <figcaption><span class="q">Where the homes were planned (2015).</span> Plots 20.01 and 20.02, where the venues would go, are zoned C3: homes (pale blue). There is no theatre or cinema anywhere on this plan. Click to enlarge.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/masterplan-2022.webp" alt="The 2022 masterplan revision's Revised Ground Level Use Plan. The Peninsula's only theatre allocation, Sui Generis, is placed at the Transport Interchange, the red-hatched plot in the centre beside the O2 and the Design District. The riverside plots where the venues would go are left outside this revision.">
+        <figcaption><span class="q">Where the theatre was allocated (2022).</span> The Peninsula's only theatre, "Sui Generis", was placed at the Transport Interchange by the O2 and the Design District (the red-hatched plot, TI). The riverside plots where the venues would go were left out of this revision. Click to enlarge.</figcaption>
+      </figure>
+    </div>
+    <p>So this is not culture arriving in the neighbourhood. It is a commercial entertainment venue, moved off the central, well-connected ground the plan set aside for a theatre, onto a riverside the plan set aside for homes, with homes nearby and more being built right beside it.</p>
+    <p>The point is not that the Peninsula can never have venues. Knight Dragon itself previously promoted theatre, cinema and performance uses at Peninsula Place, over the North Greenwich transport interchange.</p>
+    <p>That is exactly where this kind of use belongs: beside the station, bus interchange and O2, not on Lower Riverside outside homes, opening onto a 1.5-metre walking strip beside the Thames Path.</p>
+    <p>And the free culture that was here was the developer's own. Its placemaking consultant, Futurecity, appointed by Knight Dragon in 2014, describes the free NOW Gallery and the Jetty as "meanwhile activation" cultural projects, part of a "cultural DNA" strategy to establish the Peninsula "as a key cultural destination". Those free, public cultural uses are the ones now being wound down, as ticketed commercial venues arrive in their place.</p>
+    <figure>
+      <img src="images/homes-under-construction.webp" alt="A tall residential tower under construction on the Greenwich Peninsula riverside, beside a completed glass residential block, with the riverside path and a willow tree in the foreground">
+      <figcaption><span class="q">Housing land, being built as homes.</span> A residential tower under construction on the Lower Riverside, the same riverside the venues sit on, beside blocks already occupied. The masterplan zoned this for homes, and homes are arriving; every resident is also a user of the same path.</figcaption>
+    </figure>
+    <p>The "temporary" label also matters. These are not weekend pop-ups; they are up to ten-year commercial venues. A temporary permission can sit outside the normal masterplan route for housing, infrastructure and cumulative assessment, even while creating real, long-term pressure on the same streets, paths and services.</p>
+    <p>And the venues are not really sold as temporary at all. The Troubadour is marketed to investors as a ten-year venture, in the listing's own words <b>"semi-permanent, high-capacity venues"</b> disrupting "the traditional real estate and theatre models", not the brief meanwhile use the planning case relies on. And Secret Cinema, the application actually being decided, is no different: the developer's own website calls it Secret Cinema's "new permanent home" and "new long-term home", and Secret Cinema's own site a "flagship home", even as the application is only for a temporary use of up to ten years. And the label travels: before settling on Greenwich, the same operator won Camden's approval, in early 2024, for a "long-term" home in a former bingo hall, then walked away from it within months. "Permanent" here is branding attached and dropped from one site to the next, not a commitment a temporary permission can rely on.</p>
+    <details class="srcfold"><summary></summary>
+    <p class="src">Tower under construction: a 300-home Lower Riverside plot, approved 2014 and revised 2023, works commenced November 2025 (Murky Depths, 8 November 2025); a neighbouring plot of about 431 homes is already built. Photo: a resident's own. Left: Allies and Morrison Ground Level Land Use Plan, drawing 07-074 rev P02, the operative 2015 Masterplan, which zones Plots 20.01 and 20.02 as Class C3 residential. Right: the Revised Ground Level Use Plan for the 2022 masterplan revision (19/2733/O), drawing 965_10-07-005, which created the Peninsula's only "up to 8,000sqm Theatre (Sui Generis)" allocation, sited it at the Transport Interchange, and expressly excludes Plot 20. The earlier Peninsula Place scheme placed the theatre, cinema and performance venue at the same North Greenwich transport interchange, alongside a new tube and bus station: Santiago Calatrava's own project page (calatrava.com); the scheme was later reported dropped from the masterplan (Building Design). Use class: both venues are Sui Generis under the Town and Country Planning (Use Classes) Order (theatres and cinemas, since September 2020), the same family as The O2; the council's own portal description of 26/1247/F reads "(Sui Generis)". Siting principles for cultural venues, including central locations and space to queue and disperse: the Mayor of London's Cultural Facilities Design Toolkit (Designing Space for Culture), GLA, May 2022. Contributions: the Troubadour Planning Statement (Firstplan, 9 October 2025) and the Council's Planning Obligations Guide SPD (2015); the Troubadour claims CIL exemption as a temporary use, and the 20 January 2026 resolution required a Section 106 (transport, active travel, employment and training, sustainability); Secret Cinema's obligations are not yet secured on the file. The "semi-permanent, high-capacity venues" disrupting "the traditional real estate and theatre models" framing, marketed over a ten-year term: the public investor listing for the Troubadour Greenwich Peninsula Theatre Q&amp;A (The RainMakers Collective, therainmakerscollective.com), open to read; the quoted phrases are from that public page, cited only to characterise the use, not the projected returns, which are not a planning consideration. The Peninsula’s “cultural DNA” placemaking, and the “meanwhile activation” description of the NOW Gallery and the Jetty: Futurecity’s own public project page (cultural placemaking strategy for Knight Dragon, 2014). Secret Cinema as a "permanent" / "long-term" home: the developer's own website (greenwichpeninsula.co.uk/whats-here/secret-cinema, which calls it Secret Cinema's "new permanent home" and "new long-term home" while noting it is "subject to planning permission"); Secret Cinema's own site (secretcinema.com/greenwich-peninsula, "flagship home") and LinkedIn announcement; widely reported (Metro, Screen Daily, BroadwayWorld and others, March 2026); the planning submission itself describes "a new long-term location" (26/1247/F). The Camden precedent: the operator announced a "long-term" immersive flagship venue at 180 Arlington Road, a former Camden bingo hall (The Stage and London Theatre, November 2023; Camden New Journal), Camden Council approved the change of use to interactive entertainment with an ancillary bar in January 2024, and the operator then decided not to proceed and walked away by July 2024, before announcing Greenwich (Immersive Rumours timeline, January and July 2024). The point is only that the "permanent" / "long-term" label was attached to one site, even after approval, and then dropped. All are public sources.</p>
+    </details>
+    </div>
+  </details>
+
+  <details class="ev">
+    <summary>The planning case in brief, for councillors and the Greenwich Society</summary>
+    <div class="ev-body">
+    <p class="ev-intro">The material considerations, in the applicants' own documents:</p>
+    <ol>
+      <li><b>The corridor was never assessed.</b> The applicant's own Transport Statement (i-Transport, April 2026) models up to 2,250 people leaving the two venues in a single half hour, all routed via Olympian Way onto a 1.5m footway, yet contains no pedestrian comfort assessment of that corridor. The Planning Statement claims the path will "remain clear / unaffected", while the same developer's own residential statement for the plot next door (Knight Dragon / Chapman Taylor, May 2023) calls Olympian Way "a public footpath" and "the pedestrian only pathway", the neighbourhood's primary walking route.</li>
+      <li><b>This is housing land with no venue allocation.</b> Plot 20 is zoned residential under the operative 2015 masterplan, and the Peninsula's only theatre allocation (2022 Development Specification) expressly excludes this plot. Rather than amend the masterplan, each venue is consented as a separate temporary "meanwhile" permission for up to ten years, even as the developer's own website markets Secret Cinema as a "new permanent home" and the Troubadour is marketed to investors as "semi-permanent". This temporary route sits outside the masterplan's housing quantum, its zone use allocations and the infrastructure obligations tied to the residential scheme, and outside any cumulative assessment with the other venue or the O2.</li>
+      <li><b>Each venue was assessed in isolation.</b> Two adjacent crowd-generating venues, same master developer, designed to coordinate show times, applied for separately; neither models the other, and neither adds The O2 to the two-venue total. No cumulative EIA screening opinion appears on the file.</li>
+      <li><b>The noise baseline understates the real case.</b> Secret Cinema's noise survey was taken on a night with "no events at The O2", against a 43 to 45 dB baseline; the realistic worst case, both venues turning out as the O2 empties, is not modelled. The Troubadour's own acoustician (MZA, October 2025) already predicts theatre noise exceeding the adopted limit at the Secret Cinema plot.</li>
+      <li><b>The supporting infrastructure is over capacity, and its fix is being deferred.</b> TfL's own assessment calls North Greenwich the fourth busiest bus station in London and states it "no longer meets capacity requirements". The replacement bus station has not been built, and the developer has applied to push its delivery trigger back from 3,000 to 6,000 occupied homes (S106 variation 24/4133/I106, not yet determined); the original basis for the deferral, delay to the Silvertown Tunnel, fell away when the tunnel opened in April 2025. The event crowds these venues generate count toward neither dwelling threshold.</li>
+      <li><b>The path is a safeguarded National Trail.</b> Olympian Way here is part of the designated Thames Path National Trail. The council's own adopted Core Strategy Policy IM4 safeguards "the existing riverside and Thames paths"; London Plan Policy SI 16 requires public access along the waterway to be protected and kept "public and not private spaces"; and NPPF (2024) para 105 requires development to "protect and enhance public rights of way and access, including National Trails". Discharging up to 2,250 people onto it at peak, with no pedestrian comfort assessment, conflicts with each. (National Trail status is material through these policies, not a separate statutory veto.)</li>
+    </ol>
+    <p><em>These are requests for proper assessment before decision, not objections to culture or theatre.</em></p>
+    </div>
+  </details>
+
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Put together by residents, from the planning documents and from what is on these streets. Every claim here can be sourced, and the fuller, referenced briefing is available on request. Questions, corrections, or want to help? Email <a href="mailto:openpeninsula@proton.me">openpeninsula@proton.me</a>.</p>
+    <p class="footnote" id="price-note">* Secret Cinema’s own FAQ states that tickets “start at &pound;49 per person”. A separate ticketing page advertises a “from &pound;39” price, but across all the dates listed only two seats in total, on two dates, are at &pound;39; every other ticket starts at &pound;49 or more.</p>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg></button>
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image"><span class="lb-x" aria-hidden="true">&times;</span><img alt=""></div>
+
+<div id="shareModal" class="share-overlay" hidden>
+  <div class="share-panel" role="dialog" aria-modal="true" aria-labelledby="shareTitle" aria-describedby="shareIntro">
+    <button type="button" class="share-close" data-share-close aria-label="Close share panel">&times;</button>
+    <h2 id="shareTitle" class="share-title">Share this with a neighbour</h2>
+    <p id="shareIntro" class="share-intro">Most residents will not know this application exists. Copy a message or share the page directly.</p>
+    <div class="share-actions">
+      <button type="button" class="share-btn share-native" data-share-native hidden>Share&hellip;</button>
+      <button type="button" class="share-btn" data-copy="link">Copy link</button>
+      <a class="share-btn" data-share-whatsapp href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="share-btn" data-share-email href="#">Email</a>
+    </div>
+    <div class="share-cards">
+      <div class="share-card">
+        <div class="share-card-head"><h3>Neighbour message</h3><button type="button" class="share-copy" data-copy="long">Copy</button></div>
+        <p class="share-msg" data-msg="long">Hey, sharing this in case others here haven't seen it.
+
+The free Urban Village Fete has been paused this year, and now Secret Cinema has applied to put a ticketed Disney show on Lower Riverside, beside homes and the Thames Path.
+
+It would be next to the proposed Troubadour theatre site, so the worry is not just one venue. It is crowds, noise, taxis and drop-offs, North Greenwich already being busy, and the riverside path we all use day to day.
+
+The application says up to 2,250 people could leave the two venues in half an hour. That would be onto Olympian Way / the Thames Path, where the walking bit is really narrow in places.
+
+Application: 26/1247/F
+Decision expected around 21 July
+More info / how to object: [URL]</p>
+      </div>
+      <details class="share-more">
+        <summary>Need a shorter version?</summary>
+        <div class="share-card">
+          <div class="share-card-head"><h3>Shorter version</h3><button type="button" class="share-copy" data-copy="short">Copy</button></div>
+          <p class="share-msg" data-msg="short">Hey, not sure if people have seen this.
+
+The free Urban Village Fete has been paused, and Secret Cinema now wants to put a ticketed Disney show on Lower Riverside, beside homes and the Thames Path.
+
+It would sit next to the proposed Troubadour theatre, so there could be up to 2,250 people leaving onto Olympian Way / the riverside path in half an hour.
+
+Application: 26/1247/F
+Decision expected around 21 July
+Worth objecting now if you use the riverside / North Greenwich: [URL]</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'),big=lb.querySelector('img');
+  Array.prototype.forEach.call(document.querySelectorAll('figure img'),function(im){
+    im.addEventListener('click',function(){
+      big.src=im.currentSrc||im.src;big.alt=im.alt||'';
+      lb.classList.add('open');document.body.style.overflow='hidden';
+    });
+  });
+  function close(){lb.classList.remove('open');document.body.style.overflow='';big.removeAttribute('src');}
+  lb.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))close();});
+  var toTop=document.getElementById('toTop');
+  if(toTop){
+    window.addEventListener('scroll',function(){
+      if(window.scrollY>700){toTop.classList.add('show');}else{toTop.classList.remove('show');}
+    },{passive:true});
+    toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  }
+})();
+(function(){
+  var modal=document.getElementById('shareModal');
+  if(!modal)return;
+  var panel=modal.querySelector('.share-panel');
+  var canonical=document.querySelector('meta[property="og:url"]');
+  var url=(canonical&&canonical.content)||location.href;
+  var subject='Secret Cinema application on Lower Riverside';
+  var messages={};
+  Array.prototype.forEach.call(document.querySelectorAll('[data-msg]'),function(el){
+    el.textContent=el.textContent.replace(/\[URL\]/g,url);
+    messages[el.getAttribute('data-msg')]=el.textContent;
+  });
+  var defaultMsg=messages.long||'';
+  var wa=modal.querySelector('[data-share-whatsapp]');
+  if(wa)wa.href='https://wa.me/?text='+encodeURIComponent(messages.short||defaultMsg);
+  var em=modal.querySelector('[data-share-email]');
+  if(em)em.href='mailto:?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(defaultMsg);
+  var nativeBtn=modal.querySelector('[data-share-native]');
+  if(nativeBtn&&navigator.share){
+    nativeBtn.hidden=false;
+    nativeBtn.addEventListener('click',function(){navigator.share({title:document.title,text:defaultMsg,url:url}).catch(function(){});});
+  }
+  function flash(btn){
+    if(btn._t){clearTimeout(btn._t);}else{btn._orig=btn.textContent;}
+    btn.textContent='Copied';btn.classList.add('is-copied');
+    btn._t=setTimeout(function(){btn.textContent=btn._orig;btn.classList.remove('is-copied');btn._t=null;},1800);
+  }
+  function fallbackCopy(text,btn){
+    var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.left='-9999px';
+    document.body.appendChild(ta);ta.select();
+    try{document.execCommand('copy');flash(btn);}catch(e){}
+    document.body.removeChild(ta);
+  }
+  function copyText(text,btn){
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){flash(btn);},function(){fallbackCopy(text,btn);});
+    }else{fallbackCopy(text,btn);}
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-copy]'),function(btn){
+    btn.addEventListener('click',function(){
+      var k=btn.getAttribute('data-copy');
+      copyText(k==='link'?url:(messages[k]||''),btn);
+    });
+  });
+  var lastFocus=null;
+  function focusable(){
+    return Array.prototype.filter.call(panel.querySelectorAll('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])'),function(el){return !el.hasAttribute('hidden')&&el.offsetParent!==null;});
+  }
+  function onKey(e){
+    if(e.key==='Escape'){e.preventDefault();closeM();return;}
+    if(e.key==='Tab'){
+      var f=focusable();if(!f.length)return;
+      var first=f[0],last=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  }
+  function openM(){
+    lastFocus=document.activeElement;
+    modal.hidden=false;document.body.style.overflow='hidden';
+    var f=focusable();if(f.length)f[0].focus();
+    document.addEventListener('keydown',onKey,true);
+  }
+  function closeM(){
+    modal.hidden=true;document.body.style.overflow='';
+    document.removeEventListener('keydown',onKey,true);
+    if(lastFocus&&lastFocus.focus)lastFocus.focus();
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-share-open]'),function(b){b.addEventListener('click',openM);});
+  Array.prototype.forEach.call(modal.querySelectorAll('[data-share-close]'),function(b){b.addEventListener('click',closeM);});
+  modal.addEventListener('click',function(e){if(e.target===modal)closeM();});
+})();
+</script>
+
+</body>
+</html>
