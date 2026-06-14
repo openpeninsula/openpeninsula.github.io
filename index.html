@@ -205,8 +205,10 @@
   .topbar .brand{display:flex;align-items:center;gap:.55rem;min-width:0}
   .topbar .brand-logo{height:1.45rem;width:auto;flex:none;color:var(--accent);display:block}
   .topbar .brand-name{font-weight:800;font-size:1rem;letter-spacing:-0.01em;color:var(--ink);white-space:nowrap}
-  .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:.92rem;text-decoration:none;padding:.5rem .9rem;border-radius:0;white-space:nowrap}
-  .btn:hover{background:var(--accent-deep)}
+  .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:.92rem;text-decoration:none;padding:.5rem .9rem;border:1px solid var(--accent);border-radius:0;white-space:nowrap;cursor:pointer;font-family:inherit}
+  .btn:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
+  .btn-ghost{background:transparent;color:var(--accent)}
+  .btn-ghost:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 
   /* How to object */
   #object{scroll-margin-top:4rem}
@@ -354,6 +356,9 @@
   .share-inline p{margin:0 0 .85rem;color:var(--ink-2);font-size:.97rem;line-height:1.5;max-width:none}
   .share-inline-btn{display:inline-flex;align-items:center;line-height:1.1;background:var(--accent);color:#fff;font-weight:700;font-size:1rem;border:0;border-radius:0;padding:.72rem 1.15rem;cursor:pointer;font-family:inherit}
   .share-inline-btn:hover{background:var(--accent-deep)}
+  .sum-list{list-style:none;margin:1.1rem 0 1.3rem;padding:0;display:flex;flex-direction:column;gap:.7rem}
+  .sum-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:1rem;line-height:1.4;color:var(--ink);font-weight:600}
+  .sum-list .se{flex:none;font-size:1.2rem;line-height:1.35;width:1.6rem;text-align:center}
   @media(max-width:559px){.share-overlay{align-items:flex-end;padding:0}.share-panel{max-width:100%;max-height:92vh}}
   .cpoint b{display:block;color:var(--ink);margin-bottom:.15rem}
   .starter p{margin:0 0 .9em}
@@ -371,6 +376,7 @@
       <svg class="brand-logo" viewBox="0 0 538 589" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open Peninsula"><path d="M86.3 570.742C96.3 553.909 116.7 510.242 118.3 470.242C120.3 420.242 90.8 369.742 74.8 328.242C58.8 286.742 28.3 209.742 36.3 134.742C42.7 74.7422 78.3 49.2435 94.3 43.2435C110.3 37.2435 141.8 24.7444 178.3 51.2454C214.8 77.7464 276.8 202.241 319.8 248.242C362.8 294.244 377.8 324.243 451.3 347.243L528.8 366.747" stroke="currentColor" stroke-width="70" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </span>
     <div class="nav-actions">
+      <button type="button" class="btn btn-ghost" data-summary-open aria-haspopup="dialog" aria-controls="summaryModal">In short</button>
       <a class="btn" href="#object">Comment&nbsp;&rarr;</a>
     </div>
   </div>
@@ -821,6 +827,26 @@ It's 26/1247/F, due to be decided around 21 July. Worth objecting now if you use
     </div>
   </div>
 </div>
+
+<div id="summaryModal" class="share-overlay" hidden>
+  <div class="share-panel" role="dialog" aria-modal="true" aria-labelledby="sumTitle" aria-describedby="sumIntro">
+    <button type="button" class="share-close" data-summary-close aria-label="Close summary">&times;</button>
+    <h2 id="sumTitle" class="share-title">In short</h2>
+    <p id="sumIntro" class="share-intro">Secret Cinema, application <strong>26/1247/F</strong>, proposed beside homes and the Thames Path.</p>
+    <ul class="sum-list">
+      <li><span class="se" aria-hidden="true">&#128683;</span><span>Free fete gone. Ticketed shows from &pound;49.</span></li>
+      <li><span class="se" aria-hidden="true">&#127807;</span><span>Our riverside path becomes an event exit route.</span></li>
+      <li><span class="se" aria-hidden="true">&#128101;</span><span>Venues for up to 4,500, in a neighbourhood of 6,000.</span></li>
+      <li><span class="se" aria-hidden="true">&#128266;</span><span>Late shows beside homes. Their own noise report predicts a breach.</span></li>
+      <li><span class="se" aria-hidden="true">&#9203;</span><span>Up to ten years. Multiple shows, every day.</span></li>
+    </ul>
+    <div class="share-actions">
+      <a class="share-btn share-native" href="#object" data-summary-close>Comment&nbsp;&rarr;</a>
+      <button type="button" class="share-btn" data-summary-image>Save / share image</button>
+    </div>
+    <p class="share-hint">Share the summary image with a neighbour, or read the full detail on the page.</p>
+  </div>
+</div>
 <script>
 (function(){
   var lb=document.getElementById('lightbox'),big=lb.querySelector('img');
@@ -912,6 +938,47 @@ It's 26/1247/F, due to be decided around 21 July. Worth objecting now if you use
   Array.prototype.forEach.call(document.querySelectorAll('[data-share-open]'),function(b){b.addEventListener('click',openM);});
   Array.prototype.forEach.call(modal.querySelectorAll('[data-share-close]'),function(b){b.addEventListener('click',closeM);});
   modal.addEventListener('click',function(e){if(e.target===modal)closeM();});
+})();
+(function(){
+  var modal=document.getElementById('summaryModal');
+  if(!modal)return;
+  var panel=modal.querySelector('.share-panel');
+  var lastFocus=null;
+  function focusable(){
+    return Array.prototype.filter.call(panel.querySelectorAll('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])'),function(el){return !el.hasAttribute('hidden')&&el.offsetParent!==null;});
+  }
+  function onKey(e){
+    if(e.key==='Escape'){e.preventDefault();closeM();return;}
+    if(e.key==='Tab'){
+      var f=focusable();if(!f.length)return;
+      var first=f[0],last=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  }
+  function openM(){lastFocus=document.activeElement;modal.hidden=false;document.body.style.overflow='hidden';var f=focusable();if(f.length)f[0].focus();document.addEventListener('keydown',onKey,true);}
+  function closeM(){modal.hidden=true;document.body.style.overflow='';document.removeEventListener('keydown',onKey,true);if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+  Array.prototype.forEach.call(document.querySelectorAll('[data-summary-open]'),function(b){b.addEventListener('click',openM);});
+  Array.prototype.forEach.call(modal.querySelectorAll('[data-summary-close]'),function(b){b.addEventListener('click',closeM);});
+  modal.addEventListener('click',function(e){if(e.target===modal)closeM();});
+  var img='share-card.png';
+  var shareTitle='Secret Cinema on Greenwich Peninsula';
+  var canonical=document.querySelector('meta[property="og:url"]');
+  var pageUrl=(canonical&&canonical.content)||location.href;
+  var shareText='Two large ticketed venues proposed beside homes and the Thames Path. Comment on 26/1247/F before 21 July: '+pageUrl;
+  function download(){var a=document.createElement('a');a.href=img;a.download='open-peninsula.png';document.body.appendChild(a);a.click();document.body.removeChild(a);}
+  var imgBtn=modal.querySelector('[data-summary-image]');
+  if(imgBtn){
+    imgBtn.addEventListener('click',function(){
+      if(window.fetch&&navigator.canShare){
+        fetch(img).then(function(r){return r.blob();}).then(function(blob){
+          var f=new File([blob],'open-peninsula.png',{type:blob.type||'image/png'});
+          if(navigator.canShare({files:[f]})){return navigator.share({files:[f],title:shareTitle,text:shareText});}
+          download();
+        }).catch(function(){download();});
+      }else{download();}
+    });
+  }
 })();
 </script>
 
