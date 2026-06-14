@@ -267,6 +267,9 @@
   /* Action helpers: peak card, callouts, portal fineprint */
   .expect{margin:1rem 0 0;font-size:.92rem;color:var(--ink-2);line-height:1.5}
   .expect b{color:var(--ink-2)}
+  .do-steps{list-style:none;margin:1.1rem 0 0;padding:0;display:flex;flex-direction:column;gap:.6rem}
+  .do-steps li{display:flex;align-items:center;gap:.65rem;color:var(--ink);font-size:.95rem;line-height:1.4}
+  .do-steps .n{flex:none;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:.8rem;display:flex;align-items:center;justify-content:center;line-height:1}
   .callout{background:var(--band);padding:1rem 1.2rem;margin:var(--s4) 0;max-width:44rem;line-height:1.5;color:var(--ink-2)}
   .callout b{color:var(--ink-2)}
   .callout ul{margin:.55rem 0;padding-left:1.2rem}
@@ -516,7 +519,11 @@
     <p>The live application is Secret Cinema, <span class="hi">26/1247/F</span>. The council expects to decide around <span class="hi">21 July 2026</span>, and usually writes its recommendation before then, so comment now.</p>
     <div class="cta-do">
       <a class="btn-lg" href="https://planning.royalgreenwich.gov.uk/online-applications/applicationDetails.do?activeTab=makeComment&amp;keyVal=_GRNW_DCAPR_128442" target="_blank" rel="noopener">Comment on the portal&nbsp;&rarr;</a>
-      <p class="expect">Choose <b>Object</b>, write a few lines in your own words, and submit. It need not be long. You'll need your name, email, address and the reference <strong>26/1247/F</strong>.</p>
+      <ol class="do-steps">
+        <li><span class="n">1</span><span>Choose <b>Object</b></span></li>
+        <li><span class="n">2</span><span>Write a few lines in your own words</span></li>
+        <li><span class="n">3</span><span>Add your name, email and address, and submit</span></li>
+      </ol>
     </div>
     <p class="cta-note"><svg class="cta-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><span>This application could allow the venue to operate here for up to ten years.</span></p>
     <h3>What to ask for</h3>
