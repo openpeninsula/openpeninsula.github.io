@@ -275,7 +275,7 @@
   .fig-narrow{max-width:26rem}
   .tiktok-row{display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;margin:var(--s4) 0}
   .tiktok-row .tk{flex:1 1 300px;max-width:340px;margin:0}
-  .tiktok-row .tk iframe{width:100%;aspect-ratio:9/16;border:0;display:block;background:#000}
+  .tiktok-row .tk iframe,.tiktok-row .tk video{width:100%;aspect-ratio:9/16;border:0;display:block;background:#000;object-fit:cover;border-radius:8px}
   .tiktok-row .tk figcaption{font-size:.84rem;color:var(--ink-2);margin-top:.5rem;line-height:1.4}
   .tiktok-row .tk-credit{color:var(--ink-3)}
 
@@ -685,11 +685,11 @@
     <p>After many O2 events, North Greenwich station and the bus station become very crowded for a significant period. Visitors regularly film and post queues and crowding after arena events.</p>
     <div class="tiktok-row">
       <figure class="tk">
-        <iframe src="https://www.tiktok.com/player/v1/7631403742742744342?rel=0&amp;description=0&amp;music_info=0" allow="encrypted-media; fullscreen" allowfullscreen loading="lazy" title="The North Greenwich bus station after an O2 event, crowds waiting to get on (@sophsconcertss, via TikTok)"></iframe>
+        <video src="videos/bus-station.mp4" controls playsinline preload="metadata" loop muted title="The North Greenwich bus station after an O2 event, crowds waiting to get on (@sophsconcertss, via TikTok)"></video>
         <figcaption>The bus station after an O2 event. Crowds waiting to board after an arena event. <span class="tk-credit">@sophsconcertss, via TikTok</span></figcaption>
       </figure>
       <figure class="tk">
-        <iframe src="https://www.tiktok.com/player/v1/7624548783510113549?rel=0&amp;description=0&amp;music_info=0" allow="encrypted-media; fullscreen" allowfullscreen loading="lazy" title="The walk out of the O2 after an event (@miaomeew, via TikTok)"></iframe>
+        <video src="videos/o2-crowds.mp4" controls playsinline preload="metadata" loop muted title="The walk out of the O2 after an event (@miaomeew, via TikTok)"></video>
         <figcaption>The walk out of The O2 after an event. Crowds leaving the arena and heading toward North Greenwich. <span class="tk-credit">@miaomeew, via TikTok</span></figcaption>
       </figure>
     </div>
