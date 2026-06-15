@@ -634,7 +634,7 @@
     </div>
   </details>
 
-  <details class="ev">
+  <details class="ev" id="path">
     <summary>The path: 1.5 metres, and the crowd it must carry</summary>
     <div class="ev-body">
     <p class="ev-lead">The applicant's own figures show up to 2,250 people leaving Secret Cinema and the Troubadour together in a single half hour. They would leave onto Olympian Way / the Thames Path, where the marked walking space is about 1.5 metres in places beside a two-way cycle route.</p>
@@ -980,6 +980,18 @@ It's 26/1247/F, due to be decided around 21 July. Worth objecting now if you use
       }else{download();}
     });
   }
+})();
+
+// Open a <details> accordion when its id is in the URL hash (e.g. #path), and scroll to it.
+(function(){
+  function openFromHash(){
+    if(!location.hash)return;
+    var el;
+    try{el=document.getElementById(decodeURIComponent(location.hash.slice(1)));}catch(e){return;}
+    if(el&&el.tagName==='DETAILS'){el.open=true;el.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+  window.addEventListener('hashchange',openFromHash);
+  openFromHash();
 })();
 </script>
 
