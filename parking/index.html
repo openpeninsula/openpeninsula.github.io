@@ -13,14 +13,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://openpeninsula.github.io/parking/">
 <meta property="og:title" content="Greenwich Peninsula: a car-lite plan, and the parking and records behind it">
-<meta property="og:description" content="The O2's parking was capped and new homes held near car-free. In practice the O2 operates more than the cap allows — and the approved documents meant to monitor it cannot be located.">
-<!-- TODO before publishing: replace og.png / favicons with a parking-specific share card. Currently a placeholder copied from the Secret Cinema page. -->
+<meta property="og:description" content="The O2's parking was capped and new homes held near car-free. In practice the O2 operates more than the cap allows, and the approved documents meant to monitor it cannot be located.">
 <meta property="og:image" content="https://openpeninsula.github.io/parking/og.png?v=1">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Greenwich Peninsula: a car-lite plan, and the parking and records behind it">
-<meta name="twitter:description" content="The O2's parking was capped and new homes held near car-free. In practice the O2 operates more than the cap allows — and the approved documents meant to monitor it cannot be located.">
+<meta name="twitter:description" content="The O2's parking was capped and new homes held near car-free. In practice the O2 operates more than the cap allows, and the approved documents meant to monitor it cannot be located.">
 <meta name="twitter:image" content="https://openpeninsula.github.io/parking/og.png?v=1">
 <style>
   @font-face{font-family:'BDO Grotesk';src:url('fonts/BDOGrotesk-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
@@ -55,7 +54,8 @@
   h2{font-size:clamp(1.5rem,3.4vw,2rem);font-weight:800;margin:0 0 var(--s3)}
   .num{color:var(--accent);font-variant-numeric:tabular-nums;font-size:.8em;margin-right:.4rem}
   section > p{max-width:44rem;margin:0 0 1rem}
-  .pull{font-size:1.25rem;line-height:1.4;font-weight:600;max-width:44rem;margin:var(--s5) 0}
+  .pull{font-size:1.25rem;line-height:1.4;font-weight:600;max-width:44rem;margin:var(--s5) 0;padding-left:1.15rem;border-left:3px solid var(--accent)}
+  .pull cite{display:block;margin-top:.6rem;font-style:normal;font-weight:400;font-size:.85rem;color:var(--ink-3)}
   .src{font-size:.84rem;color:var(--ink-3);max-width:44rem;margin-top:var(--s2)}
   .src code{font-family:var(--mono);font-size:.92em}
 
@@ -81,10 +81,12 @@
   .starter-note .i-ico{width:1.05em;height:1.05em;vertical-align:-0.16em;margin-right:.4em;color:var(--accent)}
 
   /* attributed quote */
-  .devquote{background:var(--band);padding:1rem 1.3rem;margin:1.2rem 0;max-width:44rem}
-  .devquote p{margin:0;font-size:1.02rem;line-height:1.5;color:var(--ink)}
-  .devquote p::before{content:"\201C";color:var(--accent);font-family:Georgia,"Times New Roman",serif;font-size:1.85em;line-height:0;vertical-align:-.32em;margin-right:.05em}
-  .devquote cite{display:block;margin-top:.6rem;font-style:normal;font-size:.85rem;color:var(--ink-3)}
+  .heroquote{background:var(--band);border-left:4px solid var(--accent);padding:1.4rem 1.6rem;margin:1.5rem 0 .2rem;max-width:46rem}
+  header.lead .heroquote p{font-size:clamp(1.2rem,2.8vw,1.55rem);line-height:1.4;font-weight:600;color:var(--ink);margin:0;max-width:none}
+  header.lead .heroquote p::before{content:"\201C";color:var(--accent);font-family:Georgia,"Times New Roman",serif;font-size:1.5em;line-height:0;vertical-align:-.3em;margin-right:.04em}
+  header.lead .heroquote .hq-verdict{margin-top:.9rem;font-size:clamp(1rem,2.2vw,1.18rem);font-weight:700;color:var(--accent-deep)}
+  header.lead .heroquote .hq-verdict::before{content:none}
+  .heroquote cite{display:block;margin-top:1rem;font-style:normal;font-size:.85rem;color:var(--ink-3)}
 
   /* click-to-enlarge lightbox */
   figure img,.media img{cursor:zoom-in}
@@ -125,9 +127,6 @@
   #asks{scroll-margin-top:4rem}
   section > ul{max-width:44rem;margin:var(--s3) 0;padding-left:1.2rem}
   section > ul li{margin:.4rem 0;color:var(--ink-2)}
-  .cta-note{display:flex;gap:.6rem;align-items:flex-start;color:var(--ink-2);background:var(--band);border-radius:0;padding:.8rem 1rem;max-width:44rem}
-  .cta-note b{color:var(--ink)}
-  .cta-note .cta-ico{flex:none;width:22px;height:22px;color:var(--ink-3);margin-top:.15rem}
 
   /* then / now comparison */
   .thennow{display:grid;gap:1rem;grid-template-columns:1fr;margin:var(--s5) 0}
@@ -140,12 +139,76 @@
   .thennow li{margin:.4rem 0;color:var(--ink-2);font-size:1rem}
 
   /* proportional bar */
-  .propbar{margin:var(--s4) 0;max-width:44rem}
-  .propbar-track{position:relative;height:2.6rem;background:var(--slot);border-radius:0;overflow:hidden}
-  .propbar-fill{height:100%;background:var(--accent);display:flex;align-items:center;padding-left:.6rem;color:#fff;font-weight:700;font-size:.9rem;white-space:nowrap}
-  .propbar-cap{position:absolute;top:-.2rem;bottom:-.2rem;width:2px;background:var(--ink)}
-  .propbar-cap span{position:absolute;top:-1.25rem;left:50%;transform:translateX(-50%);font-size:.72rem;font-weight:700;color:var(--ink);white-space:nowrap;font-family:var(--mono)}
-  .propbar-legend{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin-top:1.4rem;font-size:.92rem;color:var(--ink-2)}
+  .ladder{max-width:34rem;margin:var(--s3) 0 var(--s4)}
+  .ladder-h{font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin:0 0 .35rem}
+  .ladder-h-over{color:var(--accent);margin-top:1.1rem}
+  .rung{position:relative;display:flex;align-items:baseline;gap:.85rem;padding:.45rem 0;border-bottom:1px solid var(--rule)}
+  .rung:last-child{border-bottom:0}
+  .rung::before{content:"";position:absolute;left:0;top:.3rem;bottom:.3rem;width:var(--bar,0);background:color-mix(in oklch,var(--ink-3) 16%,transparent);border-radius:0 2px 2px 0;z-index:0;pointer-events:none}
+  .rung-over::before{background:color-mix(in oklch,var(--accent) 13%,transparent)}
+  .rung-over::after{content:"";position:absolute;left:var(--cap,80%);top:0;bottom:0;border-left:1.5px dashed color-mix(in oklch,var(--accent) 50%,transparent);z-index:2;pointer-events:none}
+  .rung-n{position:relative;z-index:1;flex:0 0 5rem;font-weight:800;font-size:1.35rem;line-height:1.1;color:var(--ink);font-variant-numeric:tabular-nums}
+  .rung-over .rung-n{color:var(--accent)}
+  .rung-s{position:relative;z-index:1;font-size:.9rem;color:var(--ink-2);line-height:1.3}
+  /* biggest-car-parks chart */
+  .cpk-fig{margin:var(--s3) 0 var(--s4);max-width:38rem}
+  .cpk-head{font-weight:800;font-size:1rem;line-height:1.35;margin:0 0 .7rem;color:var(--ink)}
+  .cpk-row{position:relative;display:flex;align-items:baseline;gap:.8rem;padding:.5rem 0;border-bottom:1px solid var(--rule)}
+  .cpk-row:last-child{border-bottom:0}
+  .cpk-row::before{content:"";position:absolute;left:0;top:.32rem;bottom:.32rem;width:var(--bar,0);background:color-mix(in oklch,var(--ink-3) 14%,transparent);border-radius:0 2px 2px 0;z-index:0;pointer-events:none}
+  .cpk-ng::before{background:color-mix(in oklch,var(--accent) 15%,transparent)}
+  .cpk-n{position:relative;z-index:1;flex:0 0 3rem;font-weight:800;font-size:1.2rem;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+  .cpk-ng .cpk-n{color:var(--accent)}
+  .cpk-t{position:relative;z-index:1;font-size:.9rem;color:var(--ink-2);line-height:1.3}
+  .cpk-t b{color:var(--ink);font-weight:700}
+  .cpk-ng .cpk-t b{color:var(--accent)}
+  .cpk-foot{font-size:.78rem;color:var(--ink-3);margin:.6rem 0 0}
+  .emfig{display:flex;align-items:center;gap:1.7rem;flex-wrap:wrap;margin:1.6rem 0 var(--s4);max-width:44rem}
+  .emfig .donut{flex:0 0 auto;width:168px;height:168px}
+  .emfig .donut-num{font-family:var(--sans);font-size:31px;font-weight:800;fill:var(--ink)}
+  .emfig .donut-lab{font-family:var(--sans);font-size:13px;font-weight:600;fill:var(--ink-2);letter-spacing:.02em}
+  .em-body{flex:1 1 15rem;min-width:14rem}
+  .em-head{margin:0 0 .7rem;font-size:1rem;line-height:1.5;color:var(--ink-2)}
+  .em-legend{list-style:none;padding:0;margin:0 0 .7rem;font-size:.92rem;color:var(--ink-2)}
+  .em-legend li{display:flex;align-items:center;gap:.5rem;margin:.2rem 0}
+  .em-legend .sw{width:.8rem;height:.8rem;border-radius:2px;flex:0 0 auto}
+  .em-legend .sw-a{background:var(--accent)}
+  .em-legend .sw-b{background:var(--slot)}
+  .em-sub{margin:0;font-size:.86rem;color:var(--ink-3);line-height:1.5}
+  .reg-foot{font-size:.9rem;color:var(--ink-2);margin:.7rem 0 0;max-width:44rem}
+  .reg-foot strong{color:var(--accent-deep)}
+  .files{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:.7rem;margin:var(--s3) 0;max-width:44rem}
+  .file{flex:0 1 13rem;border:1px solid var(--rule);border-top:3px solid var(--accent);padding:.85rem .9rem;display:flex;flex-direction:column;gap:.3rem;background:var(--paper)}
+  .file-ico{width:1.5rem;height:1.5rem;color:var(--ink-3)}
+  .file-name{font-weight:700;font-size:.9rem;line-height:1.3;color:var(--ink);flex:1}
+  .file-ref{font-size:.74rem;color:var(--ink-3)}
+  .file-status{align-self:flex-start;font-size:.64rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:3px;padding:.16rem .4rem;margin-top:.2rem}
+  .strip{position:relative;display:flex;gap:.4rem;margin:var(--s5) 0 var(--s4);max-width:46rem}
+  .strip::before{content:"";position:absolute;left:8.3%;right:8.3%;top:2.95rem;height:2px;background:var(--accent);z-index:0}
+  .step{flex:1;min-width:0;position:relative;z-index:1;display:grid;grid-template-areas:"time" "badge" "h" "sub";justify-items:center;text-align:center;gap:.08rem}
+  .step-time{grid-area:time;font-size:.86rem;line-height:1.2;font-weight:700;color:var(--ink);margin-bottom:.5rem}
+  .step-badge{grid-area:badge;position:relative;z-index:1;width:2.6rem;height:2.6rem;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center}
+  .step-badge svg{width:1.45rem;height:1.45rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .step.shop .step-badge{background:var(--ink-3)}
+  .step.lim .step-badge{background:var(--paper);color:var(--ink-3);box-shadow:inset 0 0 0 2px var(--ink-3)}
+  .step-h{grid-area:h;font-weight:700;font-size:.88rem;color:var(--ink);margin-top:.55rem;line-height:1.2}
+  .step.shop .step-h{color:var(--ink-2);font-weight:600}
+  .step-sub{grid-area:sub;font-size:.76rem;color:var(--ink-2);line-height:1.25;margin-top:.15rem}
+  .strip-foot{font-size:.82rem;color:var(--ink-2);margin:0 0 var(--s3)}
+  .strip-note{font-size:.92rem;color:var(--ink-2);max-width:44rem;margin:0}
+  .floodbox{margin:1.8rem 0 .6rem}
+  .floodbox svg{width:100%;max-width:42rem;height:auto;display:block}
+  .floodbox-cap{font-size:.95rem;color:var(--ink-2);max-width:44rem;margin:.3rem 0 0}
+  @media (max-width:38rem){
+    .strip{flex-direction:column;gap:0;width:-moz-fit-content;width:fit-content;max-width:100%;margin-inline:auto}
+    .strip-foot{text-align:center}
+    .strip::before{display:none}
+    .step{grid-template-areas:"badge time" "badge h" "badge sub";grid-template-columns:2.6rem 1fr;column-gap:.9rem;justify-items:start;text-align:left;padding-bottom:1rem;align-items:start}
+    .step:not(:last-child)::before{content:"";position:absolute;left:1.3rem;transform:translateX(-50%);top:1.3rem;height:100%;width:2px;background:var(--accent);z-index:0}
+    .step-time{margin:0;align-self:center}
+    .step-badge{align-self:start}
+    .step-h{margin-top:.2rem}
+  }
 
   /* landing blocks: the question cards, the ask lists */
   .claims{margin:var(--s4) 0;display:grid;grid-template-columns:1fr;gap:.9rem}
@@ -159,6 +222,41 @@
   ul.ask{max-width:44rem;margin:var(--s3) 0;padding-left:1.2rem}
   ul.ask li{margin:.5rem 0;color:var(--ink);line-height:1.45}
   ul.ask li::marker{color:var(--accent)}
+  .plan-h{font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:var(--s5) 0 .75rem}
+  .plan{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;max-width:46rem;margin:0 0 var(--s4)}
+  .pstep{position:relative;background:var(--band);padding:1.05rem 1.1rem 1.15rem;display:flex;flex-direction:column;gap:.5rem}
+  .pstep-n{width:1.9rem;height:1.9rem;border-radius:50%;background:var(--ink-3);color:#fff;font-size:.95rem;font-weight:700;line-height:1;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .pstep h4{margin:0;font-size:1.04rem;font-weight:700;line-height:1.18;letter-spacing:-0.01em;color:var(--ink)}
+  .pstep p{margin:0;font-size:.92rem;line-height:1.4;color:var(--ink-2)}
+  .pstep.key{background:color-mix(in srgb,var(--accent) 10%,#fff);box-shadow:inset 0 0 0 2px var(--accent)}
+  .pstep.key .pstep-n{background:var(--accent)}
+  .pstep-tag{margin-top:.15rem;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  @media(max-width:640px){.plan{grid-template-columns:1fr;gap:.5rem}}
+  .tline{max-width:44rem;margin:var(--s4) 0 var(--s5)}
+  .tline-cap{font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 .7rem}
+  .trow{display:flex;gap:1rem;align-items:baseline;padding:.6rem .7rem;border-top:1px solid var(--rule)}
+  .trow .ty{flex:0 0 3rem;font-weight:700;color:var(--ink-3);font-variant-numeric:tabular-nums}
+  .trow .te{color:var(--ink-2);line-height:1.4}
+  .trow.road{background:color-mix(in srgb,var(--accent) 7%,#fff)}
+  .trow.road .ty{color:var(--accent)}
+  .trow.road .te{color:var(--ink)}
+  .tline-foot{font-size:.82rem;color:var(--ink-3);margin:.75rem 0 0;line-height:1.45}
+  .dbar{max-width:42rem;margin:var(--s4) 0 var(--s5)}
+  .dbar-hub{text-align:center;font-weight:700;font-size:.85rem;color:var(--ink);margin:0}
+  .dbar-dirs{display:grid;grid-template-columns:1fr 1fr;font-size:.82rem;color:var(--ink-2);margin:.05rem 0 .3rem}
+  .dbar-dirs .r{text-align:right}
+  .dbar-row{display:grid;grid-template-columns:1fr 3px 1fr;align-items:center}
+  .dbar-side{display:flex;align-items:center;gap:.5rem;min-width:0}
+  .dbar-side.l{justify-content:flex-end}
+  .dbar-side.r{justify-content:flex-start}
+  .dbar-fill{height:2.4rem;flex:0 0 auto}
+  .dbar-side.l .dbar-fill{background:var(--accent)}
+  .dbar-side.r .dbar-fill{background:color-mix(in srgb,var(--accent) 32%,#fff)}
+  .dbar-axis{align-self:stretch;min-height:2.8rem;background:var(--ink)}
+  .dbar-num{font-weight:700;font-size:.95rem;color:var(--ink)}
+  .dbar-take{font-size:.9rem;color:var(--ink);margin:.6rem 0 0;text-align:center}
+  .dbar-take strong{color:var(--accent)}
+  .dbar-foot{font-size:.82rem;color:var(--ink-3);margin:.25rem 0 0;text-align:center;line-height:1.45}
   .ask-group{margin:var(--s4) 0}
   .ask-group h3{font-size:1.12rem;font-weight:800;margin:0 0 .2rem;letter-spacing:-0.01em}
   .ask-group .who{font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)}
@@ -179,6 +277,7 @@
   .ev-body ul{max-width:44rem;margin:0 0 1rem;padding-left:1.2rem}
   .ev-body ul li{margin:.5rem 0;color:var(--ink-2);line-height:1.5}
   .ev-body ul li b{color:var(--ink-2)}
+  .ev-body ul li::marker{color:var(--accent)}
   .footnote{font-size:.8rem;color:var(--ink-3);max-width:44rem;margin-top:1rem;line-height:1.5}
 
   /* share */
@@ -224,6 +323,20 @@
   .sum-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:1rem;line-height:1.4;color:var(--ink);font-weight:600}
   .sum-list .se{flex:none;font-size:1.2rem;line-height:1.4rem;width:1.6rem;text-align:center;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
   @media(max-width:559px){.share-overlay{align-items:flex-end;padding:0}.share-panel{max-width:100%;max-height:92vh}}
+
+
+  /* football-pitch scale visual */
+  .pitch-fig{margin:var(--s5) 0}
+  .pitch-head{font-size:1.05rem;color:var(--ink-2);margin:0 0 .9rem;max-width:44rem;line-height:1.45}
+  .pitch-big{font-weight:800;color:var(--accent);font-size:1.3rem;letter-spacing:-0.01em}
+  .pitchviz{width:100%;height:auto;display:block;max-width:44rem}
+  .pitchviz .o2{color:var(--accent)}
+  .pitchviz .st{color:oklch(0.74 0.12 27)}
+  .pitch-legend{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:.85rem 0 0;padding:0;font-size:.92rem;color:var(--ink-2)}
+  .pitch-legend li{display:flex;align-items:center;gap:.5rem;margin:0}
+  .pitch-legend .sw{width:1.1rem;height:.75rem;flex:none}
+  .pitch-legend .sw.o2{background:var(--accent)}
+  .pitch-legend .sw.st{background:oklch(0.74 0.12 27)}
 </style>
 </head>
 <body>
@@ -243,217 +356,345 @@
 
 <header class="lead">
   <div class="wrap">
-    <p class="kicker">Greenwich Peninsula &middot; A residents' page on parking, traffic &amp; air quality</p>
-    <h1>Greenwich Peninsula was designed to be car-lite. A lot of what's happening now points the other way &mdash; and several of the documents meant to keep it in check can't be located.</h1>
-    <p>The Peninsula sits on top of a Jubilee line station, so its parking was deliberately kept low: the O2's spaces capped, new homes built nearly car-free, a travel plan meant to put people off driving, and new buses and cycle routes promised to carry the growth. These were planning conditions and legal obligations, not loose promises.</p>
-    <p>This page lays out where the plan and the reality seem to part company. Every point is a discrepancy and an open question, not an accusation &mdash; each one asks the council, TfL or the O2 to show the records that explain the current position.</p>
-    <div class="topcta" style="margin-top:1.6rem">
-      <a class="btn" href="#asks">See what we're asking&nbsp;&rarr;</a>
+    <h1>The documents meant to govern parking, traffic and air quality around the O2 can't be found. The council says a box of them may have been destroyed in a flooded basement in 2009.</h1>
+    <div class="floodbox" aria-hidden="true">
+      <svg viewBox="0 0 1253 732" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_8844_3468)">
+          <rect width="1253" height="732" fill="#DAAEAE"/>
+          <path d="M281 273.156L428.5 345.156C452.203 314.917 465.797 297.739 489.5 267.5L384.958 210.098L281 273.156Z" fill="#C56E6E"/>
+          <path d="M971.047 273.156L823.547 345.156C799.844 314.917 787.202 297.904 763.5 267.665L867.089 210.098L971.047 273.156Z" fill="#C56E6E"/>
+          <path d="M621.547 268.098H763.762L824.547 345.098L621.547 345.028V268.098Z" fill="#773737"/>
+          <path d="M621.547 268.098H489.074L428.547 345.098L621.547 345.028V268.098Z" fill="#773737"/>
+          <path d="M659.534 176.893C659.746 176.544 660.197 176.426 660.552 176.627C660.904 176.827 661.035 177.269 660.85 177.629L635.88 226.072L631.379 223.516L659.534 176.893Z" fill="#FFBB00"/>
+          <path d="M742.568 252.584C742.88 252.32 743.346 252.353 743.618 252.658C743.887 252.959 743.87 253.42 743.58 253.701L704.422 291.609L700.975 287.746L742.568 252.584Z" fill="#FFBB00"/>
+          <path d="M574.764 140.506C574.87 140.111 574.642 139.704 574.25 139.588C573.862 139.473 573.452 139.685 573.322 140.068L555.748 191.657L560.712 193.126L574.764 140.506Z" fill="#FFBB00"/>
+          <path d="M650.007 235.936C779.646 328.776 776.27 445.003 776.27 445.003C761.98 407.973 724.814 384.959 685.296 388.669L678.139 389.341C668.248 347.888 629.356 320.036 586.926 324.019C577.036 282.566 538.144 254.714 495.713 258.698L494.045 251.706C484.833 213.098 451.077 185.322 411.419 183.716C411.419 183.716 520.368 143.095 650.007 235.936Z" fill="white"/>
+          <ellipse cx="718.692" cy="327.321" rx="8.62106" ry="2.9858" transform="rotate(52.4461 718.692 327.321)" fill="#BDA38E"/>
+          <path d="M804.895 261.479C805.523 260.95 805.615 260.019 805.104 259.377C804.598 258.743 803.681 258.62 803.026 259.099L716.088 322.707L716.128 322.957C716.696 326.55 719.154 329.558 722.562 330.83L804.895 261.479Z" fill="#FFBB00"/>
+          <ellipse cx="8.12316" cy="3.67604" rx="8.12316" ry="3.67604" transform="matrix(-0.991003 -0.133838 -0.133838 0.991003 546.321 194.771)" fill="#BDA38E"/>
+          <path d="M552.351 90.2125C552.497 89.4056 553.259 88.8615 554.069 88.9854C554.872 89.108 555.435 89.8418 555.345 90.6487L543.471 197.715L543.234 197.805C539.836 199.102 536.003 198.467 533.204 196.145L552.351 90.2125Z" fill="#FFBB00"/>
+          <ellipse cx="9.73245" cy="3.49144" rx="9.73245" ry="3.49144" transform="matrix(-0.899901 -0.436095 -0.436095 0.899901 611.767 238.355)" fill="#BDA38E"/>
+          <path d="M647.782 139.769C648.173 139.048 649.066 138.768 649.798 139.139C650.522 139.505 650.828 140.378 650.492 141.117L605.833 239.146L605.58 239.158C601.947 239.331 598.503 237.533 596.567 234.454L647.782 139.769Z" fill="#FFBB00"/>
+          <ellipse cx="664.385" cy="282.298" rx="9.73245" ry="3.49144" transform="rotate(45.3614 664.385 282.298)" fill="#BDA38E"/>
+          <path d="M741.771 207.078C742.328 206.477 742.305 205.541 741.719 204.967C741.139 204.4 740.214 204.391 739.623 204.948L661.194 278.792L661.264 279.036C662.27 282.531 665.081 285.213 668.62 286.055L741.771 207.078Z" fill="#FFBB00"/>
+          <path d="M428.5 345C583.148 345 669.852 345 824.5 345V541H428.5V345Z" fill="#C56E6E"/>
+          <path opacity="0.8" d="M89.8736 424.811L17.8625 388.797C8.64188 384.185 -1.29458 381.172 -11.5235 379.886C-65.924 373.045 -114 415.455 -114 470.283V612.998C-114 732.845 -16.8449 830 103.002 830H1207.83C1302.36 830 1379 753.363 1379 658.826V528.638C1379 461.193 1308.02 417.329 1247.7 447.497C1222.15 460.273 1192.08 460.273 1166.54 447.497L1121.17 424.811C1067.07 397.754 1003.39 397.754 949.291 424.811C895.191 451.868 831.508 451.868 777.408 424.811C723.307 397.754 659.624 397.754 605.524 424.811C551.424 451.868 487.741 451.868 433.641 424.811C379.54 397.754 315.857 397.754 261.757 424.811C207.657 451.868 143.974 451.868 89.8736 424.811Z" fill="#7A0D0D"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_8844_3468">
+            <rect width="1253" height="732" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
     </div>
+    <p>The O2 is the world's busiest entertainment venue: more than 10 million visitors a year, next to one of London's largest new neighbourhoods, with thousands of homes built and still rising. The parking, traffic and air pollution that comes with crowds that size was never meant to be left to chance. It was supposed to be controlled and monitored, on the public record. We asked the council to show us. This was the reply, June 2026:</p>
+    <blockquote class="heroquote">
+      <p>We understand that a box containing a significant amount of information relating to the Dome project may have been <span class="hi">destroyed following flooding in the basement in 2009</span>. A number of records from other sites were also affected by this incident.</p>
+      <p class="hq-verdict">&ldquo;The documents you have requested cannot be located and are therefore not held.&rdquo;</p>
+      <cite>Royal Borough of Greenwich, response to records request EIR-7259, 11 June 2026</cite>
+    </blockquote>
+    <p>A flooded basement is the council's explanation for the missing files, and we report it as given. But the files are not where the problem ends. So we went through the records that do survive: the planning files, the developer's own transport reports, the letters from TfL and the Mayor's office. The deeper we looked, the wider the gap between what the planning controls appear to require and what is happening.</p>
   </div>
 </header>
 
 <main class="wrap">
 
   <section>
-    <h2>What we're asking for</h2>
-    <p>This isn't a call to ban cars, stop events, or halt new homes. It is a request for four basic checks:</p>
-    <ul class="ask">
-      <li>Which approved documents <strong>currently govern</strong> the O2's parking, travel plan, air-quality monitoring and car-use reporting?</li>
-      <li>How is compliance with the <strong>2,000-space cap</strong> and the discourage-driving strategy actually being checked?</li>
-      <li>Was the later <strong>detailed air-quality assessment</strong> for the bus terminal and car park ever carried out, and where is it recorded?</li>
-      <li>If key documents <strong>cannot be located</strong>, how can the combined impact on the area be assessed today?</li>
-    </ul>
-    <p>Greenwich Peninsula is exactly the kind of place where car-lite planning makes sense. The question is why that same logic appears not to be applied as transparently to major venue parking, free-parking promotions and event-related car activity.</p>
-    <p style="font-size:.95rem;color:var(--ink-2);max-width:44rem">We're setting out discrepancies and open questions, not allegations.</p>
-  </section>
-
-  <section>
-    <h2>What doesn't add up</h2>
+    <h2>What we found</h2>
     <div class="claims">
-      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg></span><div><b>There's more parking than the cap allows.</b><p>The latest condition caps O2 parking at <strong>2,000 spaces</strong>. The developer's own 2025 report records <strong>2,200</strong>, and a council study counts <strong>over 2,500 bays</strong>.</p></div></div>
-      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg></span><div><b>The air-quality sign-off points to a missing assessment.</b><p>Keeping the 723-space decked car park was justified as already <strong>"tested and approved"</strong> in the Masterplan Environmental Statement. But that same ES said a detailed air-quality assessment of the car park would come <strong>later</strong>.</p></div></div>
-      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14"/><path d="M6 17l1.5-5a2 2 0 0 1 1.9-1.4h5.2A2 2 0 0 1 17.5 12L19 17"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></span><div><b>Residents go nearly car-free; the O2 doesn't.</b><p>New homes get <strong>0.1 parking spaces</strong> each. The O2 keeps <strong>2,000</strong> &mdash; which the Mayor's office found "significantly exceeds" London Plan standards.</p></div></div>
-      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v14"/></svg></span><div><b>Driving was meant to be discouraged. It's being promoted.</b><p>The O2's transport case relied on charging to put people off driving. Today a promotion offers <strong>free parking</strong> to shoppers who spend over a threshold.</p></div></div>
-      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 4v6"/><path d="M17 4v6"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg></span><div><b>The transport upgrades were pushed back.</b><p>The new bus station and cycle routes were due by <strong>3,000 homes</strong>. That's been moved to <strong>6,000</strong>, with main junction works now set for <strong>2031&ndash;2037</strong>.</p></div></div>
-      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><div><b>The roads are already busy &mdash; before events.</b><p>The developer's own December 2024 survey counted about <strong>3,900 trips</strong> in one morning peak, before any O2 event, the cable car, the pier or future homes.</p></div></div>
-      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg></span><div><b>The monitoring documents can't be found.</b><p>The council can't locate the approved travel plan, parking plan, bus strategy or air-quality monitoring for the O2 &mdash; its reply to records request <strong>EIR-7259</strong>.</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></span><div><b>We rebuilt the O2's missing travel plan. It goes dark after two years.</b><p>It is one of five approved documents the council can't produce, and the only one we could reconstruct from outside sources. A flagship that worked at first, its later reviews, due at years 5, 10, 15 and 20, are <strong>not on the public record</strong>.</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg></span><div><b>The legal cap is 2,000. Current records point higher.</b><p>The most recent planning condition caps AEG parking at 2,000 spaces, yet the developer's own 2025 travel plan records <strong>2,200</strong>, and a council study counts <strong>over 2,500 bays</strong>.</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><div><b>The air monitor at the traffic hotspot lost power for most of a year.</b><p>The Silvertown air-quality monitor, by the tunnel portal and the O2's event car park, captured only <strong>21%</strong> of valid data in the tunnel's opening year. The key local pollution reading is basically unusable.</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span><div><b>Legally bound to discourage driving, promoting parking instead.</b><p>The Outlet's Section 106 legally secures public transport ahead of car use, plus a parking strategy <strong>"designed to discourage"</strong> driving. Yet the O2 promotes free and discounted parking. We raised it. The pages were reordered to push driving down. The O2 told us <strong>nothing needed changing</strong>.</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></svg></span><div><b>Residents go nearly car-free; the O2 doesn't.</b><p>New homes are allowed <strong>0.1 parking spaces</strong> each; offices and shops, none. The O2 keeps <strong>2,000</strong>, on the borough's most transit-accessible land, a level the Mayor's office found <strong>"significantly exceeds"</strong> London Plan standards.</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span><div><b>The free car park nearby, left out of the count.</b><p>In 2014 TfL warned the council the retail-park car park was <strong>"free to be used for&hellip; attending events at the O2"</strong>, and asked for a management condition. None was imposed. Event parking spills somewhere the O2 never has to price, monitor or count.</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 4v6"/><path d="M17 4v6"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg></span><div><b>The bus station is tied to housing, not the crowds it carries.</b><p>By 2019 TfL said North Greenwich <strong>"no longer meets capacity requirements"</strong>. Yet the upgrade that relieves it is triggered by home-building, not the O2's <strong>10 million</strong> visitors, and the developer now wants to push that trigger from <strong>3,000 homes</strong> to <strong>6,000</strong>.</p></div></div>
+      <div class="claim"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg></span><div><b>A car park kept for a decade, on an air-quality test that isn't there.</b><p>To keep the 723-space decked car park standing ten more years, the council was assured its air quality had been <strong>"tested and approved"</strong>. The document behind that claim says the real assessment would come <strong>later</strong>. It has never turned up.</p></div></div>
     </div>
   </section>
 
   <section>
-    <h2><span class="num">A</span>What the Peninsula was promised</h2>
-    <p>The Greenwich Peninsula was consented as a car-lite place. The masterplan and its planning obligations lean on walking, cycling, the Jubilee line, buses and river services, with parking deliberately constrained because the area sits at the highest public-transport accessibility level, beside North Greenwich station.</p>
-    <div class="thennow">
-      <div>
-        <span class="tn-label">For new homes</span>
-        <p class="tn-h">Progressively moved toward car-free</p>
-        <ul>
-          <li>0.7 spaces per home (2004)</li>
-          <li>0.25 spaces per home (2015)</li>
-          <li><strong>0.1 spaces per home (2020)</strong></li>
-          <li>Offices and retail: car-free</li>
-        </ul>
-      </div>
-      <div>
-        <span class="tn-label tn-now">For the O2</span>
-        <p class="tn-h">A firm ceiling on parking</p>
-        <ul>
-          <li>"Up to 2,000 AEG parking spaces" in the outline permission</li>
-          <li>Capped at "a total of 2,000 car parking spaces" in the latest condition</li>
-          <li>A travel plan and charges "designed to discourage use of private cars"</li>
-          <li>Car use to be monitored and reported to the council</li>
-        </ul>
-      </div>
+    <h2 id="records">The missing control files</h2>
+    <p>The records request was not for background paperwork. It was for the documents that, under a single 2004 planning agreement, were meant to control parking, travel planning, bus mitigation, air-quality monitoring and sustainability reporting across the O2 and the wider Peninsula development it anchors:</p>
+    <div class="files">
+      <div class="file"><svg class="file-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><span class="file-name">Dome Car Parking Management Plan</span><span class="file-ref">04/0365/SD</span><span class="file-status">Not located</span></div>
+      <div class="file"><svg class="file-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><span class="file-name">O2 Travel Plan</span><span class="file-ref">06/2805/SD</span><span class="file-status">Not located</span></div>
+      <div class="file"><svg class="file-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><span class="file-name">Bus Service Improvement Strategy</span><span class="file-ref">06/2671/SD</span><span class="file-status">Not located</span></div>
+      <div class="file"><svg class="file-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><span class="file-name">Air Quality Monitoring Station</span><span class="file-ref">06/2511/SD</span><span class="file-status">Not located</span></div>
+      <div class="file"><svg class="file-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><span class="file-name">Arena Sustainability Framework Monitoring Report</span><span class="file-ref">07/1254/SD</span><span class="file-status">Not located</span></div>
     </div>
-    <p>Alongside the parking limits, the 2004 legal agreement secured an air-quality monitoring station and an arena sustainability framework with independent reporting, and a bus service improvements strategy. A new, relocated bus station and cycle network were to be delivered as the homes arrived &mdash; "before the occupation of 3,000 dwellings".</p>
+    <p>The council's explanation is set out at the top of this page: the documents cannot be located and are therefore not held, and a box of Dome records may have been destroyed after a basement flood in 2009.</p>
+    <p>One of the five, the O2 Travel Plan, we were able to partly rebuild, from outside the council: a TfL case study, transport-industry coverage and an academic paper. Together they show a flagship, <strong>98 targets</strong>, a 20-year monitoring programme, a London Transport Award <strong>won jointly by the council and AEG</strong>, and a TfL verdict that it was good practice and had <strong>"exceeded its targets"</strong>. It worked at first: by 2007 to 2009, around three-quarters of visitors arrived by non-car modes and <strong>87 of the 98 targets were met</strong>.</p>
+    <p>What is not visible is everything after. The plan required AEG to fund monitoring reviews at years 5, 10, 15 and 20, and to survey five events a year from 2010. None of those later reviews are on the public record. So the one document we could reconstruct shows a programme that worked for two years, then <strong>goes dark for the rest of the twenty it was meant to run</strong>.</p>
+    <p>The flood, though, was in 2009. The case study that lets us see the plan at all is TfL's, dated <strong>2010, the year after</strong>; and the reviews the plan required fell due at years 5, 10, 15 and 20, dates that run into the 2010s and 2020s. A 2009 flood may account for older originals. It does not, on its own, explain a document still being written about the following year, or reviews that were <strong>not due to be produced until years later</strong>.</p>
+    <p>It is not a dead letter, either. On its own website today, the O2 tells drivers its parking tariffs follow <strong>"a travel plan agreement in place with the local council"</strong>, one of the documents the council now says it cannot produce.</p>
+    <p>That is why the missing files matter. They are not old paperwork; they are the control system meant to show whether the parking, travel and air-quality obligations across the O2 and the Peninsula were being kept to.</p>
     <details class="srcfold"><summary></summary>
-    <p class="src">Residential ratio: <code>20/2000/NM</code> amended Condition 51 ("up to 0.1 spaces per dwelling unit per plot"), from 0.25 (2015) and 0.7 (2004); WSP Transport Assessment (Outline Part), July 2019, Table 7.2. O2 cap: 2015 Development Specification Condition 05 ("Up to 2,000 parking spaces"); <code>19/2733/O</code> Condition 58; <code>24/1874/F</code> Condition 3 and Board Report &sect;10.5 (Arena Head Lease "a minimum of 2,000&hellip; in perpetuity"). Discourage-driving obligation: <code>11/3033/O</code> Third Supplemental Deed (1 Aug 2013), Clause 7 ("car parking strategy&hellip; designed to discourage use of private cars&hellip; [including] car parking charges") and Clause 14 (monitor and report on private car use); approved ROV Travel Plan <code>16/3897/SD</code> (June 2015), "Driving to The O2 is discouraged". Air-quality monitoring and sustainability framework: <code>02/2903/O</code> Section 106, clauses 26.1.1 and 96. Bus strategy and delivery: <code>02/2903/O</code> clause 20.1.2; Strategic Travel Plan (ref GP-STP, revised May 2025), p48 and p16.</p>
+    <p class="src">Request <code>EIR-7259</code> (Royal Borough of Greenwich), submitted 11 June 2026, relating to discharge-of-condition and Section 106 submissions under the <code>02/2903/O</code> Greenwich Peninsula / Dome permission. Also requested: North Greenwich Station interchange (<code>06/1845/SD</code>, condition 131) and Highways to serve Dome (<code>07/0920/SD</code>, conditions 71 and 141). The council's response is quoted from its written reply. A procedural note worth keeping on file: the council first treated the request as invalid under the Freedom of Information Act for not stating a full legal name, then accepted it once it was pointed out that the full-name requirement does not apply to requests under the Environmental Information Regulations. The council's reply also cited a four-year retention schedule for paper planning records (under the Local Government Act 1972), after which such records are destroyed.</p>
+    <p class="src">The O2 Travel Plan's scale and reception: <em>Transport Times</em> (April 2010), reporting the London Transport Awards 2010 "Transport Partnership Project of the Year" award (sponsored by GoSkills), won jointly by Greenwich Council and AEG ("98 targets and a rigorous 20-year monitoring programme"; first monitoring report June 2009, "87 out of 98 targets being fully met", with 75% of customers and 90% of staff travelling by non-car modes). The "exemplar" description is from the plan's author, the Transport Planning Practice (TPP). The plan and its 2007 monitoring report are described in Ying Xie, "Millennium Dome to O2: travel plan for a new entertainment facility", ISL 2010 (University of Greenwich), drawing on AEG's 2006 Travel Plan and 2007 monitoring report. The plan's monitoring cadence and early results, periodic reviews two years after opening and at years 5, 10, 15 and 20 with AEG funding all monitoring surveys, a commitment to survey five events a year from 2010, and 87 of the 98 targets met across 2007 to 2009 with around three-quarters of visitors arriving by non-car modes, are set out in TfL's own good-practice write-up, "Large Entertainment Complex case study: The O2" (dated 10 March 2010, covering 2007 to 2009). The Travel Plan was approved as <code>06/2805/SD</code> (clause 101.1.1 of the <code>02/2903/O</code> Section 106), decided 31 May 2007.</p>
+    <p class="src">The air-quality monitoring station is <code>06/2511/SD</code>, secured by clause 26 of the <code>02/2903/O</code> Deed of Planning Obligation (23 February 2004): the council "shall undertake and be responsible for the maintenance and real time continuous monitoring throughout the said period of ten years", funded by the developer up to &pound;120,000 (with a further &pound;35,000 toward apparatus upgrade), and "shall provide&hellip; copies of the results". It is among the documents EIR-7259 returns as not held.</p>
     </details>
   </section>
 
   <section>
-    <h2><span class="num">B</span>What's actually happening</h2>
+    <h2>How the car-lite promise plays out on the ground</h2>
+    <p>The Peninsula was consented as a car-lite place, with parking deliberately constrained because this is the borough's most transit-accessible land, beside North Greenwich station. On the Government's own evidence to Parliament, the scale of building here was the most the transport network could take, and was <strong>"only achievable"</strong> because the crowds were assumed to arrive by public transport rather than by car. Here is how that has played out around the O2.</p>
 
-    <h3 style="font-size:1.18rem;font-weight:800;margin:var(--s4) 0 .55rem">More parking than the cap allows</h3>
-    <p>The most recent enforceable condition (October 2024) caps AEG parking at 2,000 spaces, and requires decked spaces to be "partially or fully closed" if that is exceeded. It also gives the council a direct way to check: AEG must supply evidence of the operated number "within one month of receipt of any written request". The figure is long-standing: the 2015 masterplan's own Environmental Statement assessed the O2's parking at 2,000 spaces, to be re-provided as a permanent multi-storey car park.</p>
-    <p>Yet the developer's own May 2025 travel plan records that the O2 "currently operates four car parks with a total of 2,200 car parking spaces", with a further 500-space station car park alongside. The applicant's own April 2026 transport statement puts the four O2 car parks at 2,226. A council retail study from November 2025 describes "over 2,500 bays available".</p>
-    <div class="propbar" aria-hidden="true">
-      <div class="propbar-track">
-        <div class="propbar-fill" style="width:88%">over 2,500 bays &mdash; council study, Nov 2025</div>
-        <div class="propbar-cap" style="left:70.6%"><span>2,000 cap</span></div>
-      </div>
-      <div class="propbar-legend">
-        <span><strong>2,000</strong> &mdash; the cap (24/1874/F Condition 3)</span>
-        <span><strong>~2,200</strong> &mdash; operated (developer's travel plan)</span>
-        <span><strong>over 2,500</strong> &mdash; advertised (council study)</span>
-      </div>
+    <h3 style="font-size:1.18rem;font-weight:800;line-height:1.3;margin:var(--s4) 0 .55rem">A 2,000-space cap. The records point higher.</h3>
+    <p>An enforceable condition from October 2024 caps AEG parking at 2,000 spaces. The limit is not arbitrary: parking here was constrained from the original consent <strong>"to restrict the number of traffic movements"</strong>, yet every later figure we found is higher:</p>
+    <div class="ladder">
+      <p class="ladder-h">The legal cap</p>
+      <div class="rung" style="--bar:80%"><span class="rung-n">2,000</span><span class="rung-s">the enforceable planning cap, October 2024</span></div>
+      <p class="ladder-h ladder-h-over">Records point higher</p>
+      <div class="rung rung-over" style="--bar:88%"><span class="rung-n">2,200</span><span class="rung-s">developer's own travel plan, May 2025</span></div>
+      <div class="rung rung-over" style="--bar:89%"><span class="rung-n">2,226</span><span class="rung-s">developer's transport statement, April 2026</span></div>
+      <div class="rung rung-over" style="--bar:100%"><span class="rung-n">2,500+</span><span class="rung-s">bays "available", council retail study, November 2025</span></div>
+      <div class="rung rung-over" style="--bar:100%"><span class="rung-n">2,500</span><span class="rung-s">The O2's own website, across four car parks</span></div>
     </div>
-    <p>This is the one point that is both fully documented and directly testable. The question is simple: what evidence does the council hold that AEG parking does not exceed 2,000, and has the closure mechanism ever been used?</p>
+    <p><strong>Up to 500 spaces over the legal cap</strong>, on the developer's, the council's and the O2's own figures. The developer's travel plan spells it out: the O2 "currently operates four car parks with a total of 2,200 car parking spaces".</p>
 
-    <h3 style="font-size:1.18rem;font-weight:800;margin:var(--s5) 0 .55rem">A "temporary" car park, kept for another ten years</h3>
-    <p>That 2,000-space cap comes from a permission granted in October 2024 &mdash; one that also kept a 723-space decked car park standing for up to another ten years, to 2034. The structure was built only as temporary, to replace O2 parking during the Silvertown Tunnel works, on the explicit basis that "a separate planning permission is required for its retention" once the tunnel was finished. Rather than coming down when the tunnel opened in April 2025, it was kept &mdash; the developer's stated aim being to hold this decked capacity so surface car parks can be cleared for housing, all within the O2's standing 2,000-space obligation. Either way, a structure put up as temporary is becoming a decade-long fixture on land at the highest public-transport access, while the permanent car parks meant to replace it remain pending on other plots.</p>
+    <h3 style="font-size:1.18rem;font-weight:800;line-height:1.3;margin:var(--s5) 0 .55rem">A "temporary" car park, kept for another ten years</h3>
+    <p>The same October 2024 permission carried a second decision: a <strong>723-space</strong> decked car park could stand for up to another ten years, to 2034. The deck was only ever meant to be temporary, built to replace O2 parking during the Silvertown Tunnel works and approved on the explicit basis that "a separate planning permission is required for its retention". The tunnel opened in April 2025. The deck did not come down: <strong>a structure put up as temporary became a decade-long fixture</strong>. And the reason given to keep it, that its air quality had already been "tested and approved", is contradicted by the very document it cites.</p>
+    <p>That justification does not hold up. Asked in August 2024 whether any air-quality assessment had been done for the ten-year extension, the applicant said a "further technical assessment&hellip; hasn't been undertaken", because the car parks had already been "tested and approved" in the masterplan's Environmental Statement. But that Statement says the opposite: for the new car park "there was insufficient information for a quantitative assessment", and "a detailed assessment&hellip; will be undertaken at the reserved matters stage". The document relied on as having tested the car park is <strong>the same one that said the test would come later</strong>, and whether it was ever carried out is unanswered.</p>
 
-    <h3 style="font-size:1.18rem;font-weight:800;margin:var(--s5) 0 .55rem">Residents near car-free, the O2 at 2,000</h3>
-    <p>The same scheme that holds new homes to 0.1 spaces each, and makes offices and retail car-free, re-provides 2,000 O2 event spaces. Before the 2019 masterplan was approved, TfL's own position was that the O2 and station parking "should be allocated for disabled persons parking provision only so that the scheme is policy compliant". The Mayor's office, reviewing the same application, found the O2 parking "significantly exceeds&hellip; London Plan standards and robust justification for this is required", and that residential parking "must be reconsidered".</p>
-
-    <h3 style="font-size:1.18rem;font-weight:800;margin:var(--s5) 0 .55rem">Driving was meant to be discouraged &mdash; it's being promoted</h3>
-    <p>The transport acceptability of the O2 and its outlet rested on a charging regime: a strategy "designed to discourage use of private cars", including parking charges, and a travel plan that relied on a "punitive charge". A current retail promotion advertises free parking for shoppers spending over a threshold, and the event-ticketing journey presents parking discounts as a convenience, with no equivalent public-transport prompt.</p>
-    <p class="cta-note"><svg class="cta-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><span>The promotion is the point in question, not whether car parks should exist: a free-parking incentive sits against the charging strategy the transport case was built on.</span></p>
-
-    <h3 style="font-size:1.18rem;font-weight:800;margin:var(--s5) 0 .55rem">The transport upgrades were pushed back</h3>
-    <p>The new bus station and cycle facilities were to arrive by 3,000 homes. A 2024 deed of variation moved that trigger to 6,000 homes, and the first primary school from 2,500 to 5,000 homes; about 2,572 homes have been delivered so far. The junction and bus works that justify the intensification are programmed well into the future &mdash; the new bus station and cycleway around January 2031, and the main junction handed to the council in January 2037.</p>
-    <p>The new bus station was not a nice-to-have. It was the masterplan's own answer to its biggest transport impact: the 2015 Environmental Statement rated the scheme's effect on the bus network "moderate negative", and brought that down to "negligible" only by relying on the new bus station and extra services &mdash; a station TfL had already described as "approaching capacity" back in 2014. So the mitigation that made the bus impact acceptable on paper is the same one that has been pushed back.</p>
-    <p>And where money is committed, it does not always reach its stated purpose. On the neighbouring IKEA scheme, about &pound;260,000 earmarked to improve access to local Tube and rail stations was &mdash; a 2021 freedom-of-information response showed &mdash; mostly spent instead on street lighting.</p>
-
-    <h3 style="font-size:1.18rem;font-weight:800;margin:var(--s5) 0 .55rem">The roads are already busy, before events</h3>
-    <p>The developer's own monitoring, from surveys in December 2024, records in a single morning peak: about 1,573 residential person trips, 814 commercial, and 1,511 for the school next door &mdash; roughly 3,900 combined, before any O2 event, temporary event, cable car, pier, parkrun or future homes are added. The same report notes resident concerns about lighting, crossings and the separation between cyclists and pedestrians "especially along the Thames Path".</p>
-
-    <h3 style="font-size:1.18rem;font-weight:800;margin:var(--s5) 0 .55rem">Two station car parks that were meant to shrink or go</h3>
-    <p>When the masterplan was assessed in 2019, the O2's own car parks were to be "retained or re-provided" on a "lift and shift" basis. The separate commuter car park beside North Greenwich station was treated differently: in the transport consultant's own words, it was "to be removed by 2021 in all scenarios". It is still open in 2026 &mdash; so the modelling that judged the scheme's traffic and air quality assumed away commuter car trips that, in practice, still happen.</p>
-    <p>There is also a longer-standing obligation. In 2006, answering a question at the London Assembly, TfL said it was contractually bound to surrender the North Greenwich customer car park to support the Peninsula &mdash; "half&hellip; ahead of the Dome's re-opening", and the remainder later. That car park is still operating too. It is publicly branded as a "North Greenwich Station Car Park (TfL)", yet it is run by a private operator on behalf of TfL's property company. That raises a fair question of control and counting: who controls this land, on what terms, and are its roughly 500 spaces counted inside or outside the O2's 2,000-space cap? The useful answer is not a disputed bay number but the current occupancy &mdash; on weekdays, weekends and event days.</p>
-
-    <h3 style="font-size:1.18rem;font-weight:800;margin:var(--s5) 0 .55rem">Coach parking cut to release a venue plot</h3>
-    <p>A 2025 permission reduces coach parking "from 67 to 25" spaces, to "facilitate the release of land for&hellip; plot 20.02" &mdash; the plot now proposed for Secret Cinema. TfL recorded a concern that this could leave "coaches or lorries parking up on the council's road network".</p>
-
-    <h3 style="font-size:1.18rem;font-weight:800;margin:var(--s5) 0 .55rem">The official numbers may miss what residents see on the ground</h3>
-    <p>The formal parking figures do not necessarily capture all event-related car activity. For well over fifteen years &mdash; in online discussions dating back to 2008, years before the 2015 masterplan set its car-lite standard &mdash; event-goers have openly described the same workaround: park free at IKEA, B&amp;Q or a nearby retail park and walk or bus the rest of the way, precisely because it sits outside the O2's own charges and count. Others pay for a cinema ticket, or spend at the Outlet, to unlock free or discounted parking. Residents, in turn, report people walking back through residential streets late at night, and recurring pickup and drop-off congestion around East Parkside and Edmund Halley Way &mdash; an issue the developer has itself acknowledged and looked at moving elsewhere.</p>
-    <p>The leisure park's owner already has rules for exactly this &mdash; they just don't catch it. The car park's published policy restricts the spaces to "visitors to the leisure park only", with five hours free and customers who "may be asked to provide proof of purchase". In practice it is policed by number-plate cameras enforcing a five-hour maximum stay &mdash; which a gig comfortably fits inside &mdash; while the "leisure visitors only" rule rests on a discretionary proof-of-purchase check that, residents report, is not made even when the car park fills on event nights and the shops and cinema are closing. The enforcement that exists limits how long you stay, not whether you are a customer. That lever sits with the operator (Legal &amp; General) as much as the council.</p>
-    <p>None of this is new, and the developers have known it for years. The 2013 transport assessment submitted to win the IKEA store its planning permission records that the car park's old management scheme &mdash; three hours free, attendants logging number plates and ticketing overstays &mdash; was by then "no longer enforced", so "in effect, there are no limits on who can park and for how long". It goes further, conceding that the car park "is being used as an informal park and ride for some commuters and visitors into central London". The applicant's answer was that management "will be considered if long stay parking becomes an issue" &mdash; and the permission that followed secured no such control: its only parking condition simply requires the spaces to be retained, not policed.</p>
-    <p>There is a documented thread to this, too. When the east Greenwich IKEA &mdash; marketed as the chain's "most sustainable" store &mdash; sought up to five hours' free parking in 2019, the council's own highways officers warned that "events at the O2&hellip; are likely to attract motorists to also park at the site", and that long stays could cause "congestion and possibly subsequent queues&hellip; affecting the highway". The objection was later withdrawn and the five-hour limit approved. The spillover its highways team anticipated is now exactly what event-goers openly describe.</p>
-    <p>The venue itself is held to the opposite approach. The O2's own transport case, as reported to the Mayor in 2012, rests on discouraging car trips: its operator told planners it was "adopting a car parking pricing strategy to discourage car trips", that car use "would be monitored and reported as part of the overall O2 travel planning commitments", and that it would enter "a legal agreement with the local planning authority in relation to car parking charges and a car parking management plan" &mdash; expressly to "minimise clashes with O2 event night demand for car parking". So the venue is required to price, manage and monitor its own parking to hold event-night driving down, under a legal agreement; a free car park the same authority says is used for those same events sits a mile and a half away, with no equivalent requirement on anyone, and the management condition TfL asked for there in 2014 was never imposed.</p>
-    <p>And the pressure looks set to grow. In 2025 the council approved 1,251 homes on the IKEA car park itself &mdash; a "car-free" estate whose residents are barred from the retail-park spaces and from local street permits &mdash; cutting the retail park's own parking from 1,066 to 856. The applicant's own assessment conceded a "risk of parking overspill onto nearby residential streets", and the agreed mitigation is a legal agreement barring the new residents from ever applying for a parking permit. The Charlton Society objected that, with no residents' parking, "parking will spill into surrounding areas like Charlton&hellip; necessitating new Controlled Parking Zones". Car-free on paper, the objection warns, can still mean more cars on the surrounding residential streets.</p>
-    <p>These patterns sit outside the simple question of how many official O2 spaces exist. If parking, pickup and drop-off and informal event access are spilling into residential streets, they should be monitored and managed as part of the venue cluster's real transport impact &mdash; not treated as invisible because they fall outside the formal car parks. How many event-goers park this way, and where, does not appear ever to have been measured &mdash; so the gains a car-free neighbourhood is meant to deliver are offset by visitor traffic that is neither counted nor controlled.</p>
-
+    <h3 style="font-size:1.18rem;font-weight:800;line-height:1.3;margin:var(--s5) 0 .55rem">Residents near car-free, the O2 at 2,000</h3>
+    <p>This is one of London's largest residential schemes: the masterplan consents <strong>up to 12,678 new homes</strong>, a community the developer's own marketing calls <strong>"homes for 20,000"</strong>, much of it already built or under construction. And the same scheme that squeezed those new homes from <strong>0.7</strong> parking spaces each in 2004 to <strong>0.25</strong> in 2015 to <strong>0.1</strong> by 2020, and held offices and retail car-free, re-provides <strong>2,000</strong> O2 event spaces. The Mayor's office found the O2 parking <strong>"significantly exceeds&hellip; London Plan standards"</strong> and required "robust justification". TfL accepted it only because a legal agreement binds the operator to re-provide the spaces to 2062:</p>
+    <p class="pull">&ldquo;TfL reluctantly concedes that&hellip; this departure from policy T6(L) must be accepted to enable the delivery of the Masterplan&hellip;&rdquo;<cite>Transport for London, in the council's Masterplan committee report, 2021</cite></p>
+    <figure class="pitch-fig">
+      <p class="pitch-head"><span class="pitch-big">8.5 hectares of car parking</span>, right beside a Tube station: the area of about twelve full-size football pitches.</p>
+      <svg class="pitchviz" viewBox="0 0 434 222" role="img" aria-label="Twelve football pitches drawn to scale: ten represent the O2's car parks (about 7 hectares) and two the North Greenwich station car park (about 1.5 hectares), roughly 8.5 hectares of car parking in all.">
+        <defs>
+          <symbol id="fp" viewBox="0 0 100 64">
+            <rect x="1.5" y="1.5" width="97" height="61" fill="currentColor"/>
+            <g fill="none" stroke="#fff" stroke-width="1.4" opacity="0.92">
+              <line x1="50" y1="2.5" x2="50" y2="61.5"/>
+              <circle cx="50" cy="32" r="8.5"/>
+              <rect x="1.5" y="18" width="15" height="28"/>
+              <rect x="83.5" y="18" width="15" height="28"/>
+            </g>
+            <circle cx="50" cy="32" r="1.3" fill="#fff"/>
+          </symbol>
+        </defs>
+        <use href="#fp" x="5" y="5" width="100" height="64" class="o2"/>
+        <use href="#fp" x="113" y="5" width="100" height="64" class="o2"/>
+        <use href="#fp" x="221" y="5" width="100" height="64" class="o2"/>
+        <use href="#fp" x="329" y="5" width="100" height="64" class="o2"/>
+        <use href="#fp" x="5" y="79" width="100" height="64" class="o2"/>
+        <use href="#fp" x="113" y="79" width="100" height="64" class="o2"/>
+        <use href="#fp" x="221" y="79" width="100" height="64" class="o2"/>
+        <use href="#fp" x="329" y="79" width="100" height="64" class="o2"/>
+        <use href="#fp" x="5" y="153" width="100" height="64" class="o2"/>
+        <use href="#fp" x="113" y="153" width="100" height="64" class="o2"/>
+        <use href="#fp" x="221" y="153" width="100" height="64" class="st"/>
+        <use href="#fp" x="329" y="153" width="100" height="64" class="st"/>
+      </svg>
+      <ul class="pitch-legend">
+        <li><span class="sw o2"></span>O2 car parks: about 7 ha</li>
+        <li><span class="sw st"></span>Station car park: about 1.5 ha</li>
+      </ul>
+    </figure>
+    <p>Measured from the mapped footprints, almost all of that ground is <strong>at grade, not stacked in decks</strong>, and it sits directly on top of a Jubilee line terminus, the borough's most transit-accessible land, the very place planning policy holds everyone else to <strong>near car-free</strong>. Newer London venues of comparable scale are now planned the other way round: Tottenham Hotspur Stadium, opened in 2019, has <strong>no public car parking at all</strong> and an event-day controlled parking zone.</p>
     <details class="srcfold"><summary></summary>
-    <p class="src">Cap and operated number: <code>24/1874/F</code> Condition 3 (Oct 2024); Strategic Travel Plan (GP-STP), May 2025, p25 ("2,200 car parking spaces&hellip; an additional 500 spaces"); Secret Cinema Transport Statement (i-Transport, April 2026), Table 3.3 (2,226); Royal Greenwich Retail &amp; Leisure Study, Vol B (Nov 2025), p78 ("over 2,500 bays available").</p>
-    <p class="src">Decked car park: <code>24/1874/F</code> (granted 9 October 2024), "Retention of Temporary Decked Car Park for a period of up to 10 years"; Condition 1 requires removal by 9 October 2034. The 723-space deck was built under the Silvertown Tunnel order to replace O2 parking during construction, on the basis that "a separate planning permission is required for its retention". It sits on Plots 15.03/16.03, west of West Parkside &mdash; separate from the Olympian Way venue plots. Reported by Murky Depths, 17 June 2024 ("Temporary Greenwich car park set to stay for another decade").</p>
-    <p class="src">Residents vs the O2: WSP Transport Assessment (Outline Part), July 2019, Table 7.2; TfL pre-application letter GRNW19/275 (30 April 2019); GLA Stage 1 report <code>GLA/5010a/01</code> (11 Nov 2019).</p>
-    <p class="src">Charging case and promotion: <code>11/3033/O</code> Third Supplemental Deed, Clauses 7 and 14; ROV Travel Plan <code>16/3897/SD</code> (June 2015). The promotion itself is documented from the venue's on-site screens and ticketing pages; these are being archived (dated captures) as they change.</p>
-    <p class="src">Deferral and programme: deed of variation <code>24/4133/I106</code> (validated 5 Dec 2024); Gateway Junction Improvements <code>23/1843/I106</code> programme. Trips: Strategic Travel Plan Monitoring Report (Arup, ref GP-STPM, May 2025; surveys 4 Dec 2024) &mdash; the individual figures are from the report; the ~3,900 combined total is a sum of those figures. The &pound;260,000 station-access contribution reportedly spent mostly on street lighting is from a 2021 freedom-of-information response, reported by The Greenwich Wire / 853 (10 June 2025); it was a subset of the IKEA scheme's S106 travel and transport contributions &mdash; &pound;500,000 towards extra buses and two relocated bus stops, plus a &pound;750,000 Travel Plan Fund for sustainable-travel promotion and pedestrian and cycle links to Westcombe Park, Charlton and North Greenwich &mdash; both paid to the council in January 2018 (S106 dated 9 December 2014; IKEA Travel Plan, October 2018, &sect;7.12).</p>
-    <p class="src">2015 masterplan Environmental Statement (Vol 1, Ch 6 Transport and Access), application <code>15/0716/O</code>: O2 parking assessed at 2,000 spaces, re-provided as a permanent multi-storey car park (Table 6.2; paras 6.3.7 and 6.3.29); bus station "approaching capacity" per TfL's 2014 North Greenwich Bus Station Options Review (para 6.3.18); bus-network effect "moderate negative" reduced to "negligible" by the new Transport Hub (Table 6.28; para 6.7.41).</p>
-    <p class="src">Spillover: this is largely observed behaviour, not a quantified figure. The retail-park-parking workaround and late-night walking through residential streets are openly and repeatedly described in public visitor discussions and local community groups going back to 2008 (e.g. Digital Spy forums), before the 2015 masterplan's car-lite standard; they are cited here as observed patterns, not planning evidence. The documented parts are: the Millennium Leisure car park's own published parking policy ("for visitors to the leisure park only", five hours free, customers "may be asked to provide proof of purchase" &mdash; millennium-leisure.co.uk, &copy; Legal &amp; General Assurance Society Ltd), set against the observed event-night use; the developer's 2026 written response to residents, which describes a pickup car park on Millennium Way and taxi-app geo-fencing while acknowledging "there is still an issue on East Parkside"; and the 2019 decision in which Greenwich Council approved up to five hours' free parking at the east Greenwich IKEA (the "most sustainable" store), over an initial objection from its own highways officers that O2 events "are likely to attract motorists to also park at the site" &mdash; reported by The Greenwich Wire / 853, 23 August 2019. The 2025 redevelopment of the IKEA car park (1,251 homes; retail-park spaces cut 1,066&rarr;856; "car-free" estate) and the Charlton Society's parking-spillover / Controlled Parking Zone objection are reported by The Greenwich Wire, 10 June 2025. The shared B&amp;Q/IKEA/ODEON car park, the five-hour ANPR enforcement "as existing", the conceded "risk of parking overspill onto nearby residential streets" and the residents-barred-from-CPZ-permits legal agreement are in the application's own Planning &amp; Affordable Housing Statement (<code>24/1695/F</code>, Quod, May 2024, paras 3.2, 5.38 and 9.26&ndash;9.27). The lapsed management scheme, the "no limits on who can park and for how long" and "informal park and ride" admissions, and the voluntary "will be considered if long stay parking becomes an issue" are in the IKEA store's own Transport Assessment (Vectos, December 2013, &sect;&sect;9.31&ndash;9.34, 10.5), submitted with outline consent <code>13/3285/O</code>; that consent's only parking condition (Condition 12) requires the spaces to be "permanently retained for the designated purposes", not managed or enforced. That the retail park is an easy walk to the venue is itself on the planning record: the same 2013 assessment rates the site PTAL 5 ("very good" public-transport accessibility) and a roughly 1.8-kilometre direct walk to North Greenwich station and The O2, with around 42 buses an hour in each direction on the adjacent Millennium Busway (Vectos PERS pedestrian audit and Draft Travel Plan, &sect;2). The store's "most sustainable" billing is relative rather than absolute: the travel plan approved for it (the S106 travel-plan obligation discharged under <code>18/2940/I106</code>, 1 November 2018) was built on an expected customer baseline of 65 per cent arriving by car (41 per cent as driver, 24 per cent as passenger), with a five-year target of reducing car drivers by just three points, to 38 per cent (IKEA Travel Plan, October 2018, Tables 3.2 and 4.2). In approving 1,251 homes on part of the same car park in June 2025, the council's own planning board report described the retained IKEA parking as "contrary to London Plan policy", kept at that level only because IKEA holds a contractual right to a minimum of 1,000 spaces; the report records that IKEA declined a mechanism to reduce parking over time against monitoring, and that a proposed linear green park along Commercial Way was removed as a result (Royal Borough of Greenwich Planning Board, ref <code>24/1695/F</code>, 17 June 2025, paras 2.5, 15.24 and 31.7). The concern was raised at the very start: at the strategic planning stage in February 2014, Transport for London warned that the car park was "unregulated", that "the car park management scheme which was once in place is no longer enforced", and that it was therefore "free to be used for non-retail purposes such as commuting, attending events at the O2 or football matches at Charlton" &mdash; and TfL formally requested "that a new car park management plan is required by condition of any permission granted", one that "should in particular address the issue of parking by drivers who are not customers". No such management condition appears among the conditions on the consent that followed (Transport for London's consultation response, ref <code>14/0143</code>, 12 February 2014, signed Paul McGartoll, TfL Borough Planning; the same wording was carried into the GLA / TfL Stage 1 referral <code>D&amp;P/3283/01</code>, 25 February 2014, paras 56&ndash;59; outline consent <code>13/3285/O</code>, 9 December 2014). The O2's own car-parking pricing strategy "to discourage car trips", the commitment that car use "would be monitored and reported as part of the overall O2 travel planning commitments", and the "legal agreement with the local planning authority in relation to car parking charges and a car parking management plan" intended to "minimise clashes with O2 event night demand for car parking" are recorded in the Greater London Authority's report on The O2 (ref <code>PDU/0187h/02</code>, Transport for London's comments, 25 July 2012, paras 25&ndash;29).</p>
-    <p class="src">Station car parks: WSP Transport Assessment (Outline Part), July 2019, para 8.2.4 (commuter car park "to be removed by 2021 in all scenarios"); Mayor's Question 2006/0465-1 (11 Dec 2006) on the surrender obligation; Mayor's Question 2021/0104 (10 Feb 2021) on surplus station car parks. Coach parking: <code>25/2707/F</code> (granted 20 Oct 2025); TfL concern recorded in the <code>24/1874/F</code> board report.</p>
+    <p class="src">Scale: the 2015 masterplan (<code>15/0716/O</code>) consents up to 12,678 C3 dwellings (Development Specification / Condition 05); the developer's own marketing describes the Peninsula as "homes for 20,000" (greenwichpeninsula.co.uk). It is a London Plan Opportunity Area (minimum 13,500-home target) being built out in phases to around 2037. Residential parking ratios: 0.7 spaces per home (2004), 0.25 (2015), "up to 0.1 spaces per dwelling unit per plot" (<code>20/2000/NM</code>, 2020), with offices and retail car-free in the transport work (WSP Transport Assessment, Outline Part, July 2019, Table 7.2). The Mayor's Stage 1 report (<code>GLA/5010a/01</code>, 11 November 2019) found the O2 parking "significantly exceeds&hellip; London Plan standards and robust justification for this is required" and that residential parking "exceeds&hellip; and must be reconsidered"; the draft London Plan standard that residential development here "should be car-free aside from parking for disabled persons" is that report's para 102, and applies to the homes, not the O2 spaces. TfL accepted the O2's parking only as a conceded policy departure: its consultation response, recorded in the Masterplan committee report (application <code>19/2733/O</code>, RBG Planning Board, 2021), states that "TfL reluctantly concedes that, on-balance, this departure from policy T6(L) must be accepted to enable the delivery of the Masterplan and in particular the homes and jobs", the reprovision being "an obligation imposed by long-term (to 2062) legal agreements". an earlier Mayor's report on the retail outlet (2012) found its parking above the London Plan maximum, occupied to "only&hellip; half of the maximum capacity", with charges to be "set at a level to discourage car trips&hellip; secured through a section 106 agreement". The O2's existing surface parking is consented by space count, not floorspace, at about 2,000 spaces (maximum 2,200) across four surface car parks, with Car Park 1 alone holding 1,299 (Greenwich Peninsula Masterplan report; GLA report <code>PDU/0187h/01</code>, 2012). Footprints were measured June 2026 from OpenStreetMap car-park polygons around North Greenwich: the four car parks (Car Park 1 about 35,000 sqm, Car Park 2 about 11,200, Car Park 3 about 6,700, Car Park 4 about 7,700) cover about 60,500 sqm, roughly 30 sqm per space against the ~2,000 consented, a textbook surface-parking ratio that confirms the lots are at grade rather than decked; with the coach park (about 9,400 sqm) the O2 parking is around 7 hectares. The adjacent station car park (about 14,600 sqm) is the separate North Greenwich commuter lot, not part of the O2's consented spaces, and is shown separately within the 8.5-hectare total. A full-size football pitch is taken as 7,140 sqm (105m by 68m); the only consented floorspace figure in the record, 76,500 sqm, is for the future multi-storey replacement car parks, not today's surface lots. Tottenham Hotspur Stadium parking: tottenhamhotspur.com ("Getting here", Car Parking) and Haringey Council "Tottenham Hotspur Stadium event day parking restrictions". London Plan Policy T6 ("car-free development&hellip; the starting point"), which also provides that where sites are redeveloped parking "should&hellip; not be re-provided at previous levels" beyond the standards, the mechanism that would ratchet the Peninsula's parking down as its car parks come forward for redevelopment.</p>
     </details>
-  </section>
 
-  <section>
-    <h2><span class="num">C</span>The documents that would answer this can't be found</h2>
-    <p>Everything in section A &mdash; the cap, the travel plan, the parking management, the bus strategy, the air-quality and sustainability monitoring &mdash; was meant to be governed by approved documents and checked through monitoring reports. These aren't obscure files. They are the approved documents that set out how a major venue's parking, traffic and air quality were supposed to be controlled. Most of them are not currently inspectable.</p>
-    <p>The planning portal lists the submissions below as approved or decided, but the document tabs hold only the decision notice, not the approved document itself. In June 2026 a request under the Environmental Information Regulations (<span class="hi">EIR-7259</span>) asked the council for them:</p>
-    <ul>
-      <li><strong>Dome Car Parking Management Plan</strong> &mdash; the approved basis for O2 parking management (<code>04/0365/SD</code>)</li>
-      <li><strong>O2 Travel Plan</strong> &mdash; the plan underpinning the discourage-driving logic (<code>06/2805/SD</code>)</li>
-      <li><strong>Bus Service Improvement Strategy</strong> &mdash; the bus mitigation (<code>06/2671/SD</code>)</li>
-      <li><strong>Air Quality Monitoring Station</strong> &mdash; the monitoring obligation (<code>06/2511/SD</code>)</li>
-      <li><strong>Arena Sustainability Framework Monitoring Report</strong> &mdash; the sustainability monitoring (<code>07/1254/SD</code>)</li>
+    <h3 style="font-size:1.18rem;font-weight:800;line-height:1.3;margin:var(--s5) 0 .55rem">Driving was meant to be discouraged. It's being promoted</h3>
+    <p>The O2 and its outlet were approved on a charging regime. Their operator signed a binding commitment to run a parking strategy "designed to discourage use of private cars" which, in the agreement's own words, <strong>"for the avoidance of doubt will include car parking charges"</strong>, alongside a travel plan that put public transport ahead of the private car and a duty to monitor and report car use. The concern is not new. In 2012, when the outlet was approved, TfL told the council its parking "should be reduced and controlled to discourage car use", already <strong>more than twice the London Plan maximum</strong>. And the charging strategy was real: TfL's own 2010 case study recorded the O2's parking as <strong>"dis-incentivised"</strong> and "a premium price", sold by pre-booking for events, the deliberate opposite of a free-parking offer.</p>
+    <p>The O2's own sustainability page tells fans <strong>"the majority of our carbon footprint is generated by fan travel"</strong>, and urges them to take public transport, "from tube and bus to ferry and cable car". One of those options, the cable car, was recorded as having <strong>almost no regular commuters</strong> on TfL's figures, and is used mostly by tourists for the view.</p>
+    <figure class="emfig">
+      <svg class="donut" viewBox="0 0 200 200" role="img" aria-label="At The O2's own carbon-removed concerts in 2024, fan travel was 75.7 percent of emissions; everything else was 24.3 percent.">
+        <circle cx="100" cy="100" r="74" fill="none" stroke="var(--slot)" stroke-width="34"/>
+        <circle cx="100" cy="100" r="74" fill="none" stroke="var(--accent)" stroke-width="34" stroke-dasharray="352 465" transform="rotate(-90 100 100)"/>
+        <text x="100" y="100" text-anchor="middle" class="donut-num">75.7%</text>
+        <text x="100" y="124" text-anchor="middle" class="donut-lab">fan travel</text>
+      </svg>
+      <div class="em-body">
+        <p class="em-head">The O2's own figure, from its "carbon-removed" concerts in 2024 (The 1975, four nights).</p>
+        <ul class="em-legend">
+          <li><span class="sw sw-a"></span>Fan travel: 75.7%</li>
+          <li><span class="sw sw-b"></span>Everything else: 24.3%</li>
+        </ul>
+        <p class="em-sub">AEG's own sustainability lead separately puts parking at "70+ percent" of its venues' scope 1, 2 and 3 emissions.</p>
+      </div>
+    </figure>
+    <p>None of this rests on a poor green record. The O2 is England's first <strong>"Greener Arena"</strong>, and says it has <strong>"surpassed its&hellip; greenhouse gas emissions targets every year since 2010"</strong>. But the wins it counts are the ones it controls: energy, lighting, waste. The one it admits is the majority, fan travel, stays outside those targets, outside the monitoring its consent required and the council still can't produce, and pulled the wrong way by the parking the venue promotes.</p>
+    <p>The customer journey does the opposite:</p>
+    <ul class="ask">
+      <li>Four hours' free parking when you spend &pound;35 at the Outlet</li>
+      <li>A second four hours free for cinema-goers</li>
+      <li>Event parking sold as a ready-to-book add-on, <strong>"up to 30%"</strong> off</li>
+      <li>Weekly, monthly and even <strong>annual parking passes</strong>, sold to "save money"</li>
     </ul>
-    <p>The council carried out searches of its archived records and replied that "no documents matching those reference numbers could be located", and that "the documents you have requested cannot be located and are therefore not held". It offered an explanation:</p>
-    <blockquote class="devquote">
-      <p>We understand that a box containing a significant amount of information relating to the Dome project may have been destroyed following flooding in the basement in 2009. A number of records from other sites were also affected by this incident.</p>
-      <cite>Royal Borough of Greenwich, EIR-7259 response, June 2026</cite>
-    </blockquote>
-    <p>That is the council's own account, and it is taken at face value here: this is about records that cannot currently be inspected, not about anything being deliberately removed. But the consequence stands either way. The documents that would show whether the parking cap, the travel plan, the charging strategy and the monitoring obligations have been kept to cannot, at present, be produced for a major venue and a parking operation of this size. The question the page asks is how that is to be remedied &mdash; which documents currently govern these obligations, and how compliance is being monitored without them.</p>
-    <h3 style="font-size:1.18rem;font-weight:800;margin:var(--s4) 0 .55rem">The air-quality trail points to a missing later assessment</h3>
-    <p>Air quality is the sharpest example. The 2004 agreement required an air-quality monitoring station for the O2 and the Peninsula &mdash; and that is one of the documents the council now says it cannot locate.</p>
-    <p>It matters because of how the 723-space decked car park was justified. In August 2024, the council's environmental health team asked whether any air-quality assessment had been carried out for keeping the decked car park for another ten years. The applicant replied that "a further technical assessment&hellip; hasn't been undertaken", because the O2 car parks "were assessed in the Environmental Statement which supported the Masterplan application". On that basis, it said the temporary parking was equivalent to the permanent arrangement already "tested and approved".</p>
-    <p>But the Environmental Statement says something different. Its air-quality chapter records that, for the new bus terminal and car park, "there was insufficient information for a quantitative assessment to be undertaken", and that "a detailed assessment of the proposed bus terminal and car park will be undertaken at the reserved matters stage".</p>
-    <p>So the document now being relied on as having tested the car park is the same one that said the detailed assessment would come later. The open question is simple: was that detailed assessment ever carried out, where is it recorded, and how is current air-quality monitoring being checked now that the Silvertown Tunnel is open?</p>
+    <p>In May 2025 the O2 went further, naming JustPark its <strong>"official parking partner"</strong> in a first-of-its-kind, multi-year deal. AEG's own vice-president put the aim plainly:</p>
+    <p class="pull">&ldquo;&hellip;make it easier than ever for attendees to drive, park and enjoy their visit.&rdquo;<cite>Nathan Kosky, VP Europe, AEG, on the JustPark partnership (May 2025)</cite></p>
+    <p>JustPark's own research, cited in the announcement, found parking hassle can deter up to <strong>87% of fans</strong> from driving to an event; the deal is built to remove exactly that deterrent. The commitment the operator signed was to discourage driving, with charges as the lever; the partnership, and the discounts and passes around it, pull that lever the other way.</p>
+    <p>And after we raised it, <strong>the long-stable travel pages were quietly reordered within weeks</strong> to push driving down, while AEG told us nothing needed changing.</p>
+    <p>The pull toward driving also cuts against the council's own current Transport Strategy 2022&ndash;2032, which asks key tourism destinations (it names the O2) to steer visitors to public transport, and says "sustainable and active travel options" should be "prioritised above car travel to and from major events".</p>
     <details class="srcfold"><summary></summary>
-    <p class="src">Request <code>EIR-7259</code> (Royal Borough of Greenwich), submitted 11 June 2026, relating to discharge-of-condition and Section 106 submissions under the <code>02/2903/O</code> Greenwich Peninsula / Dome permission. Also requested: North Greenwich Station interchange (<code>06/1845/SD</code>, condition 131) and Highways to serve Dome (<code>07/0920/SD</code>, conditions 71 and 141). The council's response is quoted from its written reply. A procedural note worth keeping on file: the council first treated the request as invalid under the Freedom of Information Act for not stating a full legal name, then accepted it once it was pointed out that the full-name requirement does not apply to requests under the Environmental Information Regulations.</p>
-    <p class="src">The air-quality exchange is recorded in the council's own <code>24/1874/F</code> Planning Board Report (Environmental Health consultation response, 9 August 2024, and the applicant's reply): "a further technical assessment&hellip; hasn't been undertaken"; the car parks "were assessed in the Environmental Statement&hellip; tested and approved"; the cited emissions improvement is from the separate Energy Centre heat-pump application <code>24/0706/F</code>.</p>
-    <p class="src">The deferral is in the 2015 Greenwich Peninsula Masterplan Environmental Statement, Volume 1, Chapter 8 (Local Air Quality), para 8.3.23 ("Proposed Bus Terminal &amp; Car Park"): "At the time of writing there was insufficient information for a quantitative assessment to be undertaken&hellip; A detailed assessment of the proposed bus terminal and car park will be undertaken at the reserved matters stage." Application <code>15/0716/O</code>.</p>
+    <p class="src">The car-parking strategy "designed to discourage use of private cars" and the duty to monitor and report car use are in the Outlet's Section 106 (<code>11/3033/O</code>, Third Supplemental Deed, Clauses 7 and 14) and the approved ROV Travel Plan (<code>16/3897/SD</code>, June 2015); the Sustainable Travel Hierarchy and the "promote, manage and monitor" wording are set out in the same agreement and Travel Plan. The 2012 over-provision concern is from the Mayor's Stage 1 report (GLA / TfL, <code>PDU/0187h/01</code>, 7 February 2012, paras 33&ndash;34): the retail outlet's Car Park 1 provided 1,299 spaces against a London Plan maximum of 502 (Policy 6.13, one space per 50&nbsp;sq.m), and TfL advised that "the car parking provision available for the retail outlet use should be reduced and controlled to discourage car use", a separate figure from the O2's 2,000-space event cap. The roadworks warning, the "4 hours free parking when you spend &pound;35 or more at Outlet Shopping" offer and the JustPark event-parking prompt are quoted from The O2's own parking page (Wayback capture 4 March 2026, theo2.co.uk/visit-us/getting-to-the-o2/parking); the "up to 30%" event-parking saving is from the linked official O2 JustPark booking page; the "Be Ready to Go" parking amenity beside hotels and food is from the O2 / AXS event-ticketing journey. The May 2025 "official parking partner" deal, AEG VP Nathan Kosky's stated aim to "make it easier than ever for attendees to drive, park and enjoy their visit", and the finding that "up to 87% of fans can be deterred from driving" (a JustPark survey of 3,100 drivers, April 2025) are from JustPark's own announcement, "JustPark Announces Exclusive Partnership with The O2" (justpark.com, 1 May 2025), and corroborated by trade press carrying the same VP quote (Conference News, "The O2 partners with JustPark", conference-news.co.uk, 1 May 2025); JustPark is listed as an official partner on The O2's own partners page (theo2.co.uk/about-us/partners). The page reordering (driving and drop-off, and the Outlet "Free Parking Offer", moved down and de-emphasised, the cable car moved up) is documented in last-archived-versus-live side-by-side captures of theo2.co.uk/visit-us/getting-to-the-o2, outletshoppingattheo2.co.uk/getting-here and theo2.co.uk/visit-us/getting-to-the-o2/parking (Wayback captures January&ndash;April 2026 against the live pages). The quoted AEG reply ("no priority or preference"; "no changes that we would deem necessary") is from The O2's written response to us, June 2026. The O2's own statement that "the majority of our carbon footprint is generated by fan travel", with its appeal to use public transport, is on its sustainability page (theo2.co.uk/about-us/sustainability, accessed June 2026), which lists the options "from tube and bus to ferry and cable car"; the cable car (the Emirates Air Line, now the IFS Cloud Cable Car) was reported on TfL's own figures to have no regular commuters, with only a handful of people qualifying for its commuter discount in a sample week and the service used predominantly by tourists for the view (The Greenwich Wire / 853, 16 December 2014; TfL Cable Car Need and Business Case, 2011). AEG's own sustainability lead has separately put a figure on it, Adam Pearson of AEG stating in a JustPark case study (2 March 2026) that parking "makes up 70+ percent of scope one, two and three emissions related to all venues and how they operate". The 75.7% fan-travel figure and the 90p-per-ticket offset are AEG's own results from The O2's "carbon-removed" concerts (The 1975, four nights, February 2024; more than 545 tonnes of residual carbon removed), reported by Music Ally, 17 April 2024. The Cineworld "up to 4 hours free parking" offer (valid for Car Park 2 or Car Park 4 on presentation of a paid cinema ticket) is set out in The O2's own published Car Park Terms and Conditions (theo2.co.uk/legal), which name Ansco Arena Limited as its promoter, the entity defined in the <code>11/3033/O</code> Third Supplemental Deed as promoting "use of public transport ahead of use of private car"; the same terms confirm the arena car parks are operated by Combined Services Provider Ltd (registered office York House, Empire Way, Wembley HA9 0PA). The "Greener Arena" certification and the claim that the venue has "surpassed its waste, water and greenhouse gas emissions targets every year since 2010" are from The O2's own news page (theo2.co.uk, 8 June 2022); the emissions reductions AEG quantifies (LED lighting, boiler efficiency, renewable-energy procurement) are scope 1 and 2 operational measures set out on AEG's own "eradicate our carbon" pages, while fan travel (scope 3, the admitted majority) is given no target figure.</p>
+    </details>
+
+    <h3 style="font-size:1.18rem;font-weight:800;line-height:1.3;margin:var(--s5) 0 .55rem">The roads are already busy before events</h3>
+    <p>This is already a busy residential, school, station and venue district before event traffic is added. The developer's own December 2024 surveys counted roughly 3,900 person trips in one morning peak around the new homes and school. Closer to the O2, Department for Transport counts on the road serving its car parks show weekday car traffic rising from roughly 4,900 to 7,500 vehicles between 2008 and 2019, a rise the counts attribute to the area's general build-out rather than to the O2 alone.</p>
+    <p>Those counts show the ordinary baseline, not the weekend and event-night peaks. On one O2 event day, Boxing Day 2024, a Transport for London freedom-of-information response recorded <strong>108 parking fines in a single day</strong> at the neighbouring North Greenwich station car park, where a driver reported being trapped in congestion with no spaces free and no signage warning that the car park was full. It was one day, and not a typical one, but it is what no spare capacity looks like on the kind of day the area exists to host.</p>
+    <p>The pressure is significant enough that Transport for London plans its own operations around it. Its Board papers keep the Blackwall Tunnel running northbound through the night so O2 crowds can cross the river home, and choose tunnel-closure dates to avoid <strong>"major O2 area events"</strong>; clearing cars from the venue has taken <strong>"over 90 minutes"</strong>, enough that TfL fitted a bespoke automated signal system at the car-park exit, one of only about 50 such critical locations in London. The council records the same in its own Transport Strategy 2022&ndash;2032, which names the O2 for <strong>"sharp spikes in demand"</strong>, "traffic congestion" and more "contested kerb spaces" on the Peninsula.</p>
+
+    <h3 style="font-size:1.18rem;font-weight:800;line-height:1.3;margin:var(--s5) 0 .55rem">A designated air-quality corner, near the limit and barely monitored</h3>
+    <p>The whole borough is an Air Quality Management Area, and TfL's own Silvertown baseline puts the Peninsula's approach road, the A102 past the tunnel portal, at the <strong>highest excess delay of any route in its study area</strong>, already near the legal nitrogen-dioxide limit, "sensitive to traffic changes", and, on TfL's own forecast, still short of World Health Organisation air-quality guidelines even by 2030. Yet at the exact corner where the tunnel, the O2 car parks and venue traffic converge, the effect has barely been measured: TfL's reference monitor at the portal lost power for most of the tunnel's opening year and captured just <strong>21%</strong> of valid data, nearly four-fifths of the year missing, too little to use. A reliable post-opening picture is not expected until around mid-2026.</p>
+    <p>The same corridor exceeds limits at its other end. Of the borough's eleven air-quality monitors, the council's own strategy singles out the one at the Woolwich flyover, beside the free retail-park car park the planning record says is used for O2 events:</p>
+    <p class="pull">&ldquo;The monitoring station at the Woolwich flyover is the only site which is regularly exceeding the WHO limits.&rdquo;<cite>Royal Borough of Greenwich Transport Strategy 2022&ndash;2032</cite></p>
+    <p>The corridor this venue cluster feeds is bracketed by air-quality problems at both ends, while the traffic the car-lite plan is meant to discourage goes onto it uncounted. (The A102 is a major tunnel approach, so its through and freight traffic dominates these readings; the point is that the venue traffic on top is neither separately measured nor managed.)</p>
+    <details class="srcfold"><summary></summary>
+    <p class="src">Air quality and the portal corner: the borough-wide Air Quality Management Area is on the Defra UK-Air register (Greenwich AQMA, ref 140) and confirmed in the Royal Greenwich Air Quality Annual Status Report 2024. The A102 southern approach as the highest excess delay of any monitored route, the "sensitive to traffic changes" / near-limit wording, and the WHO-guideline point (no road or school near the tunnel meeting 10&micro;g/m&sup3;, predicted to still be the case in 2030) are from TfL, <em>Travel in London 2025, Focus report: The Silvertown Tunnel: baseline monitoring</em> (May 2025), Table 4.1 and &sect;6.9. The portal monitor (London Air Quality Network / Air Quality England site TL4, "Greenwich &ndash; Tunnel Avenue", at 51.4951, 0.0041) recorded only 21.3% data capture in 2024: "the monitor did not have power from 9th April 2024 until 10th March 2025&hellip; due to construction works which removed the original feeder pillar" (TfL Silvertown Tunnel Air Quality Baseline Monitoring Report 2024, whose Table 4-1 records the site as 30 metres from the tunnel portal); the first consolidated post-opening data is expected around mid-2026. The distance to Car Park 1 is our own straight-line calculation from the published coordinates: about 230 metres from the monitor to the car park's Millennium Way frontage (about 315 metres to its centre), with Car Park 1's position taken from OpenStreetMap (way 10408063, "Car Park 1 (Arena Pre-Booked)") and its "event parking only" designation from The O2's own site-layout map. WHO air-quality guideline for NO&#8322;: 10&micro;g/m&sup3; annual mean (against the UK legal objective of 40). The Woolwich flyover site: the Royal Borough of Greenwich Transport Strategy 2022&ndash;2032 records that, of 11 London Air Quality Network sites in the borough, "the monitoring station at the Woolwich flyover is the only site which is regularly exceeding the WHO limits". The site is London Air Quality Network / Air Quality England "Greenwich &ndash; Woolwich Flyover" (site code GR8 / GR008), classified as an "Urban Traffic" site at latitude 51.486884, longitude 0.017902, at the A102 (Blackwall Tunnel Southern Approach) and A206 Woolwich Road junction, immediately south of the Millennium Leisure Park / IKEA retail-park access. "WHO limits" here means the WHO 2021 guideline (10&micro;g/m&sup3; NO&#8322;), a stricter threshold than the UK legal objective (40); the strategy does not state the site exceeds the legal objective, and the causal contribution of any single source on this strategic-road corridor is not established here.</p>
+    </details>
+
+    <h3 style="font-size:1.18rem;font-weight:800;line-height:1.3;margin:var(--s5) 0 .55rem">At the station, the promised changes haven't happened</h3>
+    <p>The car park beside the station is <strong>the largest at any Underground station in London</strong>. At about 500 spaces, only Epping, out in Essex at the far end of the Central line, has more:</p>
+    <figure class="cpk-fig" role="group" aria-label="The biggest London Underground station car parks by number of parking spaces: Epping 538 (Central line, zone 6, Essex); North Greenwich 509 (Jubilee line, zone 2/3, mid-network); Stanmore 434 (Jubilee line, zone 5); Hounslow West 420 (Piccadilly line, zone 5); Chalfont and Latimer 373 (Metropolitan line, zone 8); Newbury Park 337 (Central line, zone 4); Cockfosters 311 (Piccadilly line, zone 5). Every one except North Greenwich is an outer-London park-and-ride.">
+      <figcaption class="cpk-head">The Underground's biggest station car parks are all outer-London park-and-rides. North Greenwich, mid-network and on land planned car-lite, is the exception.</figcaption>
+      <div class="cpk-row" style="--bar:100%"><span class="cpk-n">538</span><span class="cpk-t"><b>Epping</b> (Central line, zone 6, Essex)</span></div>
+      <div class="cpk-row cpk-ng" style="--bar:95%"><span class="cpk-n">509</span><span class="cpk-t"><b>North Greenwich</b> (Jubilee line, zone 2/3, mid-network)</span></div>
+      <div class="cpk-row" style="--bar:81%"><span class="cpk-n">434</span><span class="cpk-t"><b>Stanmore</b> (Jubilee line, zone 5, NW terminus)</span></div>
+      <div class="cpk-row" style="--bar:78%"><span class="cpk-n">420</span><span class="cpk-t"><b>Hounslow West</b> (Piccadilly line, zone 5, west London)</span></div>
+      <div class="cpk-row" style="--bar:69%"><span class="cpk-n">373</span><span class="cpk-t"><b>Chalfont &amp; Latimer</b> (Metropolitan line, zone 8, Buckinghamshire)</span></div>
+      <div class="cpk-row" style="--bar:63%"><span class="cpk-n">337</span><span class="cpk-t"><b>Newbury Park</b> (Central line, zone 4, NE London)</span></div>
+      <div class="cpk-row" style="--bar:58%"><span class="cpk-n">311</span><span class="cpk-t"><b>Cockfosters</b> (Piccadilly line, zone 5, north terminus)</span></div>
+      <p class="cpk-foot">Parking spaces per station car park (Saba / TfL operator listings; full network compiled October 2023).</p>
+    </figure>
+    <p>And it was never meant to be this big, or even to survive. Two car parks beside the station were meant to go: a commuter car park the 2019 modelling assumed <strong>"removed by 2021 in all scenarios"</strong>, and a customer car park a 2006 obligation bound TfL to surrender. Both still operate in 2026, and whether their <strong>roughly 500 spaces</strong> sit inside or outside the O2's 2,000-space cap is unanswered. The land's status is unsettled even for its owner: it sits in public ownership, yet asked whether the railway byelaws that normally govern a station car park still apply here, TfL replied that it holds <strong>no such record</strong>.</p>
+    <p>The bus station shows the same gap between plan and delivery. The new bus station and cycle network were the masterplan's own answer to its biggest transport impact, yet the upgrade is tied to home-building rather than the O2's crowds, and the developer now proposes to slip its trigger <strong>from 3,000 homes to 6,000</strong>, into the 2030s, even as TfL calls North Greenwich a station that <strong>"no longer meets capacity requirements"</strong>.</p>
+    <h3 style="font-size:1.18rem;font-weight:800;line-height:1.3;margin:var(--s5) 0 .55rem">One Tube line, and the alternatives that never came</h3>
+    <p>The low-car record leans on a single Underground line, the Jubilee. TfL's own modelling shows car use roughly doubles, to <strong>40 to 55 percent of visitors</strong>, when it is closed, as it was across a full event weekend in January 2026 that left O2 visitors and a nearby football crowd with a handful of replacement buses. When the line is down, far more of the crowd drives, onto the same roads and into the same parking the venue promotes.</p>
+    <p>There was meant to be more than that one line. The record since runs one way:</p>
+    <figure class="tline" role="group" aria-label="The corridor's promised transit, and what was delivered. 2009: the Greenwich Waterfront Transit, planned as an attractive alternative to the car, abandoned and never replaced. 2024: a one-pound cross-river ferry to the Isle of Dogs, a short walk from the O2, shelved for lack of funding. 2025: the Silvertown road tunnel opened, road traffic only. 2026: the 472 bus replaced by the limited-stop SL11 Superloop, skipping most of its stops.">
+      <p class="tline-cap">The corridor's transit: promised, and what was built</p>
+      <div class="trow"><span class="ty">2009</span><span class="te">The Greenwich Waterfront Transit, a dedicated route serving the O2 and planned as <strong>"an attractive alternative to the car"</strong>, is abandoned and never replaced.</span></div>
+      <div class="trow"><span class="ty">2024</span><span class="te">A one-pound cross-river ferry to the Isle of Dogs, a short walk from the O2, is shelved for lack of funding.</span></div>
+      <div class="trow road"><span class="ty">2025</span><span class="te">The Silvertown Tunnel opens. It carries road traffic only.</span></div>
+      <div class="trow"><span class="ty">2026</span><span class="te">The 472 bus is replaced by the limited-stop SL11 Superloop, which skips most of its stops.</span></div>
+    </figure>
+    <p>TfL does not dispute the bind. Its own business case calls this <strong>"an unusually high degree of dependence on a single Underground line"</strong>, with <strong>"no realistic proposals"</strong> for a new high-capacity route <strong>"during the next twenty years"</strong>. And when the cross-river ferry was shelved, the Mayor's answer was that TfL was <strong>"not in a position to invest any significant capital costs in new schemes such as the aforementioned new ferry crossings"</strong>.</p>
+    <figure class="dbar" role="group" aria-label="Where North Greenwich passengers travel in the morning peak, on TfL modelling: about 8,899 board toward Canary Wharf and central London against about 1,927 toward Stratford, roughly 4.6 times as many heading toward Canary Wharf.">
+      <p class="dbar-hub">North Greenwich</p>
+      <div class="dbar-dirs">
+        <span class="l">&larr; toward Canary Wharf &amp; central London</span>
+        <span class="r">toward Stratford &rarr;</span>
+      </div>
+      <div class="dbar-row">
+        <div class="dbar-side l"><span class="dbar-num">8,899</span><div class="dbar-fill" style="width:80%"></div></div>
+        <div class="dbar-axis"></div>
+        <div class="dbar-side r"><div class="dbar-fill" style="width:17.3%"></div><span class="dbar-num">1,927</span></div>
+      </div>
+      <p class="dbar-take"><strong>4.6&times; more</strong> morning-peak boardings head toward Canary Wharf and central London than toward Stratford.</p>
+      <p class="dbar-foot">TfL modelling. Canary Wharf is one Jubilee stop under the river.</p>
+    </figure>
+    <p>The links that exist run the other way. The cable car goes to the Royal Docks, and on TfL's own count carries almost no regular commuters, <strong>four</strong> qualified for its commuter discount in the first year, and it shuts in high winds. The river bus is a small, premium service the O2's own travel plan counted on for about <strong>three percent</strong> of visitors. The crossing that would have served the busy direction, the Isle of Dogs ferry, is the one that was dropped.</p>
+
+    <h3 style="font-size:1.18rem;font-weight:800;line-height:1.3;margin:var(--s5) 0 .55rem">The free car park the count leaves out</h3>
+    <p>The formal count covers the O2's own spaces, and stops there. About a mile away sits a free car park, shared by IKEA, B&amp;Q and a cinema, that the planning record itself says is <strong>used for O2 events</strong>. The car park is policed only by number-plate cameras enforcing a five-hour maximum stay, with no check on whether a driver is a customer, and it stays open until 11pm, and midnight on Fridays and Saturdays, so right through an O2 event. And <strong>five hours comfortably covers a gig</strong>, as a typical night shows:</p>
+    <div class="strip" aria-hidden="true">
+      <div class="step">
+        <div class="step-time">6:30pm</div>
+        <span class="step-badge"><svg viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></span>
+        <div class="step-h">Park free</div>
+        <div class="step-sub">5-hour clock starts</div>
+      </div>
+      <div class="step">
+        <div class="step-time">7:30pm</div>
+        <span class="step-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <div class="step-h">Show starts</div>
+        <div class="step-sub">still parked free</div>
+      </div>
+      <div class="step shop">
+        <div class="step-time">8:00pm</div>
+        <span class="step-badge"><svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+        <div class="step-h">IKEA, B&amp;Q close</div>
+        <div class="step-sub">most retail over</div>
+      </div>
+      <div class="step">
+        <div class="step-time">10:30pm</div>
+        <span class="step-badge"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1.5"/></svg></span>
+        <div class="step-h">Show ends</div>
+        <div class="step-sub">walk/bus back</div>
+      </div>
+      <div class="step">
+        <div class="step-time">11:00pm</div>
+        <span class="step-badge"><svg viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></span>
+        <div class="step-h">Drive away</div>
+        <div class="step-sub">4h 30m, within limit</div>
+      </div>
+      <div class="step lim">
+        <div class="step-time">11:30pm</div>
+        <span class="step-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></span>
+        <div class="step-h">5-hour limit</div>
+        <div class="step-sub">car already gone</div>
+      </div>
+    </div>
+    <p class="strip-foot">Car park open until 11pm (midnight Fri &amp; Sat). ODEON later. Main shops closed by 8-10pm.</p>
+    <p><strong>The rule doesn't stop event parking. It fits it.</strong> The O2 and that car park are held to opposite standards. The O2's own transport case, as reported to the Mayor in 2012, rests on a charging strategy "to discourage car trips", on car use being "monitored and reported", and on a "legal agreement&hellip; in relation to car parking charges and a car parking management plan" expressly to "minimise clashes with O2 event night demand". The retail car park carries no equivalent duty. In February 2014 Transport for London told the council as much:</p>
+    <p class="pull">&ldquo;[The car park is] unregulated&hellip; free to be used for non-retail purposes such as commuting, attending events at the O2 or football matches at Charlton.&rdquo;<cite>Transport for London to Greenwich Council, February 2014</cite></p>
+    <p>TfL asked that a management plan address "parking by drivers who are not customers". A plan was put in place, but it manages shoppers by time, not the venue's events. And when TfL asked again, in 2021, for controls extending "through the night and at weekends" to catch non-customer parking, the applicant replied that IKEA <strong>"will not accept"</strong> them.</p>
+    <p>Closer to the venues, the estate's own fixes are, by its own account, unfinished. The developer says it moved coach and private-hire pick-up and drop-off to a dedicated facility on Millennium Way so vehicles "would not need to access estate roads", yet admits <strong>"there is still an issue on East Parkside"</strong>; its further measures, geo-fencing taxi apps and a physical barrier "being considered", are partial and still in progress.</p>
+    <p>None of this is new: the 2013 assessment that won IKEA its permission already conceded the car park "is being used as an <strong>informal park and ride</strong> for some commuters and visitors into central London". How many event-goers park this way, and where, <strong>does not appear ever to have been counted</strong>, and that absence is the point: this event parking, drop-off and pedestrian spillover fall outside the formal count, so the gains a car-free neighbourhood is meant to deliver are quietly offset by visitor traffic that is <strong>neither monitored nor managed</strong>.</p>
+
+    <details class="srcfold"><summary></summary>
+    <p class="src">Cap and operated number: <code>24/1874/F</code> Condition 3 (Oct 2024); Strategic Travel Plan (GP-STP), May 2025, p25 ("2,200 car parking spaces&hellip; an additional 500 spaces"); Secret Cinema Transport Statement (i-Transport, April 2026), Table 3.3 (2,226); Royal Greenwich Retail &amp; Leisure Study, Vol B (Nov 2025), p78 ("over 2,500 bays available"). The O2's own figure, "2,500 parking spaces spread across four car parks", is from its help page "Getting to The O2 &ndash; Parking &amp; Transport" (help.theo2.co.uk, article 23250711344797; Wayback capture 18 June 2026).</p>
+    <p class="src">Decked car park: <code>24/1874/F</code> (granted 9 October 2024), "Retention of Temporary Decked Car Park for a period of up to 10 years"; Condition 1 requires removal by 9 October 2034. The 723-space deck was built under the Silvertown Tunnel order to replace O2 parking during construction, on the basis that "a separate planning permission is required for its retention". It sits on Plots 15.03/16.03, west of West Parkside, separate from the Olympian Way venue plots. Reported by Murky Depths, 17 June 2024 ("Temporary Greenwich car park set to stay for another decade").</p>
+    <p class="src">Deferral and programme: deed of variation <code>24/4133/I106</code> (validated 5 Dec 2024); Gateway Junction Improvements <code>23/1843/I106</code> programme. Trips: Strategic Travel Plan Monitoring Report (Arup, ref GP-STPM, May 2025; surveys 4 Dec 2024): the individual figures are from the report, and the ~3,900 combined total is a sum of those figures. The &pound;260,000 station-access contribution reportedly spent mostly on street lighting is from a 2021 freedom-of-information response, reported by The Greenwich Wire / 853 (10 June 2025); it was a subset of the IKEA scheme's S106 travel and transport contributions (&pound;500,000 towards extra buses and two relocated bus stops, plus a &pound;750,000 Travel Plan Fund for sustainable-travel promotion and pedestrian and cycle links to Westcombe Park, Charlton and North Greenwich), both paid to the council in January 2018 (S106 dated 9 December 2014; IKEA Travel Plan, October 2018, &sect;7.12). Longer-run roadside counts: Department for Transport Road Traffic Statistics, raw manual counts (roadtraffic.dft.gov.uk), count point 942366 on the road serving the O2 car-park area; near-annual single-weekday counts 2008&ndash;2019 show 12-hour car traffic rising from 4,934 (2008) to 7,488 (2019), about +52%. The rise was gradual rather than a single step (12-hour car totals 4,934 in 2008, 4,908 in 2011, 5,686 in 2014, 7,250 in 2018 and 7,488 in 2019; DfT's annual flows for the point run to 2019 only) and coincides with the area around this road building out over the decade (the cable car in 2012, the InterContinental hotel in 2015, the Upper Riverside homes, and the ICON Outlet in October 2018), so it reflects general growth around the road rather than the O2 arena, which has operated since 2007. The point sits at the O2 car-park cluster (about 120m from the event Car Park 1, 265m from the commuter Station Car Park and 277m from Car Park 2, ground-truthed against OpenStreetMap) and does not lie on the route to the peninsula's homes or school: Greenwich Millennium Village and Millennium Primary School (50 John Harrison Way) are reached via John Harrison Way, not Millennium Way, so residential and school journeys do not pass this counter. These are link counts of traffic passing the point on weekdays in late spring, which exclude weekends and event nights; the latest count is 2019 (pre-pandemic, pre-tunnel).</p>
+    <p class="src">2015 masterplan Environmental Statement (Vol 1, Ch 6 Transport and Access), application <code>15/0716/O</code>: O2 parking assessed at 2,000 spaces, re-provided as a permanent multi-storey car park (Table 6.2; paras 6.3.7 and 6.3.29); bus station "approaching capacity" per TfL's 2014 North Greenwich Bus Station Options Review (para 6.3.18); bus-network effect "moderate negative" reduced to "negligible" by the new Transport Hub (Table 6.28; para 6.7.41). TfL's later pre-application advice (letter <code>GRNW19/275</code>, 30 April 2019, signed Lucinda Turner, TfL) describes North Greenwich as "the 4th busiest Bus Station in London with approximately 39,500 passengers using it per day" and one that "no longer meets capacity requirements".</p>
+    <p class="src">Spillover: this is largely observed behaviour, not a quantified figure. The retail-park-parking workaround and late-night walking through residential streets are openly and repeatedly described in public visitor discussions and local community groups going back to 2008 (e.g. Digital Spy forums), before the 2015 masterplan's car-lite standard; they are cited here as observed patterns, not planning evidence. The documented parts are: the Millennium Leisure car park's own published parking policy ("for visitors to the leisure park only", five hours free, customers "may be asked to provide proof of purchase", millennium-leisure.co.uk, &copy; Legal &amp; General Assurance Society Ltd), set against the observed event-night use; the developer's 2026 written response to residents, which describes a pickup car park on Millennium Way and taxi-app geo-fencing while acknowledging "there is still an issue on East Parkside"; and the 2019 decision in which Greenwich Council approved up to five hours' free parking at the east Greenwich IKEA (the "most sustainable" store), over an initial objection from its own highways officers that O2 events "are likely to attract motorists to also park at the site", reported by The Greenwich Wire / 853, 23 August 2019. The 2025 redevelopment of the IKEA car park (1,251 homes; retail-park spaces cut 1,066&rarr;856; "car-free" estate) and the Charlton Society's parking-spillover / Controlled Parking Zone objection are reported by The Greenwich Wire, 10 June 2025. The shared B&amp;Q/IKEA/ODEON car park, the five-hour ANPR enforcement "as existing", the conceded "risk of parking overspill onto nearby residential streets" and the residents-barred-from-CPZ-permits legal agreement are in the application's own Planning &amp; Affordable Housing Statement (<code>24/1695/F</code>, Quod, May 2024, paras 3.2, 5.38 and 9.26&ndash;9.27). The lapsed management scheme, the "no limits on who can park and for how long" and "informal park and ride" admissions, and the voluntary "will be considered if long stay parking becomes an issue" are in the IKEA store's own Transport Assessment (Vectos, December 2013, &sect;&sect;9.31&ndash;9.34, 10.5), submitted with outline consent <code>13/3285/O</code>; that consent's only parking condition (Condition 12) requires the spaces to be "permanently retained for the designated purposes", not managed or enforced. That the retail park is an easy walk to the venue is itself on the planning record: the same 2013 assessment rates the site PTAL 5 ("very good" public-transport accessibility) and a roughly 1.8-kilometre direct walk to North Greenwich station and The O2, with around 42 buses an hour in each direction on the adjacent Millennium Busway (Vectos PERS pedestrian audit and Draft Travel Plan, &sect;2). The store's "most sustainable" billing is relative rather than absolute: the travel plan approved for it (the S106 travel-plan obligation discharged under <code>18/2940/I106</code>, 1 November 2018) was built on an expected customer baseline of 65 per cent arriving by car (41 per cent as driver, 24 per cent as passenger), with a five-year target of reducing car drivers by just three points, to 38 per cent (IKEA Travel Plan, October 2018, Tables 3.2 and 4.2). In approving 1,251 homes on part of the same car park in June 2025, the council's own planning board report described the retained IKEA parking as "contrary to London Plan policy", kept at that level only because IKEA holds a contractual right to a minimum of 1,000 spaces; the report records that IKEA declined a mechanism to reduce parking over time against monitoring, and that a proposed linear green park along Commercial Way was removed as a result (Royal Borough of Greenwich Planning Board, ref <code>24/1695/F</code>, 17 June 2025, paras 2.5, 15.24 and 31.7). The concern was raised at the very start: at the strategic planning stage in February 2014, Transport for London warned that the car park was "unregulated", that "the car park management scheme which was once in place is no longer enforced", and that it was therefore "free to be used for non-retail purposes such as commuting, attending events at the O2 or football matches at Charlton", and TfL formally requested "that a new car park management plan is required by condition of any permission granted", one that "should in particular address the issue of parking by drivers who are not customers". A management plan was instead secured through the consent's Section 106 (Third Schedule, Clause 6.1), but it addresses shoppers' duration, not non-customer or event parking: a five-hour ANPR limit to "discourage commuter parking", enforced only "during the hours in which the stores trade", with overstays issued a &pound;70 penalty. Its details were approved under <code>19/0109/i106</code> (23 August 2019) and amended under <code>20/3722/i106</code> (10 February 2021) to issue a penalty notice from the first overstay rather than a warning; TfL was consulted on that amendment and "chose not to make comment". Sources: Transport for London's consultation response, ref <code>14/0143</code>, 12 February 2014, signed Paul McGartoll, TfL Borough Planning; GLA / TfL Stage 1 referral <code>D&amp;P/3283/01</code>, 25 February 2014, paras 56&ndash;59; outline consent <code>13/3285/O</code>, 9 December 2014; Car Park Management Plan (Gleneagles Project Services / Horizon Parking, ref GPS3201, 9 November 2020). The O2's own car-parking pricing strategy "to discourage car trips", the commitment that car use "would be monitored and reported as part of the overall O2 travel planning commitments", and the "legal agreement with the local planning authority in relation to car parking charges and a car parking management plan" intended to "minimise clashes with O2 event night demand for car parking" are recorded in the Greater London Authority's report on The O2 (ref <code>PDU/0187h/02</code>, Transport for London's comments, 25 July 2012, paras 25&ndash;29). The car park's 2026 opening hours (to 11pm, and midnight on Fridays and Saturdays), the five-hour ANPR limit and the developer's account that "visitors would be able to use the car park within the opening hours and for durations of under five hours, as per the existing situation" are in the Peninsula Gardens Transport Assessment (Arup, ref <code>305558-00-TA</code>, 2 May 2025, &sect;3.8.1 and Appendix A); the parking management plan's statement that the limit exists "to enable customers to complete a full shop and linked trip" and that "there will be no charge for parking less than five hours" is in the accompanying Parking Design and Management Plan (Arup, ref <code>305558-00-PDMP</code>, 2 May 2025, &sect;2.1.1 and &sect;4.3.2&ndash;4.3.4), both submitted under application <code>24/1695/F</code>. TfL's 2021 request that controls "extend through the night and at weekends" to deter non-customer and resident parking, and the applicant's reply of 9 September 2021 that this "would be detrimental to IKEA customer experience" and that "if the arrangements are considered too onerous, IKEA will not accept the proposals", are reproduced in that assessment's Appendix A, from the 2021 pre-application for the withdrawn predecessor scheme <code>22/1077/F</code>.</p>
+    <p class="src">Station car parks: WSP Transport Assessment (Outline Part), July 2019, para 8.2.4 (commuter car park "to be removed by 2021 in all scenarios"); Mayor's Question 2006/0465-1 (11 Dec 2006) on the surrender obligation; Mayor's Question 2021/0104 (10 Feb 2021) on surplus station car parks. Coach parking: <code>25/2707/F</code> (granted 20 Oct 2025); TfL concern recorded in the <code>24/1874/F</code> board report. Byelaw / land status: TfL freedom-of-information response <code>FOI-0703-2526</code> and its internal review (June 2025): TfL "unable to identify" any record of the TfL Railway Byelaws 2011 being revoked or superseded over the site, and "on the balance of probabilities&hellip; the information is not held". Tenure: the TfL Property Asset Register (par.tfl.gov.uk) records the car-park land as held by Places for London Ltd on leasehold titles <code>TGL539603</code> and <code>TGL539628</code>; large parts of the surrounding Peninsula freehold shown on the same register are held by GLA Land and Property Ltd (the GLA). HM Land Registry official copies of those titles would confirm the freeholder and lease terms.</p>
+    <p class="src">The air-quality exchange over the decked car park is recorded in the council's own <code>24/1874/F</code> Planning Board Report (Environmental Health consultation response, 9 August 2024, and the applicant's reply): "a further technical assessment&hellip; hasn't been undertaken"; the car parks "were assessed in the Environmental Statement&hellip; tested and approved"; the cited emissions improvement is from the separate Energy Centre heat-pump application <code>24/0706/F</code>. The deferral is in the 2015 Greenwich Peninsula Masterplan Environmental Statement, Volume 1, Chapter 8 (Local Air Quality), para 8.3.23 ("Proposed Bus Terminal &amp; Car Park"): "At the time of writing there was insufficient information for a quantitative assessment to be undertaken&hellip; A detailed assessment of the proposed bus terminal and car park will be undertaken at the reserved matters stage." Application <code>15/0716/O</code>.</p>
+    <p class="src">The Greenwich Waterfront Transit: TfL, <em>Greenwich Waterfront Transit Summary Report</em> (July 2001). The planned route ran "between the site of the Millennium Dome and North Greenwich station (interchange with Jubilee line and bus services)", and the project's stated purpose was to provide "an attractive alternative to the car"; the report records that "Waterfront Transit should incorporate the 1.8 kms of Transitway already in place between the Millennium Dome and Peartree Way", built in anticipation of the scheme. TfL and the Mayor decided not to proceed in 2009 (the last Phase 1 capital-cost projection was &pound;46.4m; GLA Mayor's Question 2009/1354, 25 May 2009); the scheme has not been replaced.</p>
+    <p class="src">The single-line dependence is TfL's own assessment: TfL, <em>Cable Car Need and Business Case</em> (2011), paras 4.11&ndash;4.36, describing "an unusually high degree of dependence on a single Underground line", buses "certainly not sufficient to meet demand in the event of the Jubilee line being unavailable" and "insufficient bus capacity to disperse either peak period or event crowds", and "no realistic proposals" for a new high-capacity route, "unlikely&hellip; during the next twenty years"; the same report records that the 2,600-capacity Matter nightclub inside The O2 cited Jubilee line engineering works in its 2010 closure. The Elizabeth line does not serve North Greenwich and the Silvertown Tunnel carries road traffic only, so the Jubilee remains the Peninsula's only rail line.</p>
+    <p class="src">The proposed cross-river ferry is from a study for the Port of London Authority and the Thames Estuary Growth Board, "Report recommends three electric ferry crossing options for East London" (pla.co.uk, 13 December 2023), part of its Thames Vision 2050 work: a "turn-up-and-go" electric ferry for walkers and cyclists on three shortlisted routes, North Greenwich&ndash;Isle of Dogs among them, every ten minutes from 7am to 11pm, with a &pound;1 fare modelled, each route costed at &pound;120&ndash;132 million over thirty years (about &pound;370 million for all three) and "around a third of the cost of a bridge capable of carrying a comparable number of people over the river". The south pier was proposed beside the Magazine events venue on the Peninsula, the north-bank pier at Stewart Street (the PLA's preferred option, nearer Canary Wharf) or Coldharbour; reported by The Greenwich Wire, 14 December 2023. TfL had been examining a North Greenwich&ndash;Isle of Dogs ferry and new Peninsula piers since at least 2019 (Mayor's Questions 2019/0341 and 2020/0666, "working with developers to support the delivery of new pier infrastructure"). In January 2024 the Mayor's office said there was no prospect of the crossings for lack of long-term funding, TfL "not in a position to invest any significant capital costs in new schemes such as the aforementioned new ferry crossings" (reported by The Greenwich Wire, 30 January 2024). The PLA's stated rationale was connectivity, the routes "located close to major development areas in the capital, where North-South transport connectivity is currently severely lacking", rather than Jubilee-line relief specifically.</p>
+    <p class="src">The Superloop SL11 launched on 24 January 2026, replacing the 472 bus (in service since 1999) along the North Greenwich&ndash;Charlton&ndash;Woolwich&ndash;Thamesmead corridor as a limited-stop express; most of the 472's stops are not served by it (reported by Murky Depths, 19 January 2026, and The Greenwich Wire, 21 January 2026). It runs in general traffic, not on segregated transit. The wider reductions to the area's bus network over this period are London-wide and funding-driven, not specific to the O2.</p>
+    <p class="src">The cross-river alternatives and their direction: TfL's NUMBAT 2019 weekday modelling shows North Greenwich trips running far more toward central London than toward Stratford (about 8,899 boardings toward central London against 1,927 toward Stratford in the morning peak, roughly 4.6 times), the dominant direction being toward Canary Wharf and central London. The cable car (the Emirates Air Line, now the IFS Cloud Cable Car) instead runs to the Royal Docks; TfL's own <em>Cable Car Need and Business Case</em> (2011) records demand "dominated by tourists and linked visitors rather than commuters", and by 2013 only four passengers qualified for its regular-commuter discount (sixteen in 2012); it closed 354 times between July 2012 and December 2014, around 250 of them in high winds (reported by 853 / The Greenwich Wire, 16 December 2014, and Londonist, December 2015). The river share was always small by design: the O2 Travel Plan's own target mode split allotted about three percent to river travel.</p>
     </details>
   </section>
+
 
   <section id="asks">
-    <h2><span class="num">D</span>What we're asking the council, TfL and the O2</h2>
-    <p>These are addressed to the bodies that hold the records, and framed as questions. Two requests under the Environmental Information Regulations are live: <strong>EIR-7259</strong> to the council (which has now replied that the older documents are not held), and <strong>EIR-0773-2627</strong> to TfL, due <strong>3 July 2026</strong>.</p>
-
-    <div class="ask-group">
-      <p class="who">For the Royal Borough of Greenwich</p>
-      <ul class="ask">
-        <li>Which approved documents currently govern O2 parking, the travel plan, parking pricing and car-use monitoring &mdash; given the <code>02/2903/O</code> approved documents could not be located?</li>
-        <li>The latest condition caps AEG parking at 2,000 with evidence available on request. What evidence does the council hold that the operated number does not exceed 2,000, how is the "over 2,500" figure reconciled, and has the closure mechanism been used?</li>
-        <li>Has the free-parking promotion been reviewed against the approved travel plan, the car parking strategy and the obligation to discourage car use?</li>
-        <li>How is the continued operation of the commuter car park &mdash; assumed removed by 2021 in the masterplan modelling &mdash; reconciled with the assessed transport and air-quality impacts?</li>
-        <li>The 2004 agreement secured an air-quality monitoring station for the O2 and the Peninsula. Is it operating, where is its monitoring data published, and does it yet reflect the Silvertown Tunnel that opened in April 2025?</li>
-        <li>As parking plots come forward for redevelopment, will the quantum be assessed against current London Plan Policy T6 (car-free the starting point) rather than simply re-provided?</li>
-        <li>Are event-related parking, pickup and drop-off, and pedestrian spillover through residential streets &mdash; including retail-park parking, East Parkside and Edmund Halley Way &mdash; being monitored, and what evidence is held on the scale, timing and management of these impacts?</li>
-        <li>Who maintains and funds the public realm and landscaped areas absorbing this spillover, and how is that cost met?</li>
-      </ul>
-    </div>
-
-    <div class="ask-group">
-      <p class="who">For TfL and the Mayor's office</p>
-      <ul class="ask">
-        <li>What recorded assessment confirmed deferring the bus and cycle trigger from 3,000 to 6,000 homes, and was TfL formally consulted? <em>(EIR-0773-2627, due 3 July 2026.)</em></li>
-        <li>The commuter car park beside the station was assessed as "removed by 2021 in all scenarios". Why is it still open in 2026, and was its continued operation ever reassessed for traffic and air quality?</li>
-        <li>What is the status of the 2006 obligation to surrender the North Greenwich customer car park &mdash; who controls the land and on what terms, and are its roughly 500 spaces counted inside or outside the O2's 2,000-space cap? What is its current occupancy on weekdays, weekends and event days?</li>
-        <li>The Mayor's office found the O2 parking to "significantly exceed" London Plan standards, needing "robust justification". What justification was accepted, and does it still hold now the Silvertown Tunnel is open and the bus and cycle triggers deferred?</li>
-      </ul>
-    </div>
-
-    <div class="ask-group">
-      <p class="who">For AEG and The O2</p>
-      <ul class="ask">
-        <li>How many parking spaces are currently operated and promoted, and are former station car park spaces counted within the approved AEG maximum or treated as additional to it?</li>
-        <li>How do parking promotions, validation and free parking sit with the travel plan commitment to discourage car use?</li>
-      </ul>
-    </div>
-
-    <div class="share-inline">
-      <h3>Know this ground?</h3>
-      <p>If you live or work on the Peninsula and have seen the parking, the queues at the station, the buses or the promotions firsthand, that context helps. Share this with a neighbour or local group, or get in touch.</p>
-      <button type="button" class="share-inline-btn" data-share-open aria-haspopup="dialog" aria-controls="shareModal">Share page</button>
-    </div>
+    <h2>The questions they have not answered</h2>
+    <p>None of this is an accusation. It is a set of questions the responsible bodies have not answered, drawn entirely from their own records:</p>
+    <ul class="ask">
+      <li><strong>Which documents now govern the O2's parking, travel plan and monitoring?</strong> The council cannot produce the originals, and has not said which, if any, now apply. <span style="color:var(--ink-3)">(Royal Borough of Greenwich)</span></li>
+      <li><strong>What holds parking to the 2,000 cap when the operator's own website advertises 2,500?</strong> Nothing on the record reconciles the enforceable limit with the spaces actually marketed. <span style="color:var(--ink-3)">(Royal Borough of Greenwich)</span></li>
+      <li><strong>Was the free-parking promotion ever tested against the duty to discourage car use?</strong> The Section 106 requires a strategy "designed to discourage use of private cars"; the discounts, passes and JustPark deal pull the other way. <span style="color:var(--ink-3)">(Royal Borough of Greenwich / The O2)</span></li>
+      <li><strong>Do the roughly 500 station car-park spaces sit inside or outside the cap, and what is that land's legal status?</strong> TfL holds "no such record" of the byelaws governing it. <span style="color:var(--ink-3)">(Transport for London)</span></li>
+      <li><strong>When will the event-evening parking controls the residential streets need be required?</strong> The retail-park overflow and drop-off spillover remain unmonitored and unmanaged. <span style="color:var(--ink-3)">(Royal Borough of Greenwich / TfL)</span></li>
+      <li><strong>Where is the air-quality assessment for keeping the decked car park ten years?</strong> It was said to be "tested and approved", but the document relied on says the test would come later. <span style="color:var(--ink-3)">(Royal Borough of Greenwich)</span></li>
+    </ul>
+    <p>Two of these are now formal records requests: <strong>EIR-7259</strong> to the council, the request that produced the flooded-basement reply, and <strong>EIR-0773-2627</strong> to TfL, due <strong>3 July 2026</strong>. The fuller set has been put to the council, TfL and the O2 directly. The records either exist or they do not; either way, the answers are theirs to give.</p>
   </section>
 
-  <section>
-    <div class="askbox">
-      <h3 style="margin:0 0 .55rem;font-size:1.25rem;font-weight:800;letter-spacing:-0.01em">Public, but not easy to inspect</h3>
-      <p style="font-weight:400;margin:0 0 .85rem">The planning record is technically public. In practice, the key information is scattered across hundreds of files, with important points buried in environmental chapters, appendices, legal agreements, later amendments and monitoring reports. Some approved documents are missing from the portal entirely.</p>
-      <p style="margin:0">Open Peninsula exists because residents should not need to become planning archaeologists to understand how a car-lite neighbourhood is being monitored.</p>
+  <section id="bargain">
+    <h2>The way forward</h2>
+    <p>None of this is a case against the O2, or against the events people come for. They will keep coming; the only real question is how they get here. The Peninsula was built on a straightforward bargain: that a place this dense beside a Tube station could work because people could arrive without a car. <strong>Keeping that bargain is not a punishment; it is the plan</strong>:</p>
+    <div class="plan">
+      <div class="pstep">
+        <span class="pstep-n">1</span>
+        <h4>Produce the records</h4>
+        <p>Release the documents meant to govern the O2's parking, travel plan and monitoring.</p>
+      </div>
+      <div class="pstep">
+        <span class="pstep-n">2</span>
+        <h4>Establish and enforce the 2,000 cap</h4>
+        <p>The O2 already operates above it. Hold AEG to the limit, and ratchet it down toward the car-lite standard the rest of the Peninsula meets.</p>
+      </div>
+      <div class="pstep key">
+        <span class="pstep-n">3</span>
+        <h4>Deliver the capacity</h4>
+        <p>Build the public-transport capacity the Peninsula was promised, so arriving without a car is genuinely easy.</p>
+        <span class="pstep-tag">The keystone</span>
+      </div>
+    </div>
+    <p>That last step is the keystone. The point was never to force people out of cars with nowhere else to go, which would only move the same traffic onto the same streets and the same overstretched line; it was to make arriving without a car genuinely easy, so the pressure to drive eases of its own accord. Done that way, it serves everyone at once: today's residents, the venue, and the new homes and public realm this land was always meant to deliver. The pieces were all promised once; they can still be delivered.</p>
+
+    <div class="share-inline">
+      <h3>Share this</h3>
+      <p>This page is built entirely from the public planning record. If you can point to a document, correction or detail we've missed, get in touch.</p>
+      <button type="button" class="share-inline-btn" data-share-open aria-haspopup="dialog" aria-controls="shareModal">Share page</button>
     </div>
   </section>
 
@@ -462,65 +703,68 @@
     <p class="ev-intro">Everything above comes from the planning documents, the developer's own transport reports, the Mayor's office and TfL records, and the council's own correspondence. Open any section for the exact figures and references.</p>
   </section>
 
-  <details class="ev">
+  <details class="ev" id="ev-cap">
     <summary>The parking cap, and what is operated</summary>
     <div class="ev-body">
-    <p class="ev-lead">The O2's event and leisure parking was given a firm ceiling, but the ceiling crept upward over time, and the operated and advertised figures now sit above it.</p>
+    <p class="ev-lead">The O2's parking was capped to control traffic. Over time the ceiling crept upward, the live permissions stopped agreeing on it, and the operated figure settled above the line.</p>
     <ul>
-      <li>The 2015 Development Specification set a control parameter of "Up to 2,000 parking spaces". The 2022 outline permission, <code>19/2733/O</code> Condition 58, says "up to 2,000 AEG parking spaces". The most recent enforceable condition, <code>24/1874/F</code> Condition 3 (Oct 2024), caps AEG parking at "a total of 2,000 car parking spaces across the Greenwich Peninsula", requires decked spaces to be "partially or fully closed" if exceeded, and requires evidence "within one month of receipt of any written request".</li>
-      <li>The parameter crept: from "Up to 2,000" (2015) to a "2000 to 2150" range (<code>20/2000/NM</code>, July 2020) to "up to 2,150" (<code>23/3796/NM</code>, 2023). The two extant permissions now carry different caps &mdash; 2,150 under <code>15/0716/O</code>, 2,000 under <code>19/2733/O</code> and <code>24/1874/F</code>.</li>
-      <li>The operated figure: the Strategic Travel Plan (May 2025) records "2,200 car parking spaces" across four O2 car parks, plus a 500-space station car park; the applicant's April 2026 transport statement gives 2,226; the council's November 2025 retail study describes "over 2,500 bays available".</li>
+      <li><strong>The cap has teeth.</strong> The current enforceable condition, <code>24/1874/F</code> Condition 3 (October 2024), sets "a total of 2,000 car parking spaces across the Greenwich Peninsula", requires decked spaces to be "partially or fully closed" if it is exceeded, and requires the operator to produce evidence of the number "within one month of receipt of any written request". The council does not have to estimate the figure; it can require it.</li>
+      <li><strong>The ceiling crept, and the permissions now disagree.</strong> The 2015 Development Specification allowed "up to 2,000"; a 2020 amendment (<code>20/2000/NM</code>) widened it to a "2,000 to 2,150" range, and a 2023 one (<code>23/3796/NM</code>) to "up to 2,150". The two live permissions carry different caps: 2,150 under <code>15/0716/O</code>, 2,000 under <code>19/2733/O</code> (Condition 58) and <code>24/1874/F</code>.</li>
+      <li><strong>What is actually operated has barely moved in twenty years.</strong> The 2004 consent allowed 2,200 spaces "to restrict the number of traffic movements" (Public Accounts Committee, <code>HC 409</code>, 2005); the O2's contractor then installed exactly "2,200 spaces across four car parks" for the 2007 opening (Parkeon, 19 April 2007); and the developer's 2025 travel plan still records 2,200, its own consultant putting it at "over 2,100". The operated figure has tracked that original 2,200 throughout, even as the enforceable cap was set lower, at 2,000, and the most recent records (shown above) run higher still.</li>
+      <li><strong>It is run and audited by a contractor.</strong> The car parks are operated by a third party, CSP (the Combined Services Provider), appointed by AEG in 2006 with "cash and audit services" among its listed duties, so the true, audited number sits with the operator and AEG. (Consumer event-parking booking and pricing is a separate arrangement again, through JustPark and The O2's own pages.)</li>
     </ul>
-    <p>So the operated number appears to sit above both the 2,000 cap and the older 2,150 parameter, and Condition 3 provides a direct, inspectable way for the council to test it.</p>
+    <p>So the operated number sits above both the 2,000 cap and the older 2,150 parameter, and Condition 3 is a direct, inspectable way for the council to establish the real one: it exists, it is audited, and it can be required within a month.</p>
     </div>
   </details>
 
-  <details class="ev">
-    <summary>Residents near car-free, the O2 at 2,000</summary>
-    <div class="ev-body">
-    <p class="ev-lead">The contrast between how residents and the venue operator are treated is set out in the developer's own transport work and the Mayor's reports.</p>
-    <ul>
-      <li>Residential parking fell from 0.7 spaces per home (2004) to 0.25 (2015) to "up to 0.1 spaces per dwelling unit per plot" (<code>20/2000/NM</code>, 2020); offices and retail are car-free in the transport work.</li>
-      <li>TfL's pre-application position (letter GRNW19/275, 30 April 2019) was that the O2 and station parking "should be allocated for disabled persons parking provision only so that the scheme is policy compliant".</li>
-      <li>The Mayor's Stage 1 report (<code>GLA/5010a/01</code>, 11 Nov 2019) found the O2 parking "significantly exceeds draft London Plan and London Plan standards and robust justification for this is required", and that residential parking "exceeds London Plan and draft London Plan standards and must be reconsidered".</li>
-      <li>An earlier Mayor's report on the retail outlet (2012) found its parking above the London Plan maximum and occupied to "only&hellip; half of the maximum capacity", with charges that were supposed to be "set at a level to discourage car trips&hellip; secured through a section 106 agreement".</li>
-    </ul>
-    </div>
-  </details>
-
-  <details class="ev">
+  <details class="ev" id="ev-infra">
     <summary>The infrastructure that was deferred, and the traffic already here</summary>
     <div class="ev-body">
-    <p class="ev-lead">The infrastructure meant to carry the growth has been pushed back, while the surveyed trips are already high.</p>
+    <p class="ev-lead">The infrastructure meant to carry the growth has been pushed back, while the surveyed trips are already high. This is the fuller record behind "The roads are already busy before events" and "At the station" above.</p>
     <ul>
-      <li>The deed of variation <code>24/4133/I106</code> (validated 5 Dec 2024) moved the bus station and cycle facilities triggers from 3,000 to 6,000 homes, and the first primary school from 2,500 to 5,000 homes; about 2,572 homes have been delivered. The developer said this followed "an assessment undertaken by our consultant team and confirmed by TfL" &mdash; the point that EIR-0773-2627 is testing with TfL directly.</li>
+      <li>The deed of variation <code>24/4133/I106</code> (validated 5 Dec 2024) proposes to move the bus station and cycle facilities triggers from 3,000 to 6,000 homes, and the first primary school from 2,500 to 5,000 homes; about 2,572 homes have been delivered. The developer said this followed "an assessment undertaken by our consultant team and confirmed by TfL", the point that EIR-0773-2627 is testing with TfL directly.</li>
       <li>The Gateway Junction Improvements programme (<code>23/1843/I106</code>) places the new bus station and cycleway works around January 2031 and the main junction handover to the council in January 2037.</li>
-      <li>The Strategic Travel Plan Monitoring Report (Arup, May 2025; surveys 4 December 2024) records, in the morning peak: 1,573 residential person trips, 814 commercial, and 1,511 for St Mary Magdalene school &mdash; roughly 3,900 combined, before O2 events, temporary events, the cable car, the pier, parkrun, visitors and future homes. The same report logs resident concerns about lighting, crossings and cyclist&ndash;pedestrian separation "especially along the Thames Path".</li>
+      <li>The new bus station was the masterplan's own answer to its biggest transport impact: the 2015 Environmental Statement (<code>15/0716/O</code>) rated the scheme's effect on the bus network "moderate negative" and brought it to "negligible" only by relying on the new station and extra services. Yet TfL's 2014 options review already called the station "approaching capacity", and its April 2019 pre-application advice (<code>GRNW19/275</code>) described North Greenwich as "the 4th busiest Bus Station in London", with about 39,500 passengers a day, that "no longer meets capacity requirements". The mitigation that made the impact acceptable on paper is the same one now proposed to slip to 6,000 homes.</li>
+      <li>On the neighbouring IKEA scheme, about &pound;260,000 secured to improve access to local Tube and rail stations was, a 2021 freedom-of-information response showed, mostly spent instead on street lighting, so transport money committed to the area did not all reach its stated purpose.</li>
+      <li>The Strategic Travel Plan Monitoring Report (Arup, May 2025; surveys 4 December 2024) records, in the morning peak: 1,573 residential person trips, 814 commercial, and 1,511 for St Mary Magdalene school: roughly 3,900 combined, before O2 events, temporary events, the cable car, the pier, parkrun, visitors and future homes. The same report logs resident concerns about lighting, crossings and cyclist&ndash;pedestrian separation "especially along the Thames Path".</li>
+      <li>Over a longer run, the Department for Transport's own roadside counts on the road serving the O2's car parks show weekday car traffic there rising about 52% between 2008 and 2019 (roughly 4,900 to 7,500 vehicles across a 12-hour day), as the surrounding area built out. Honest limits: these are single weekday counts (each a Thursday in late spring), so they understate weekend and event-night peaks; the latest is 2019, before the pandemic and the tunnel; the rise tracks general build-out around the road, not the O2 specifically; and they measure traffic passing on the road, not a turnstile count of the car park itself. (The counts do peak at 5&ndash;6pm, but an evening peak is the norm on most roads and is not itself evidence of leisure or event use.)</li>
+      <li>What one of those peaks looks like in practice is on the public record. On Boxing Day 2024, during an O2 event, TfL's own freedom-of-information response (<code>FOI-3502-2425</code>, 18 February 2025) records <strong>108 parking fines issued in a single day</strong> at the North Greenwich station car park, where the requester described being trapped in event congestion, with no spaces free and no signage warning the car park was full. It is one day, and not a typical one, but it shows what no spare capacity looks like on the kind of day the area exists to host: the O2's own help pages state up to 2,000 cars may leave its car parks at once on an event day, and AEG puts the venue at around ten million visitors a year. TfL retains the car-park CCTV for only 30 days, so the footage was overwritten before it could be requested.</li>
     </ul>
     <p>The school figure is worth holding onto: around 1,511 morning trips, including children, use the same routes that event crowds disperse onto.</p>
+    <p>Transport for London's own papers repeatedly plan major roadworks around the O2's event car traffic. A June 2009 TfL Board paper, placing barriers on a new link road by the Blackwall Tunnel, noted that otherwise "a large number of vehicles may utilise this new link to access the nearby O2 arena". The June 2010 paper on the &pound;70m Blackwall Tunnel refurbishment kept traffic running northbound overnight because the arrangement "enables patrons of the O2 to travel southbound across the river to attend evening events and return northbound after events", warning that restricting it "would create significant local traffic problems across a wide area of south London", and it chose weekend closure dates to avoid "major O2 area events". The venue's event car traffic is significant enough to shape how TfL runs a major river crossing, yet it is the same traffic the car-lite plan and the discourage-driving duty are meant to hold down. The problem is long-standing: a 2010 TfL Board paper records that clearance times for vehicles leaving the O2 had reached "over 90 minutes", and that TfL installed a bespoke automated signal system at the car-park exit in 2009 to manage it, one of only around 50 such critical locations in London.</p>
+    <p>The council says the same in its own words: its Transport Strategy 2022&ndash;2032 (para 3.23) names the O2 for event "spikes in demand" that bring "traffic congestion", "greater demands for public transport" and more "contested kerb spaces" on the Peninsula.</p>
     </div>
   </details>
 
-  <details class="ev">
+  <details class="ev" id="ev-stations">
     <summary>The station car parks and the surrender obligation</summary>
     <div class="ev-body">
-    <p class="ev-lead">Two car parks beside the station were assumed to be gone or shrinking. Both are still operating.</p>
+    <p class="ev-lead">The fuller record behind "At the station" above: two car parks assumed to be gone or shrinking, both still operating, and the public-land questions around them.</p>
     <ul>
-      <li>The WSP Transport Assessment (Outline Part, July 2019) states at para 8.2.4 that "the existing commuter car park is to be removed by 2021 in all scenarios", distinguishing it from the O2 parking, which is "retained or re-provided". The commuter car park remains open in 2026, so the assessment baseline deleted commuter car trips that still exist.</li>
-      <li>In answer to Mayor's Question 2006/0465-1 (11 December 2006), TfL stated it was bound by 2002 agreements "to surrender half of the North Greenwich customer car park ahead of the Dome's re-opening" and "contractually obliged to surrender the remainder&hellip; at a later date". The customer car park still operates. TfL's own later programme (Mayor's Question 2021/0104) treats surplus station car parks as housing sites where drivers have alternatives.</li>
-      <li>That customer car park is publicly branded as a "North Greenwich Station Car Park (TfL)", but it is managed by a private operator (Saba) on behalf of TfL's property company (TTL Properties / Places for London). When TfL was asked (FOI-0703-2526, 2025) it pointed to that management arrangement. The open question of control and counting remains: on what terms the land now operates, and whether its roughly 500 spaces sit inside or outside the O2's 2,000-space cap.</li>
+      <li>Both "gone or shrinking" assumptions are documented, and both went unmet. The commuter car park's removal "by 2021 in all scenarios" is in the WSP Transport Assessment (Outline Part, July 2019, para 8.2.4), which kept the O2 parking "retained or re-provided"; because that car park is still open in 2026, the assessment baseline deleted commuter trips that still exist. The customer car park's surrender is in Mayor's Question 2006/0465-1: under 2002 agreements TfL was bound to surrender half before the Dome re-opened and the rest later, yet it still operates, and TfL's own 2021 programme (Mayor's Question 2021/0104) now treats surplus station car parks as housing sites.</li>
+      <li>This has been unresolved for a long time. In January 2007 the station car park was a 913-space London Underground car park that, local press reported, had just "lost some 500 spaces to the Anschutz Company, which runs The O2, for a temporary car park", and was itself expected to "eventually close" (News Shopper, 9 January 2007). So roughly 500 station spaces were handed to the venue's operator nearly two decades ago, and how today's spaces are counted against the O2's 2,000-space cap traces back to that transfer.</li>
+      <li>That customer car park is publicly branded as a "North Greenwich Station Car Park (TfL)", but it is managed by a private operator (Saba) on behalf of TfL's property company (TTL Properties / Places for London), which took the car parks over from NCP in January 2023. Saba's own public listing gives 509 spaces. When TfL was asked (FOI-0703-2526, 2025) it pointed to that management arrangement. The open question of control and counting remains: on what terms the land now operates, and whether those 509 spaces sit inside or outside the O2's 2,000-space cap.</li>
+      <li>Asked under freedom-of-information rules (FOI-0703-2526, internal review June 2025) whether the railway byelaws that normally cover a station car park still apply to this land, or had been revoked, TfL's review panel said it had been "unable to identify" any such record and that, "on the balance of probabilities&hellip; the information is not held". On the ordinary principle that byelaws stay in force until formally revoked, that absence is itself telling: the land's legal status is undocumented by its owner, even as it is run as ordinary private parking. The TfL property register (Property Asset Register, par.tfl.gov.uk) records the car-park land as held by Places for London on a lease (titles TGL539603 and TGL539628), over land in public ownership; the wider Peninsula freehold on the same register is held by GLA Land and Property Ltd, the legacy of the site's public assembly for the Dome.</li>
       <li>A 2025 permission, <code>25/2707/F</code> (granted 20 October 2025), reduces coach parking "from 67 to 25" to "facilitate the release of land for&hellip; plot 20.02"; TfL recorded a concern about coaches or lorries then "parking up on the council's road network".</li>
     </ul>
-    <p>No bay count is cited for the customer car park here &mdash; published figures conflict. The useful, answerable question is its current occupancy on weekdays, weekends and event days.</p>
+    <p>Older planning figures vary; the useful, answerable question is the car park's current occupancy on weekdays, weekends and event days. (For how its ~500 spaces compare across the network, see the chart above.)</p>
     </div>
   </details>
 
-  <details class="ev">
-    <summary>The missing approved documents (EIR-7259), and the policy backdrop</summary>
+  <details class="ev" id="ev-spillover">
+    <summary>The retail-park car park, and event parking spillover</summary>
     <div class="ev-body">
-    <p class="ev-lead">The records that would prove the obligations were discharged and are being monitored could not be located by the council.</p>
-    <p>Under the <code>02/2903/O</code> permission, the approved documents for the Dome Car Parking Management Plan (<code>04/0365/SD</code>), the O2 Travel Plan (<code>06/2805/SD</code>), the Bus Service Improvement Strategy (<code>06/2671/SD</code>), the Air Quality Monitoring Station (<code>06/2511/SD</code>) and the Arena Sustainability Framework Monitoring Report (<code>07/1254/SD</code>) are not on the portal &mdash; only the decision notices are. The council searched its archives and confirmed the documents "cannot be located and are therefore not held", citing a possible loss of Dome-related records in a 2009 basement flood.</p>
-    <p>Two pieces of the current policy backdrop matter to the questions above. The Silvertown Tunnel opened on 7 April 2025, which changes the traffic and air-quality picture the older assessments assumed. And current London Plan Policy T6 makes "car-free development&hellip; the starting point", and says that where sites are redeveloped, parking "should&hellip; not be re-provided at previous levels" where that exceeds the standards &mdash; the mechanism that would ratchet parking down as the Peninsula's car parks come forward for redevelopment.</p>
+    <p class="ev-lead">The venue is required to price, manage and monitor its own parking to discourage event-night driving; a free car park the planning record says is used for those same events sits about a mile away, with no equivalent control. This is the full record behind "The free car park the count leaves out" above.</p>
+    <ul>
+      <li><strong>The leisure park's own rules exist, but don't catch it.</strong> Its published policy restricts the spaces to "visitors to the leisure park only", five hours free, customers who "may be asked to provide proof of purchase". In practice it is policed by number-plate cameras enforcing a five-hour maximum stay, which a gig comfortably fits inside, while the "leisure visitors only" rule rests on a discretionary proof-of-purchase check that, residents report, is not made even when the car park fills on event nights and the shops and cinema are closing. The control that exists limits how long you stay, not whether you are a customer, and that lever sits with the operator (Legal &amp; General) as much as the council.</li>
+      <li><strong>The developers have known for years.</strong> The 2013 transport assessment that won the IKEA store its permission records that the car park's old management scheme was by then "no longer enforced", so "in effect, there are no limits on who can park and for how long", and concedes the car park "is being used as an informal park and ride for some commuters and visitors into central London". The applicant's answer was that management "will be considered if long stay parking becomes an issue".</li>
+      <li><strong>The management plan that followed targets shoppers, not events.</strong> Secured through the site's S106 (Clause 6.1) and in force: number-plate cameras, a five-hour maximum stay, a &pound;70 penalty for overstaying, tightened in 2021 so a penalty issues from the first overstay. But its stated objective is to "discourage commuter parking", it runs only "during the hours in which the stores trade", and five hours covers a gig, so the non-customer event parking TfL asked it to address is exactly what it leaves untouched.</li>
+      <li><strong>The developer's own May 2025 reports say as much in writing.</strong> Its transport assessment records the car park open until 11pm, and midnight on Fridays and Saturdays, with the five-hour ANPR limit, and that "visitors would be able to use the car park within the opening hours and for durations of under five hours, as per the existing situation". Its parking management plan is blunter: the limit exists "to enable customers to complete a full shop and linked trip", and "there will be no charge for parking less than five hours", so the only control is duration, never whether you are a customer or why you came.</li>
+      <li><strong>TfL asked for event controls; IKEA refused.</strong> When TfL asked, in 2021, that controls "extend through the night and at weekends" to stop parking by non-customers and residents, the applicant replied it could not deter visitor parking "without greater levels of control" such as in-store validation, that this "would be detrimental to IKEA customer experience", and that "if the arrangements are considered too onerous, IKEA will not accept the proposals".</li>
+      <li><strong>The council's own highways team predicted it.</strong> When the east Greenwich IKEA, marketed as the chain's "most sustainable" store, sought five hours' free parking in 2019, the council's highways officers warned that "events at the O2&hellip; are likely to attract motorists to also park at the site", and that long stays could cause "congestion&hellip; affecting the highway". The objection was withdrawn and the five-hour limit approved.</li>
+      <li><strong>And the pressure is set to grow.</strong> In 2025 the council approved 1,251 homes on the IKEA car park itself (a "car-free" estate whose residents are barred from the retail-park spaces and from local street permits), cutting the retail park's own parking from 1,066 to 856. The applicant conceded a "risk of parking overspill onto nearby residential streets", and the Charlton Society objected that parking "will spill into surrounding areas like Charlton&hellip; necessitating new Controlled Parking Zones".</li>
+    </ul>
+    <p>The duty the O2 carries to price, manage and monitor its parking has no counterpart at the free car park a mile away: every control that would catch event parking there has been asked for and either declined, or left to a check that residents say isn't made.</p>
     </div>
   </details>
 
@@ -552,11 +796,13 @@
         <div class="share-card-head"><h3>Message</h3><button type="button" class="share-copy" data-copy="long">Copy</button></div>
         <p class="share-msg" data-msg="long">Sharing this in case it's useful.
 
-Greenwich Peninsula was approved as a car-lite neighbourhood: the O2's parking capped, new homes near car-free, a travel plan meant to discourage driving.
+Greenwich Peninsula could be a model car-lite neighbourhood, and residents want it to work. But the deal the place was built on is not being kept, and much of it cannot even be checked.
 
-In practice the O2 appears to operate more parking than the latest cap allows, residents are held to 0.1 spaces per home while the O2 keeps 2,000, and a retail promotion offers free parking.
+The approved documents that are meant to govern parking, traffic and air quality around the O2 on Greenwich Peninsula can't be found. A council records request (EIR-7259) came back saying they are "not held", with the explanation that a box of Dome-related records may have been lost to a basement flood in 2009.
 
-The approved documents that were meant to govern and monitor all of this can't be found: a council records request (EIR-7259) came back saying they are not held.
+Meanwhile the things you can still check point the other way: the O2 appears to operate more parking than its latest cap allows, residents are held to 0.1 spaces per home while the O2 keeps 2,000, and a retail promotion offers free parking.
+
+The fix is not to stop the O2; it is to deliver the deal the place was built on: the records, the parking cap, and the public transport that was promised.
 
 The questions, with sources, are here: [URL]</p>
       </div>
@@ -564,7 +810,7 @@ The questions, with sources, are here: [URL]</p>
         <summary>Need a shorter version?</summary>
         <div class="share-card">
           <div class="share-card-head"><h3>Shorter version</h3><button type="button" class="share-copy" data-copy="short">Copy</button></div>
-          <p class="share-msg" data-msg="short">Greenwich Peninsula was planned car-lite, but the O2 appears to operate more parking than its cap allows while new homes get 0.1 spaces each, and a retail promotion offers free parking. The documents meant to monitor it can't be found. The questions, with sources: [URL]</p>
+          <p class="share-msg" data-msg="short">Greenwich Peninsula was meant to be a model car-lite neighbourhood, but the deal is not being kept: the records meant to govern the O2's parking, traffic and air quality can't be found (the council says a box was lost to a 2009 flood), the O2 appears to operate over its parking cap, and the transport the area was promised never came. The fix is to deliver what was promised. Questions and sources: [URL]</p>
         </div>
       </details>
     </div>
@@ -575,15 +821,19 @@ The questions, with sources, are here: [URL]</p>
   <div class="share-panel" role="dialog" aria-modal="true" aria-labelledby="sumTitle" aria-describedby="sumIntro">
     <button type="button" class="share-close" data-summary-close aria-label="Close summary">&times;</button>
     <h2 id="sumTitle" class="share-title">In short</h2>
-    <p id="sumIntro" class="share-intro">Greenwich Peninsula was designed to be car-lite. Here's what doesn't add up.</p>
+    <p id="sumIntro" class="share-intro">Greenwich Peninsula can be the model car-lite neighbourhood it was designed to be, but the deal it was built on is not being kept. The O2's parking, traffic and air quality were meant to be controlled and monitored: key records can't be found, and the ones that survive don't add up.</p>
     <ul class="sum-list">
-      <li><span class="se" aria-hidden="true">&#128679;</span><span>More O2 parking than its cap allows.</span></li>
-      <li><span class="se" aria-hidden="true">&#127787;</span><span>The car park's air-quality sign-off points to a missing assessment.</span></li>
-      <li><span class="se" aria-hidden="true">&#128663;</span><span>Residents go nearly car-free; the O2 keeps 2,000.</span></li>
-      <li><span class="se" aria-hidden="true">&#127915;</span><span>Driving was meant to be discouraged; now there's free parking.</span></li>
-      <li><span class="se" aria-hidden="true">&#128652;</span><span>Bus and cycle upgrades pushed from 3,000 to 6,000 homes.</span></li>
-      <li><span class="se" aria-hidden="true">&#128196;</span><span>The documents meant to monitor it can't be found.</span></li>
+      <li><span class="se" aria-hidden="true">&#127787;</span><span>A car park kept for a decade, on an air-quality test that isn't there.</span></li>
+      <li><span class="se" aria-hidden="true">&#128679;</span><span>The cap says 2,000. The records point higher.</span></li>
+      <li><span class="se" aria-hidden="true">&#127915;</span><span>Legally bound to discourage driving; promoting parking.</span></li>
+      <li><span class="se" aria-hidden="true">&#127359;</span><span>A free car park nearby, used for O2 events.</span></li>
+      <li><span class="se" aria-hidden="true">&#128652;</span><span>The bus mitigation was pushed back.</span></li>
+      <li><span class="se" aria-hidden="true">&#128663;</span><span>Car-lite for residents. Thousands of spaces for the venue.</span></li>
+      <li><span class="se" aria-hidden="true">&#128666;</span><span>Car parks assumed gone are still open.</span></li>
+      <li><span class="se" aria-hidden="true">&#128196;</span><span>The monitoring records can't be found.</span></li>
+      <li><span class="se" aria-hidden="true">&#128168;</span><span>Air quality on the edge, and the portal monitor was off for the opening year.</span></li>
     </ul>
+    <p class="share-intro">None of this is a case against the O2. It is a call to deliver the deal the place was built on, the records, the cap and the transport that was promised, so the Peninsula works as it was meant to.</p>
     <div class="share-actions">
       <a class="share-btn share-native" href="#asks" data-summary-close>The questions&nbsp;&rarr;</a>
       <button type="button" class="share-btn" data-share-open data-summary-close>Share page</button>
