@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What Could This Have Been? · Greenwich Peninsula</title>
+<meta name="description" content="A community imagination board for a riverside site on Greenwich Peninsula. Illustrative ideas, not a formal proposal. We were never told this was up for imagination." />
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://openpeninsula.github.io/imagine/" />
+<meta property="og:title" content="What could this have been? · Greenwich Peninsula" />
+<meta property="og:description" content="A whole riverside site, free for years, and nobody asked us what it could be. A community imagination board for the Greenwich Peninsula riverside now proposed for two ticketed venues." />
+<meta property="og:image" content="https://openpeninsula.github.io/imagine/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="What could this have been? · Greenwich Peninsula" />
+<meta name="twitter:description" content="A whole riverside site, free for years, and nobody asked us what it could be. Add your idea before it is decided." />
+<meta name="twitter:image" content="https://openpeninsula.github.io/imagine/og.png" />
+
+<script>
+  /* Backend API (Cloudflare Pages Functions, free tier). After you run
+     `wrangler pages deploy` set this to your project URL, e.g.
+     https://what-could-this-have-been.pages.dev — until then the page falls
+     back to per-browser localStorage so nothing breaks. */
+  window.API_BASE = 'https://what-could-this-have-been.pages.dev';
+  window.VOTES_ENDPOINT = window.API_BASE + '/votes';
+  window.IDEA_ENDPOINT  = window.API_BASE + '/submit';
+  window.BOARD_ENDPOINT = window.API_BASE + '/board';
+</script>
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700&family=space-mono:400,700&family=fraunces:400,600,400i,600i,700i" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- shared hand-drawn wobble filter for all card doodles -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7" result="n" />
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" />
+  </filter>
+</svg>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-media">
+    <img class="hero-bg" src="assets/sorry.svg" loading="eager"
+      alt="A hand-drawn map of Greenwich Peninsula showing the River Thames winding past the O2, the cable car, the university, Central Park, the Design District and homes, with a red question mark marking the riverside site this page is about." />
+  </div>
+  <div class="hero-text">
+    <h1>What could this <span class="squiggle">be?</span></h1>
+    <p class="lede">
+      A whole riverside site, free for years. And <strong>nobody asked us what it could
+      be.</strong> So we filled it in ourselves, before it's decided for us.
+    </p>
+    <div class="hero-cta">
+      <a class="hero-btn" href="#board">See the ideas →</a>
+      <a class="hero-or" href="#submit">Or submit your own! 💡</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== CONCEPT GRID ===== -->
+<section id="board">
+  <div class="wrap">
+    <h2 class="grid-head">Six daydreams <em>(and a blank one)</em></h2>
+
+    <div class="grid" style="margin-top:6px">
+
+      <article class="card">
+        <div class="thumb has-doodle t-sand">
+          <svg class="doodle" viewBox="0 0 280 160" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <g filter="url(#rough)" stroke="#1d1b16" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <!-- sun, full rays -->
+              <circle cx="236" cy="30" r="11" stroke="#e0972a"/>
+              <path d="M236 15 L236 6" stroke="#e0972a"/><path d="M236 45 L236 54" stroke="#e0972a"/>
+              <path d="M221 30 L212 30" stroke="#e0972a"/><path d="M251 30 L260 30" stroke="#e0972a"/>
+              <path d="M225 19 L219 13" stroke="#e0972a"/><path d="M247 19 L253 13" stroke="#e0972a"/>
+              <path d="M225 41 L219 47" stroke="#e0972a"/><path d="M247 41 L253 47" stroke="#e0972a"/>
+              <!-- sand court / field in perspective -->
+              <path d="M70 104 L210 104"/>
+              <path d="M70 104 L30 140"/><path d="M210 104 L250 139"/>
+              <path d="M30 140 q110 9 220 -1"/>
+              <!-- volleyball net, centred across the court -->
+              <path d="M114 120 L114 66" stroke="#2f5d62"/><path d="M166 116 L166 64" stroke="#2f5d62"/>
+              <path d="M114 68 L166 66" stroke="#2f5d62"/><path d="M114 98 L166 95" stroke="#2f5d62"/>
+              <path d="M114 83 L166 80" stroke="#2f5d62"/>
+              <path d="M132 67 L132 97" stroke="#2f5d62"/><path d="M150 66 L150 96" stroke="#2f5d62"/>
+              <!-- near player bumping -->
+              <circle cx="64" cy="78" r="11"/>
+              <path d="M64 89 L66 118"/>
+              <path d="M64 98 L48 84"/><path d="M64 98 L82 82"/>
+              <path d="M66 118 L54 136"/><path d="M66 118 L78 134"/>
+              <!-- far player, other side of the net -->
+              <circle cx="202" cy="70" r="10"/>
+              <path d="M202 80 L200 108"/>
+              <path d="M202 88 L186 74"/><path d="M202 88 L218 76"/>
+              <path d="M200 108 L190 126"/><path d="M200 108 L212 126"/>
+              <!-- ball -->
+              <circle cx="98" cy="54" r="9" stroke="#e8624a"/><path d="M90 52 q8 6 16 0" stroke="#e8624a"/>
+            </g>
+          </svg>
+          <span class="imagined">Imagined use · sport & play</span>        </div>
+        <div class="body">
+          <div class="num">01</div>
+          <h3>London Sands</h3>
+          <p class="desc">Weatherproof sand courts under cover: beach volleyball, beach
+            tennis, footvolley. Drop-in family sessions, evening leagues, beginner
+            classes, and a café. A bit of summer indoors while it buckets down outside.</p>
+          <div class="tags">
+            <span class="tag">🌞 daytime use</span><span class="tag">👨‍👩‍👧 family-friendly</span><span class="tag">🏠 local value</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb has-doodle t-roller">
+          <svg class="doodle" viewBox="0 0 280 160" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <g filter="url(#rough)" stroke="#1d1b16" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M96 58 q-12 0 -12 14 l0 28 q0 8 12 8 l82 0 q8 0 8 -8 q0 -9 -11 -11 l-34 -4 q-12 -2 -16 -14 l-6 -13 q-3 -8 -13 -8 z"/>
+              <path d="M86 108 L186 108"/>
+              <circle cx="112" cy="123" r="11" stroke="#e8624a"/><circle cx="160" cy="123" r="11" stroke="#e8624a"/>
+              <circle cx="112" cy="123" r="2"/><circle cx="160" cy="123" r="2"/>
+              <path d="M106 70 L150 66" stroke="#2f5d62"/><path d="M106 82 L150 78" stroke="#2f5d62"/><path d="M106 94 L150 90" stroke="#2f5d62"/>
+              <path d="M50 66 L82 66" stroke="#e8624a"/><path d="M44 86 L80 86" stroke="#e8624a"/><path d="M52 104 L84 104" stroke="#e8624a"/>
+            </g>
+          </svg>
+          <span class="imagined">Imagined use · skating culture</span>        </div>
+        <div class="body">
+          <div class="num">02</div>
+          <h3>The Roller Yard</h3>
+          <p class="desc">The Peninsula already has roller skaters. They just don't have
+            a roof. A smooth, weatherproof rink for skate culture: open sessions, lessons,
+            roller discos, beginner mornings. Bring your own laces.</p>
+          <div class="tags">
+            <span class="tag">🌞 daytime use</span><span class="tag">🌙 less late dispersal</span><span class="tag">🏠 local value</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb has-doodle t-move">
+          <svg class="doodle" viewBox="0 0 280 160" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <g filter="url(#rough)" stroke="#1d1b16" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M58 50 q14 -9 19 4 q4 13 -11 12 q-16 -1 -8 -16 z" stroke="#e8624a"/>
+              <path d="M198 64 q14 -7 17 6 q2 12 -12 10 q-15 -2 -5 -16 z" stroke="#2f5d62"/>
+              <path d="M150 116 q14 -9 19 4 q3 12 -11 12 q-15 -1 -8 -16 z" stroke="#e0972a"/>
+              <circle cx="120" cy="56" r="11"/>
+              <path d="M120 67 L116 104"/>
+              <path d="M120 78 L94 60"/><path d="M120 78 L150 66"/>
+              <path d="M116 104 L100 132"/><path d="M116 104 L128 130"/>
+            </g>
+          </svg>
+          <span class="imagined">Imagined use · movement & fitness</span>        </div>
+        <div class="body">
+          <div class="num">03</div>
+          <h3>Peninsula Movement Hall</h3>
+          <p class="desc">One big flexible hall for moving your body: bouldering walls,
+            yoga and dance floors, table tennis, climbing-play for kids, fitness classes,
+            quiet bookable hours for community groups. No chrome-and-mirrors gym vibes.</p>
+          <div class="tags">
+            <span class="tag">🌞 daytime use</span><span class="tag">👨‍👩‍👧 family-friendly</span><span class="tag">🏠 local value</span><span class="tag">🚶 distributed footfall</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb has-doodle t-market">
+          <svg class="doodle" viewBox="0 0 280 160" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <g filter="url(#rough)" stroke="#1d1b16" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <!-- striped awning -->
+              <path d="M56 46 L224 46 L221 62 L59 62 Z"/>
+              <path d="M59 62 q13 13 27 0 q13 13 27 0 q13 13 27 0 q13 13 27 0 q13 13 27 0 q13 13 27 0"/>
+              <path d="M84 47 L86 61" stroke="#e8624a"/><path d="M112 47 L113 61" stroke="#e8624a"/>
+              <path d="M140 47 L140 61" stroke="#e8624a"/><path d="M168 47 L167 61" stroke="#e8624a"/>
+              <path d="M196 47 L197 61" stroke="#e8624a"/>
+              <!-- poles -->
+              <path d="M60 48 L60 150"/><path d="M220 48 L220 150"/>
+              <!-- stall counter -->
+              <path d="M64 112 L216 112"/>
+              <path d="M66 112 L63 150 L217 150 L214 112"/>
+              <path d="M104 114 L102 150"/><path d="M150 114 L150 150"/><path d="M180 114 L182 150"/>
+              <!-- veg crate -->
+              <path d="M76 100 L112 100 L110 112 L78 112 Z" stroke="#4f9a52"/>
+              <circle cx="84" cy="97" r="5" stroke="#4f9a52"/><circle cx="95" cy="96" r="5" stroke="#4f9a52"/><circle cx="105" cy="97" r="5" stroke="#4f9a52"/>
+              <!-- bread and fruit -->
+              <path d="M127 105 q13 -10 26 0 q-13 8 -26 0 Z" stroke="#e0972a"/><path d="M133 103 L147 101" stroke="#e0972a"/>
+              <circle cx="188" cy="101" r="6" stroke="#e8624a"/><circle cx="200" cy="102" r="6" stroke="#e8624a"/><circle cx="194" cy="92" r="6" stroke="#e8624a"/>
+            </g>
+          </svg>
+          <span class="imagined">Imagined use · market & makers</span>        </div>
+        <div class="body">
+          <div class="num">04</div>
+          <h3>The Market</h3>
+          <p class="desc">The Peninsula had a market in the square, then lost it. Bring it
+            back: bread, veg, a proper grocer, makers, local art, coffee. Somewhere to do the
+            Saturday shop, buy from people who live here, and bump into a neighbour. The
+            parkrunners already finish on this stretch, the cable car could bring more across.
+            No big build, a weekend in the yard does it.</p>
+          <div class="tags">
+            <span class="tag">🌞 daytime use</span><span class="tag">👨‍👩‍👧 family-friendly</span><span class="tag">🏠 local value</span><span class="tag">🧱 temporary/removable</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb has-doodle t-ware">
+          <svg class="doodle" viewBox="0 0 280 160" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <g filter="url(#rough)" stroke="#1d1b16" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <!-- power drill -->
+              <path d="M100 58 L182 58 q14 0 14 14 l0 12 q0 14 -14 14 l-82 0 Z"/>
+              <path d="M112 66 L150 66"/>
+              <path d="M100 64 L82 68 L82 88 L100 92 Z" stroke="#2f5d62"/>
+              <path d="M82 78 L44 78" stroke="#2f5d62"/>
+              <path d="M54 74 L58 82" stroke="#2f5d62"/><path d="M64 74 L68 82" stroke="#2f5d62"/>
+              <path d="M146 98 L142 132 q-1 8 8 8 l16 0 q8 0 8 -8 L178 98"/>
+              <path d="M146 104 q-9 1 -9 10 q7 2 9 -3" stroke="#e8624a"/>
+              <!-- a screw (the fixings) -->
+              <path d="M214 60 L226 60" stroke="#e0972a"/>
+              <path d="M220 60 L220 86" stroke="#e0972a"/>
+              <path d="M215 66 L225 68" stroke="#e0972a"/><path d="M215 72 L225 74" stroke="#e0972a"/><path d="M215 78 L225 80" stroke="#e0972a"/>
+              <path d="M216 86 L220 92 L224 86" stroke="#e0972a"/>
+            </g>
+          </svg>
+          <span class="imagined">Imagined use · borrow, fix, reuse</span>        </div>
+        <div class="body">
+          <div class="num">05</div>
+          <h3>The Useful Warehouse</h3>
+          <p class="desc">Borrow the drill you'd use twice instead of buying it. A library of
+            things, a repair shop for your zip, your bike, your kettle, a secondhand floor for
+            furniture and outgrown kids' stuff, and the pack of screws nowhere else on the
+            Peninsula sells. Classes to mend your own, a café in the middle, and a weekend reuse
+            market worth crossing the river for. Everyday for us, a reason to visit for everyone
+            else.</p>
+          <div class="tags">
+            <span class="tag">🧱 temporary/removable</span><span class="tag">🌞 daytime use</span><span class="tag">🏠 local value</span><span class="tag">🚶 distributed footfall</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb has-doodle t-book">
+          <svg class="doodle" viewBox="0 0 280 160" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <g filter="url(#rough)" stroke="#1d1b16" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <!-- stack of books -->
+              <path d="M58 126 L180 122 L181 140 L59 144 Z"/>
+              <path d="M62 131 L176 127"/>
+              <path d="M62 108 L184 110 L185 124 L63 122 Z" stroke="#2f5d62"/>
+              <path d="M66 113 L180 115" stroke="#2f5d62"/>
+              <path d="M60 94 L176 92 L177 108 L61 110 Z" stroke="#e8624a"/>
+              <path d="M64 99 L172 97" stroke="#e8624a"/>
+              <!-- mug of coffee -->
+              <path d="M199 116 L202 140 q14 5 28 0 L233 116"/>
+              <path d="M197 116 L236 116"/>
+              <path d="M233 121 q13 0 13 9 q0 9 -13 8"/>
+              <path d="M204 120 L228 120"/>
+              <!-- steam -->
+              <path d="M209 112 q-5 -6 1 -11 q5 -4 -1 -10" stroke="#e0972a"/>
+              <path d="M222 112 q-5 -6 1 -11 q5 -4 -1 -10" stroke="#e0972a"/>
+            </g>
+          </svg>
+          <span class="imagined">Imagined use · books &amp; culture</span>        </div>
+        <div class="body">
+          <div class="num">06</div>
+          <h3>The Peninsula Library</h3>
+          <p class="desc">A town this size, and not one library. So build a better one: new
+            books, a secondhand shelf, local art where NOW Gallery used to be, kids' story
+            time, talks and classes. Plus the proper breakfast the Peninsula somehow doesn't
+            have, coffee all day, a glass of wine at night. A place to read, meet and hang out
+            by the river, open to everyone, not just people with a ticket.</p>
+          <div class="tags">
+            <span class="tag">🌞 daytime use</span><span class="tag">👨‍👩‍👧 family-friendly</span><span class="tag">🏠 local value</span><span class="tag">🚶 distributed footfall</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb has-doodle t-blank">
+          <svg class="doodle" viewBox="0 0 280 160" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <g filter="url(#rough)" stroke="#1d1b16" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="140" cy="70" r="32" stroke="#e0972a"/>
+              <path d="M140 30 L140 20" stroke="#e0972a"/>
+              <path d="M117 47 L110 40" stroke="#e0972a"/><path d="M163 47 L170 40" stroke="#e0972a"/>
+              <path d="M104 70 L94 70" stroke="#e0972a"/><path d="M176 70 L186 70" stroke="#e0972a"/>
+              <path d="M135 96 L139 84 L141 90 L143 84 L147 96" stroke="#e8624a"/>
+              <path d="M124 100 L156 100"/>
+              <path d="M127 108 L153 108"/>
+              <path d="M131 115 L149 115"/>
+              <path d="M135 121 q5 5 10 0"/>
+            </g>
+          </svg>
+          <span class="imagined">Imagined use · ???</span>
+        </div>
+        <div class="body">
+          <div class="num">07</div>
+          <h3>Your Idea Here</h3>
+          <p class="desc">We filled six in an afternoon. There are thousands of us. What
+            would <em>you</em> put on a free riverside site you got to keep for years?
+            Don't overthink it. That was never the hard part. Being asked was.</p>
+          <div class="tags">
+            <a href="#submit" class="tag" style="text-decoration:none;color:inherit;background:var(--sun)">✏️ add yours below ↓</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE REVEAL ===== -->
+<section class="reveal">
+  <div class="reveal-media">
+    <img class="reveal-bg" src="assets/venue-draw.svg" alt="A hand-drawn cross-section of the riverside: two ticketed venues and about 300 new homes beside a green strip, a narrow 1.5-metre footpath and a two-way cycle path packed with a crowd and a stuck cyclist, then the quiet Tide path with loungers and shade, and the River Thames." />
+    <img class="reveal-bg-v" src="assets/vertical-illu.svg" alt="A hand-drawn cross-section of the riverside: two ticketed venues and about 300 new homes, a green strip, a narrow 1.5-metre footpath and a two-way cycle path packed with a crowd and a stuck cyclist, the quiet Tide path with loungers and shade, and the River Thames." />
+  </div>
+  <div class="reveal-text">
+    <div class="section-label">The actual plan</div>
+    <h2>So what's <em>actually</em> planned?</h2>
+    <div class="reveal-body">
+      <p>Two ticketed, mass-entertainment venues, next to the riverside and 25 metres from homes.</p>
+      <p>Destination-level events, marketed nationally and internationally, with repeated shows, over eight times a week.</p>
+      <p>When a show ends, up to <strong>2,250 people</strong> leave at once, onto the Thames Path. The footpath is about 1.5m in places, next to a two-way cycle lane. It's a riverside route, not a venue exit.</p>
+      <p>Even the applicants don't call it community use. Their own planning form says "not relevant."</p>
+      <p class="reveal-punch">Built for people with a ticket, not the people who live here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTRAST ===== -->
+<section class="frame">
+  <div class="wrap">
+    <p>
+      None of our ideas is <em>the</em> answer. The difference is the point: a market or a court
+      is something you'd use on a wet Tuesday. A ticketed show is a night out for visitors, then
+      gone. And nobody asked us. The developer's consultation got <strong>35 replies</strong>.
+      We'd just like to be asked <strong>before it's locked in.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ===== TAGS KEY ===== -->
+<section>
+  <div class="wrap">
+    <div class="section-label">The test for this site</div>
+    <h2>Why these, and <em>not just anything?</em></h2>
+    <p class="test-lede">
+      This is a specific place: a narrow riverside path, homes right up against it, and a
+      transport network already stretched thin. So there's a simple test for what belongs here.
+      Does it give something to the people who live here, in the daytime, not just ticket-holders
+      at night? Does it bring a steady trickle rather than a surge that floods the path and the
+      tube? Does it wind down before midnight, not empty into quiet streets? Every idea on this
+      board passes that test.
+    </p>
+    <div class="key-grid">
+      <div>🌞 <b>daytime use</b>, alive in the day, not just at night</div>
+      <div>🏠 <b>local value</b>, built for people who live here, not just ticket-holders</div>
+      <div>🚶 <b>distributed footfall</b>, a steady trickle, not a surge-and-dump</div>
+      <div>🧱 <b>temporary / removable</b>, fits a "for now" site, packs away clean</div>
+      <div>👨‍👩‍👧 <b>family-friendly</b>, works for kids and grandparents too</div>
+      <div>🌙 <b>less late dispersal</b>, fewer midnight crowds into quiet streets</div>
+    </div>
+    <p class="test-closer">You can do a lot on a free riverside site next to homes. Just not everything.</p>
+    <p class="precedent"><b>Not a fantasy.</b> In Peckham, a council car park earmarked for redevelopment became Peckham Levels: studios, a café, a gallery, workshops, a kids' play floor. It got so loved the council took it off the demolition list. Different site, same idea: a place waiting to be built on became something people actually wanted. <a href="https://peckhamlevels.org/" target="_blank" rel="noopener">Peckham Levels →</a></p>
+  </div>
+</section>
+
+<!-- ===== SUBMIT ===== -->
+<section class="submit" id="submit">
+  <div class="wrap">
+    <h2>What would <em>you</em> put here?</h2>
+    <p style="max-width:620px;color:var(--ink-soft)">
+      A sentence is plenty. A scribble is plenty. The hard part was never the ideas. It
+      was being asked.
+    </p>
+
+    <form id="idea-form">
+      <div class="drawpad">
+        <div class="drawpad-head">
+          <span class="dp-title">Sketch your idea</span>
+          <span class="dp-note">rough is good, that's the whole point</span>
+        </div>
+        <canvas id="idea-canvas" class="drawpad-canvas" aria-label="Drawing canvas for your idea"></canvas>
+        <div class="drawpad-tools">
+          <div class="dp-group" id="dp-tools">
+            <button type="button" class="dp-btn is-on" data-tool="pen">Pen</button>
+            <button type="button" class="dp-btn" data-tool="highlight">Highlight</button>
+            <button type="button" class="dp-btn" data-tool="eraser">Erase</button>
+            <button type="button" class="dp-btn" data-act="undo">Undo</button>
+            <button type="button" class="dp-btn" data-act="clear">Clear</button>
+          </div>
+          <div class="dp-group" id="dp-sizes">
+            <button type="button" class="dp-size" data-size="2"><i style="width:4px;height:4px"></i></button>
+            <button type="button" class="dp-size is-on" data-size="4"><i style="width:7px;height:7px"></i></button>
+            <button type="button" class="dp-size" data-size="8"><i style="width:12px;height:12px"></i></button>
+            <button type="button" class="dp-size" data-size="14"><i style="width:18px;height:18px"></i></button>
+          </div>
+          <div class="dp-group" id="dp-colors">
+            <button type="button" class="dp-color is-on" data-color="#1d1b16" style="background:#1d1b16" aria-label="black"></button>
+            <button type="button" class="dp-color" data-color="#e8624a" style="background:#e8624a" aria-label="coral"></button>
+            <button type="button" class="dp-color" data-color="#f4b942" style="background:#f4b942" aria-label="yellow"></button>
+            <button type="button" class="dp-color" data-color="#7fae5a" style="background:#7fae5a" aria-label="green"></button>
+            <button type="button" class="dp-color" data-color="#2f5d62" style="background:#2f5d62" aria-label="teal"></button>
+            <button type="button" class="dp-color" data-color="#88b7d5" style="background:#88b7d5" aria-label="blue"></button>
+            <button type="button" class="dp-color" data-color="#e98ab0" style="background:#e98ab0" aria-label="pink"></button>
+            <button type="button" class="dp-color" data-color="#ffffff" style="background:#ffffff" aria-label="white"></button>
+          </div>
+        </div>
+        <input type="hidden" name="drawing" id="idea-drawing" />
+      </div>
+
+      <div class="dp-or"><span>or just describe it</span></div>
+
+      <label class="f">Your idea, in a few words</label>
+      <input type="text" required placeholder="e.g. an indoor playground / a lido / a maker space for Ravensbourne grads" />
+
+      <label class="f">Add a little more <span class="opt">(optional)</span></label>
+      <textarea placeholder="Who's it for? When would it be busy? Why here?"></textarea>
+
+      <label class="f">Your connection to the Peninsula <span class="opt">(optional)</span></label>
+      <select>
+        <option value="">Your connection (optional)</option>
+        <option>I live here</option>
+        <option>I work or study here</option>
+        <option>I visit</option>
+        <option>I just care about it</option>
+      </select>
+
+      <button class="btn" type="submit">Pin it to the board →</button>
+      <div class="toast" id="toast">Pinned. Thanks, that took you less time than nobody asked us in years. 💛</div>
+      <p class="fineprint">
+        We might show ideas on this page. We won't sell anything, spam you, or pretend
+        your scribble is a planning application.
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== SPREAD IT ===== -->
+<section class="spread">
+  <div class="wrap">
+    <div class="section-label">Get involved</div>
+    <h2>You don't have to draw to be <em>in</em>.</h2>
+    <p class="ways-intro">Five ways to push this along, from a ten-second tap to actually helping make one happen.</p>
+    <div class="ways">
+      <div class="way">
+        <div class="wnum">01 · ten seconds</div>
+        <h3>React</h3>
+        <p>Tap <em>I'd use this</em> on the ideas you'd actually show up for. No sign-up, no email.</p>
+        <a class="wgo" href="#board">↑ Back to the ideas</a>
+      </div>
+      <div class="way">
+        <div class="wnum">02 · two minutes</div>
+        <h3>Add your own</h3>
+        <p>Sketch it or just describe it. A scribble counts. Being asked was always the hard part.</p>
+        <a class="wgo" href="#submit">↑ Add an idea</a>
+      </div>
+      <div class="way">
+        <div class="wnum">03 · one minute</div>
+        <h3>Spread it</h3>
+        <p>Send it to Design District, Ravensbourne, a club, a café, a class group chat.</p>
+        <a class="wgo" href="#spread-box">↓ Grab the links</a>
+      </div>
+      <div class="way">
+        <div class="wnum">04 · offline</div>
+        <h3>Take it further</h3>
+        <p>Mention it to a local business, school, club or your councillor. Borrow any idea here. Posters and cards are yours to use.</p>
+        <span class="wgo wgo-static">No permission needed</span>
+      </div>
+      <div class="way">
+        <div class="wnum">05 · roll up sleeves</div>
+        <h3>Help make one <em>happen</em></h3>
+        <p>Can you run sessions, design, organise, or offer a corner of a space? That's how daydreams get real.</p>
+        <a class="wgo" href="mailto:openpeninsula@proton.me?subject=I'd%20like%20to%20help">✉ Get in touch</a>
+      </div>
+    </div>
+    <div class="invite" id="spread-box">
+      <p>
+        This only works if it travels. If you're at <b>Design District</b>,
+        <b>Ravensbourne</b>, a local club, a café or a studio. This question is yours
+        too. You lot imagine spaces for a living. Add an idea, then send it down the
+        corridor. Takes two minutes, costs nothing, and proves the point: asking was
+        always the easy part.
+      </p>
+      <div class="share-row">
+        <a href="#" onclick="navigator.clipboard&&navigator.clipboard.writeText(location.href);return false;">🔗 Copy link</a>
+        <a href="https://wa.me/?text=What%20Could%20This%20Have%20Been%3F%20An%20imagination%20board%20for%20the%20Greenwich%20Peninsula%20riverside%20site." target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="mailto:?subject=What%20Could%20This%20Have%20Been%3F&body=An%20imagination%20board%20for%20the%20riverside%20site%20on%20Greenwich%20Peninsula." >✉️ Email</a>
+      </div>
+    </div>
+    <div class="deadline">
+      <p>The council decides around <b>21 July</b> (application 26/1247/F). Comments count most now, not the week of the vote. You don't need planning words: say you live nearby, what worries you, and that nobody asked the neighbourhood. Two minutes.</p>
+      <p class="deadline-links"><a href="https://openpeninsula.github.io/secret-cinema/#object" target="_blank" rel="noopener">Comment on the plan →</a> · <a href="https://openpeninsula.github.io/secret-cinema/" target="_blank" rel="noopener">See the full case →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DISCLAIMER ===== -->
+<section class="disclaimer">
+  <div class="wrap">
+    <div class="section-label">The small, honest print</div>
+    <div class="box">
+      This isn't about being against events. It's that a riverside site is being handed to an
+      <strong>outside operator</strong> for ticketed shows without the people who live around it
+      ever being asked what else it could be. When a site sits free for <strong>years</strong>,
+      shouldn't the neighbourhood get to imagine it too, before it's locked in? That's it. That's
+      the whole thing. Everything here is an <strong>illustrative community idea</strong>, not a
+      formal proposal, planning application, or objection, and not affiliated with any developer,
+      operator, or event.
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="big">
+      If this land isn't going to be homes for another ten years, let it be something the
+      neighbourhood actually gains from, something that doesn't cost us the path, the quiet, or a
+      tube we can already barely get on.
+      <em>Consider this the invitation.</em>
+    </div>
+    <div class="meta">
+      Made by people who live on Greenwich Peninsula. Not a developer. Not the council.
+      Not anyone with a logo to protect. · <a href="#submit">Add your idea →</a>
+    </div>
+  </div>
+</footer>
+
+<script src="draw.js"></script>
+<script src="submit.js"></script>
+<script src="votes.js"></script>
+<script src="community.js"></script>
+</body>
+</html>
