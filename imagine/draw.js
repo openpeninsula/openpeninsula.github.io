@@ -14,6 +14,14 @@
   function paintBg() {
     ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // faint sketchbook dot grid
+    var step = 20 * dpr, r = 1 * dpr;
+    ctx.fillStyle = 'rgba(29,27,22,0.09)';
+    for (var y = step; y < canvas.height; y += step) {
+      for (var x = step; x < canvas.width; x += step) {
+        ctx.beginPath(); ctx.arc(x, y, r, 0, 6.2832); ctx.fill();
+      }
+    }
     ctx.restore();
   }
   function setup() {
