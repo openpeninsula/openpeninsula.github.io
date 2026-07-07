@@ -41,12 +41,13 @@
       ? '<div class="thumb has-doodle t-community"><img class="doodle" src="' + esc(it.drawing) +
         '" alt="" loading="lazy" /><span class="imagined">Imagined use · from a neighbour</span></div>'
       : '<div class="thumb t-community">✏️<span class="imagined">Imagined use · from a neighbour</span></div>';
+    var tags = (Array.isArray(it.tags) ? it.tags : []).map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join('');
     var by = it.name ? '<span class="tag">✏️ ' + esc(it.name) + '</span>' : '';
     art.innerHTML =
       thumb +
       '<div class="body"><h3>' + esc(it.title || 'An idea') + '</h3>' +
       '<p class="desc">' + esc(it.blurb || '') + '</p>' +
-      '<div class="tags">' + by + '</div></div>';
+      '<div class="tags">' + tags + by + '</div></div>';
     return art;
   }
 
