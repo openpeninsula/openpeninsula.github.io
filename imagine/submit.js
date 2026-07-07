@@ -45,9 +45,9 @@
     function finish(sent) {
       if (btn) { btn.disabled = false; btn.textContent = origLabel || 'Pin it to the board →'; }
       if (toast) {
-        toast.textContent = sent
-          ? 'Pinned. Thanks, that took you less time than nobody asked us in years. 💛'
-          : 'Saved on your device. We could not reach the board just now, but your idea counts. 💛';
+        toast.innerHTML = sent
+          ? 'Pinned, thanks. 💛 The one thing that actually moves this now: <a href="https://openpeninsula.github.io/secret-cinema/#object" target="_blank" rel="noopener">object before 21 July &rarr;</a>. Or send it to a neighbour so more of us do.'
+          : 'Saved on your device (we could not reach the board just now). 💛 Either way, the thing that counts: <a href="https://openpeninsula.github.io/secret-cinema/#object" target="_blank" rel="noopener">object before 21 July &rarr;</a>.';
         toast.classList.add('show');
       }
       form.reset();
