@@ -31,7 +31,7 @@
     var payload = { idea: idea, more: more, tags: tags, connection: connection, drawing: drawing };
 
     var origLabel = btn ? btn.textContent : '';
-    if (btn) { btn.disabled = true; btn.textContent = 'Pinning…'; }
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
 
     fetch(ENDPOINT, {
       method: 'POST',
@@ -43,10 +43,10 @@
       .catch(function () { stash(payload); finish(false); });
 
     function finish(sent) {
-      if (btn) { btn.disabled = false; btn.textContent = origLabel || 'Pin it to the board →'; }
+      if (btn) { btn.disabled = false; btn.textContent = origLabel || 'Send it in →'; }
       if (toast) {
         toast.innerHTML = sent
-          ? 'Pinned, thanks. 💛 The one thing that actually moves this now: <a href="https://openpeninsula.github.io/secret-cinema/#object" target="_blank" rel="noopener">object before 21 July &rarr;</a>. Or send it to a neighbour so more of us do.'
+          ? 'Got it, thanks 💛 We read each idea before it goes on the board. The thing that actually moves this now: <a href="https://openpeninsula.github.io/secret-cinema/#object" target="_blank" rel="noopener">object before 21 July &rarr;</a>. Or send it to a neighbour so more of us do.'
           : 'Saved on your device (we could not reach the board just now). 💛 Either way, the thing that counts: <a href="https://openpeninsula.github.io/secret-cinema/#object" target="_blank" rel="noopener">object before 21 July &rarr;</a>.';
         toast.classList.add('show');
       }
