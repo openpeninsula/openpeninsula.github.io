@@ -178,7 +178,7 @@ header.hero {
 @media (max-width: 1500px) {
   .hero-media { overflow: hidden; }
   .hero-media .hero-bg { display: none; }
-  .hero-media .hero-bg-sw { display: block; margin-top: -20%; }
+  .hero-media .hero-bg-sw { display: block; margin-top: -25%; }
 }
 @media (max-width: 900px) {
   header.hero { display: flex; flex-direction: column; }
