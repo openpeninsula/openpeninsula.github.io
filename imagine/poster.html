@@ -7,6 +7,7 @@
 <title>Print a poster · What could this be?</title>
 <link rel="stylesheet" href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700&family=space-mono:400,700&family=fraunces:400,600,700i" />
 <style>
+  @font-face { font-family:"Project Blackbird"; src:url("assets/projekt-blackbird.otf") format("opentype"); font-weight:400; font-display:swap; }
   :root { --ink:#1d1b16; --coral:#e8624a; --sun:#f4b942; --river:#2f5d62; --paper:#f6f1e7; }
   * { box-sizing:border-box; }
   html,body { margin:0; }
@@ -20,8 +21,8 @@
   .scrim { position:absolute; inset:0; background:linear-gradient(90deg, var(--paper) 0%, var(--paper) 30%, rgba(246,241,231,.92) 42%, rgba(246,241,231,0) 64%); }
   .overlay { position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; justify-content:center; width:55%; padding:16mm 6mm 16mm 16mm; text-align:left; }
   .kicker { font-family:'Space Mono',monospace; text-transform:uppercase; letter-spacing:.14em; font-size:10.5pt; color:var(--river); font-weight:700; }
-  h1 { font-family:'Fraunces',serif; font-weight:600; font-size:46pt; line-height:.98; letter-spacing:-.02em; margin:4mm 0 4mm; }
-  h1 em { font-style:italic; color:var(--coral); }
+  h1 { font-family:"Project Blackbird","Instrument Sans",sans-serif; font-weight:400; font-size:52pt; line-height:1.0; letter-spacing:-0.025em; margin:4mm 0 4mm; }
+  h1 em { font-style:normal; color:var(--coral); }
   .sub { font-size:13.5pt; line-height:1.42; max-width:135mm; color:#3a362e; margin:0 0 7mm; }
   .sub strong { color:var(--ink); }
   .qrrow { display:flex; align-items:center; gap:7mm; }
