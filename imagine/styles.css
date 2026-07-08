@@ -469,6 +469,16 @@ h2 em {
 }
 .reveal-body p { font-size: 18px; line-height: 1.55; margin: 0 0 16px; color: var(--ink-soft); }
 .reveal-body p strong { color: var(--ink); }
+.reveal-facts { list-style: none; margin: 0; padding: 0; }
+.reveal-facts li {
+  position: relative; padding-left: 30px; margin: 0 0 14px;
+  font-size: 18px; line-height: 1.5; color: var(--ink-soft);
+}
+.reveal-facts li::before {
+  content: "→"; position: absolute; left: 0; top: 0;
+  color: var(--coral); font-weight: 800;
+}
+.reveal-facts strong { color: var(--ink); font-weight: 700; }
 .reveal-body .reveal-punch {
   font-family: var(--font-display); font-weight: 400;
   font-size: clamp(21px, 2.8vw, 30px); line-height: 1.12; letter-spacing: -0.01em;
