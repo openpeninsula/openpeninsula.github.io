@@ -56,7 +56,7 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.25'/%3E%3C/svg%3E");
 }
 
-.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.wrap { max-width: 1340px; margin: 0 auto; padding: 0 24px; }
 
 /* ---- sticker tags ---- */
 .tag {
@@ -452,7 +452,7 @@ h2 em {
 .action-bridge { margin: 20px 0 0; font-size: 14px; color: var(--ink-soft); }
 .action-bridge a { color: var(--coral); font-weight: 600; }
 .reveal { position: relative; padding: 0; background: linear-gradient(90deg, #ffffff 0 38%, #BCDFF1 38% 100%); border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); overflow: hidden; }
-.reveal-inner { position: relative; display: flex; align-items: center; max-width: 1320px; margin: 0 auto; min-height: 720px; }
+.reveal-inner { position: relative; display: flex; align-items: center; max-width: 1340px; margin: 0 auto; min-height: 720px; }
 .reveal-media { position: absolute; top: 0; bottom: 0; left: clamp(0px, 4vw, 72px); line-height: 0; }
 .reveal-bg { display: block; height: 100%; width: auto; max-width: none; }
 .reveal-bg-v { display: none; }
@@ -547,7 +547,7 @@ h2 em {
 
 /* ---- submit form ---- */
 .submit { background: var(--paper-2); border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
-.submit .wrap { max-width: 1040px; }
+.submit .wrap { max-width: 1340px; }
 .submit form { max-width: none; }
 .submit .drawpad { max-width: none; }
 .submit-grid { display: grid; grid-template-columns: 1fr; gap: 26px; margin-top: 24px; }
