@@ -451,18 +451,18 @@ h2 em {
 }
 .action-bridge { margin: 20px 0 0; font-size: 14px; color: var(--ink-soft); }
 .action-bridge a { color: var(--coral); font-weight: 600; }
-.reveal { position: relative; background: linear-gradient(90deg, #ffffff 0 38%, #BCDFF1 38% 100%); border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); overflow: hidden; }
+.reveal { position: relative; padding: 0; background: linear-gradient(90deg, #ffffff 0 38%, #BCDFF1 38% 100%); border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); overflow: hidden; }
 .reveal-inner { position: relative; display: flex; align-items: center; max-width: 1680px; margin: 0 auto; min-height: 720px; }
-.reveal-media { position: absolute; top: 0; bottom: 0; left: clamp(0px, 4vw, 72px); }
+.reveal-media { position: absolute; top: 0; bottom: 0; left: clamp(0px, 4vw, 72px); line-height: 0; }
 .reveal-bg { display: block; height: 100%; width: auto; max-width: none; }
 .reveal-bg-v { display: none; }
-.reveal-text { position: relative; z-index: 1; width: min(54%, 700px); margin-left: auto; padding: 76px clamp(20px, 5vw, 72px) 76px 24px; }
-.reveal-body { max-width: 700px; }
+.reveal-text { position: relative; z-index: 1; width: min(50%, 640px); margin-left: auto; padding: 0 clamp(20px, 5vw, 72px) 0 24px; }
+.reveal-body { max-width: 640px; }
 @media (max-width: 1500px) {
   .reveal { background: #BCDFF1; }
-  .reveal-inner { display: flex; flex-direction: column; min-height: 0; max-width: none; }
-  .reveal-text { order: 1; min-width: 0; width: 100%; box-sizing: border-box; max-width: 820px; margin: 0 auto; padding: 44px clamp(24px, 4vw, 48px) 28px; }
-  .reveal-media { order: 2; min-width: 0; width: 100%; position: static; left: 0; }
+  .reveal-inner { display: flex; flex-direction: column; align-items: stretch; min-height: 0; max-width: none; }
+  .reveal-text { position: static; order: 1; width: 100%; box-sizing: border-box; max-width: 820px; margin: 0 auto; padding: 44px clamp(24px, 4vw, 48px) 28px; }
+  .reveal-media { position: static; order: 2; width: 100%; }
   .reveal-bg { display: none; }
   .reveal-bg-v { display: block; width: 100%; height: auto; }
 }
