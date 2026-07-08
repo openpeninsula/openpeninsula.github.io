@@ -8,7 +8,7 @@
   if (!grid) return;
 
   var ENDPOINT = window.BOARD_ENDPOINT || '/board';
-  var PAGE = 6;
+  var PAGE = 3;
   var items = [], shown = 0, moreBtn = null;
 
   // find the blank "add yours" card so community ideas insert before it
