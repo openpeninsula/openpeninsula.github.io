@@ -586,6 +586,8 @@ textarea { min-height: 90px; resize: vertical; }
   background: var(--river); color: #fff; border-radius: 4px; font-weight: 700;
 }
 .toast.show { display: block; }
+.toast a { color: var(--sun); font-weight: 800; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 2px; white-space: nowrap; }
+.toast a:hover { color: #fff; }
 
 /* ---- spread ---- */
 .spread .invite {
