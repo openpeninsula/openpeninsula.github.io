@@ -451,7 +451,7 @@ h2 em {
 }
 .action-bridge { margin: 20px 0 0; font-size: 14px; color: var(--ink-soft); }
 .action-bridge a { color: var(--coral); font-weight: 600; }
-.reveal { position: relative; background: linear-gradient(90deg, #ffffff 0 38%, #BCDFF1 38% 100%); border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); overflow: hidden; min-height: 480px; }
+.reveal { position: relative; display: flex; align-items: center; background: linear-gradient(90deg, #ffffff 0 38%, #BCDFF1 38% 100%); border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); overflow: hidden; min-height: 720px; }
 .reveal-media { position: absolute; top: 0; bottom: 0; left: clamp(0px, 4vw, 72px); }
 .reveal-bg { display: block; height: 100%; width: auto; max-width: none; }
 .reveal-bg-v { display: none; }
