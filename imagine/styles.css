@@ -377,11 +377,6 @@ h2 em {
 }
 .vote.is-voted .vcount { background: rgba(29, 27, 22, 0.14); }
 
-/* TEMP: hide vote counts until there are real numbers worth showing.
-   Delete these two rules to restore the count pill (label + count, space-between). */
-.vote { justify-content: center; }
-.vote .vcount { display: none; }
-
 /* get-involved */
 .ways-intro { max-width: 600px; color: var(--ink-soft); margin: 0 0 22px; }
 .involve-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 22px; align-items: stretch; }
