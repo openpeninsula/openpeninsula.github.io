@@ -325,6 +325,9 @@ h2 em {
 .t-blank  { background: repeating-linear-gradient(45deg, #fff, #fff 12px, var(--paper-2) 12px, var(--paper-2) 24px); }
 .t-community { background: #fcfbf7; }
 .card .thumb img.doodle { object-fit: contain; padding: 10px; }
+/* Submitted drawings are captured with a white canvas fill baked in; multiply
+   drops that white against the thumb so they read transparent like the seed doodles. */
+.t-community img.doodle { mix-blend-mode: multiply; }
 .load-more {
   display: block; margin: 10px auto 0; font-family: var(--font-mono); font-weight: 700;
   font-size: 13px; letter-spacing: 0.03em; text-transform: uppercase;
