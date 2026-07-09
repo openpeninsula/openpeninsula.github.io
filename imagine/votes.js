@@ -14,13 +14,11 @@
   var localCounts = load(LS_LOCAL) || {};
   var server = {};
 
-  document.querySelectorAll('.card').forEach(function (card) {
-    var thumb = card.querySelector('.thumb');
+  // attach an "I'd use this" button to a card for a given idea id (idempotent)
+  function attach(card, id) {
+    if (!card || !id || map[id]) return;      // no card/id, or already wired
     var body = card.querySelector('.body');
-    if (!thumb || !body) return;
-    var m = thumb.className.match(RE);
-    if (!m) return; // skip the blank "Your idea here" card
-    var id = m[1];
+    if (!body) return;
 
     var btn = document.createElement('button');
     btn.type = 'button';
@@ -33,7 +31,17 @@
     paintState(id);
     render(id);
     btn.addEventListener('click', function () { toggle(id); });
+  }
+
+  // seed cards: id comes from the t-<name> thumb class
+  document.querySelectorAll('.card').forEach(function (card) {
+    var thumb = card.querySelector('.thumb');
+    var m = thumb && thumb.className.match(RE);
+    if (m) attach(card, m[1]);
   });
+
+  // expose so community.js can wire up published ideas as they load
+  window.IdeaVotes = { attach: attach };
 
   function paintState(id) {
     var on = !!voted[id];

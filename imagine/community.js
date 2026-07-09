@@ -48,6 +48,7 @@
       '<div class="body"><h3>' + esc(it.title || 'An idea') + '</h3>' +
       '<p class="desc">' + esc(it.blurb || '') + '</p>' +
       '<div class="tags">' + tags + by + '</div></div>';
+    if (it.id && window.IdeaVotes) window.IdeaVotes.attach(art, it.id);
     return art;
   }
 
